@@ -1,0 +1,107 @@
+.container-startups{
+    width: 75vw;
+    height: 100vh;
+    background: $white;
+
+    @media (max-width: $breakpoint-tablet){
+        width: 100vw;
+        height: auto;
+    }
+
+    &-header{
+        height: 30vh;
+        padding: 30px 25px;
+
+        @media (max-width: $breakpoint-tablet){
+            background: $aqua;
+            padding: 0 25px;  
+              padding-top: 70px;
+              height: auto;
+        }
+
+       
+
+        h2{
+            font-family: 'Maison Neue Book';
+            font-size: 55px;
+            font-weight: 400;
+            color: $black;
+
+            @media (max-width: $breakpoint-tablet){
+                font-size: 30px;
+                height: auto;
+                padding-bottom: 25px;
+            
+            }
+        }
+
+        p{
+            font-size: 18px;
+            font-weight: 300;
+
+            @media (max-width: $breakpoint-tablet){
+                font-size: 13px;
+                padding-bottom: 25px;
+            
+            }
+        }
+    }
+
+    .narrow-right{
+        text-align: right;
+        padding-right: 10px;
+        position: absolute;
+        right: 0;
+        top: 22%;
+        .arrowLine {
+            d: path("M0 8.03004H68");
+        }
+    }
+
+    &-itemsContainer{
+        width: 100%;
+        height: 70vh;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding-top: 70px;
+
+        &::-webkit-scrollbar{
+            width: 0px;
+            height: 0;
+        }
+    }
+
+    .items-container{
+        overflow: scroll;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .marquee-container{
+        overflow: scroll !important;
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .overlay::before, .overlay::after{
+        display: none;
+    }
+
+    .movil-boton, .cargando{
+        padding-left: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.emprendimientos-container{
+
+    @media (max-width: $breakpoint-tablet){
+        flex-direction: column;
+    }
+}

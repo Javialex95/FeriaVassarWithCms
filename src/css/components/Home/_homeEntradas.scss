@@ -1,0 +1,56 @@
+.home-entradas{
+    background: $white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px 50px 250px;
+
+    @media (max-width: $breakpoint-tablet){
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    h2{
+        color: $black;
+        font-size: 30px;
+        strong{
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        @media (max-width: $breakpoint-tablet){
+            font-size: 17px;
+
+            strong{
+                font-size: 28px;
+            }
+        }
+    }
+
+    span{
+        font-size: 20px;
+        display: block;
+        @media (max-width: $breakpoint-tablet){
+            font-size: 14px;
+            padding-bottom: 20px;
+
+        }
+    }
+
+    .primary-button_text{
+        font-size: 20px;
+        @media (max-width: $breakpoint-tablet){
+            font-size: 15px;
+        }
+    }
+
+    .primary-button{
+
+        @media (max-width: $breakpoint-tablet){
+            min-width: auto;
+        }
+    }
+
+    .relative{
+        height: 50px;
+    }
+}

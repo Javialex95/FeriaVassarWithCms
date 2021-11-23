@@ -1,0 +1,57 @@
+.sidebar{
+    height: 100vh;
+    width: 25vw;
+    background: $aqua;
+    padding: 50px 30px;
+    padding-top: 130px;
+    position: relative;
+
+    @media (max-width: $breakpoint-tablet){
+        width: 100vw;
+        background: #E1DBCD;
+        height: auto;
+        padding-top: 50px;
+    }
+
+    @media (min-width: 1100px ) and (max-height: 600px){
+        padding-top: 50px;
+
+    }
+
+    .no-search{
+        height: 40px;
+    }
+
+    a{
+        position: absolute;
+        bottom: 10%;
+    }
+
+    &-footer{
+        position: absolute;
+        bottom: 2%;
+        font-size: 9px;
+        width: 80%;
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+    }
+}
+
+.orange{
+    background: $white;
+}
+
+.sidebarButton{
+    min-width: 100px;
+    background: $white;
+
+    .primary-button_text{
+        font-size: 15px;
+    }
+
+    .relative{
+        height: 50px;
+    }
+}

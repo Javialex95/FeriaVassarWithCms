@@ -1,0 +1,147 @@
+.absolute-centered {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.transition {
+  transition: 0.3s ease-in-out;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.max-width{
+  max-width: 1700px;
+  margin: 0px auto;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-none {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.absolute-hidden {
+  z-index: -1000;
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-btn {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: $pink;
+    border: 1px solid$black;
+    &, path {
+        @extend .transition;
+    }
+    &:hover {
+        background-color: $orange;
+        path {
+            fill: $white;
+        }
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mt {
+  &-1 {
+    margin-top: 1em;
+  }
+  &-2 {
+    margin-top: 2em;
+  }
+  &-3 {
+    margin-top: 5em;
+  }
+}
+.mb {
+  &-1 {
+    margin-bottom: 1em !important;
+  }
+  &-2 {
+    margin-bottom: 2em !important;
+  }
+  &-3 {
+    margin-bottom: 5em !important;
+  }
+}
+
+.bg-color {
+  &_aqua {
+    background-color: $aqua !important;
+  }
+  &_aqua-darker {
+    background-color: #37A9C5 !important;
+  }
+  &_red {
+    background-color: $red;
+  }
+  &_green-darker {
+    background-color: $green-darker;
+  }
+  &_green {
+    background-color: $green;
+  }
+  &_orange {
+    background-color: $orange;
+  }
+  &_orange-darker {
+    background-color: #CB3907;
+  }
+  &_purple-lighter {
+    background-color: #A184CB;
+  }
+  &_purple-darker {
+    background-color: #5407CB;
+  }
+  &_yellow {
+    background-color: $yellow;
+  }
+  &_brown {
+    background-color: #CA8B55;
+  }
+  &_yellow-darker {
+    background-color: #CC8A07;
+  }
+}

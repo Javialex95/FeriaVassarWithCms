@@ -1,0 +1,71 @@
+
+$red-darker: #C9003E;
+$green-darker: #009966;
+$green: #6D9B11;
+
+$black: #231F20;
+$red: #FF004F;
+$purple: #6300FF;
+$orange: #FF4200;
+$blue: rgb(64, 64, 255);
+$aqua: #3DD3F7;
+$yellow: #FFAA00;
+$pink: #C9003E;
+$white: #E1DBCD;
+
+$blackLight: #231f208e;
+
+$breakpoint-laptop: 1440px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 425px;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+}
+
+b{
+  font-family: 'Maison Neue Bold';
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+  font-family: 'Maison Neue Light';
+}
+
+.flex {
+  display: flex;
+}
+
+strong{
+  font-family: 'Maison Neue Bold';
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

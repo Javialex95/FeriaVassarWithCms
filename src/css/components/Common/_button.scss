@@ -1,0 +1,57 @@
+.primary-button {
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  user-select: none;
+  position: relative;
+  border-radius: 100px;
+  display: inline-block;
+  border: 1px solid$black;
+  min-width: 450px;
+  &,span {
+    @extend .transition;
+    background-color: $white;
+  }
+  .normal, .hover {
+    z-index: 1;
+    @extend .transition;
+  }
+  .hover {
+    display: none;
+  }
+  &:hover {
+    &,span {
+      background-color: $orange;
+      color: $white;
+    }
+    .normal {
+      display: none;
+    }
+    .hover {
+      display: block;
+    }
+  }
+  &_icon {
+    right: 20px; top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  & > * {
+    // BUTTON HEIGHT
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &_text {
+    z-index: 10;
+    text-align: left;
+    font-size: 30px;
+    padding: 10px 100px 10px 30px;
+    span {
+      padding-right: 5px;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+
+@import './base';
+
+
+@import './fonts';
+@import './utils';
+
+@import './components/Common/button';
+@import './components/Common/animations';
+@import './components/Common/search';
+@import './components/Common/filtro';
+@import './components/Common/cargando';
+
+@import './components/Home/HomeSlider.scss';
+@import './components/Home/HomeManifesto.scss';
+@import './components/Home/homeEntradas';
+@import './components/Home/HomeEmpren.scss';
+@import './components/Home/HomeExperience.scss';
+@import './components/Home/HomeRedes.scss';
+@import './components/Home/HomeContacto.scss';
+@import './components/Home/HomeFooter.scss';
+
+@import './components/Emprendimientos/Sidebar.scss';
+@import './components/Emprendimientos/ContainerEmpren.scss';
+@import './components/Emprendimientos/startup.scss';
+@import './components/Emprendimientos/listaEmprend.scss';
+@import './components/Emprendimientos/singleEmpren.scss';
+@import './components/Emprendimientos/singleEmprenMovil.scss';
+
+@import './components/Menu/menu.scss';
+
+@import './components/footer.scss';
+@import './components/vassar.scss';
+@import './components/faq.scss';
+@import './components/experience.scss';
+
+@import './components/CMS/login';
+@import './components/CMS/select';
+@import './components/CMS/recopilacion';
+@import './components/CMS/modal';

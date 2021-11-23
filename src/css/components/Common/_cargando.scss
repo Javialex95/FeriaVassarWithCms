@@ -1,0 +1,23 @@
+.cargando{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+    &-text{
+        text-align: center;
+    }
+
+    svg{
+        animation: loading 2s infinite;
+    }
+
+    @keyframes loading {
+        to{
+            transform: rotate(
+                360deg);
+        }
+
+        
+    }
+}

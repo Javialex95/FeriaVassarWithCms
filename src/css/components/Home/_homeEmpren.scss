@@ -1,0 +1,315 @@
+.home-emprendimientos {
+  height: 90vh;
+  max-height: 1000px;
+
+  .mercado {
+    span {
+      color: $white;
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
+
+  .brightness {
+    img {
+      filter: brightness(0.8);
+    }
+    &:hover {
+      img {
+        filter: brightness(1);
+      }
+    }
+  }
+
+  .brightness-contrast {
+    img {
+      filter: brightness(1);
+    }
+    &:hover {
+      img {
+        filter: brightness(0.8) contrast(1.1);
+      }
+    }
+  }
+
+  .asterisks {
+    width: 165px;
+    margin: 80px 0 50px 0;
+  }
+
+  .description {
+    margin: 30px 0 90px;
+    font-size: 18px;
+  }
+
+  &_conoce {
+    .primary-button {
+      min-width: 300px;
+      &_text {
+        font-size: 20px !important;
+      }
+    }
+  }
+
+  &-contenedor {
+    display: flex;
+    height: 100%;
+
+    > div {
+      width: 50%;
+    }
+
+    h2 {
+      color: $black;
+      font: normal normal bold 70px/80px Maison Neue Bold;
+    }
+
+    &-title {
+      padding: 0 4vw;
+      background: $aqua;
+      @extend .flex-center;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &_slider {
+    height: 100% !important;
+    .swiper {
+    }
+    &_container {
+    }
+    .swiper-slide,
+    &_item {
+      margin-right: 0 !important;
+      height: 100%;
+      width: 521px !important;
+    }
+    &_item {
+      // padding-top: 20px 0 !important;
+      @extend .flex-center;
+      flex-direction: column;
+      border-right: 1px solid $black;
+      &:hover {
+        span,
+        img {
+          opacity: 1;
+        }
+      }
+      span,
+      img {
+        opacity: 0.5;
+        @extend .transition;
+      }
+      span {
+        opacity: 0;
+        color: $black;
+        margin-top: 40px;
+        position: relative;
+        letter-spacing: 2px;
+        font-family: "Maison Neue Light";
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 100%;
+          width: 100%;
+          height: 1px;
+          background: rgba($black, 0.9);
+        }
+      }
+      .img {
+        width: 309px;
+        height: 549px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-laptop) {
+    .asterisks {
+      width: 100px;
+    }
+    .description {
+      font-size: 16px;
+    }
+    &-contenedor-title {
+      width: 60% !important;
+    }
+    &_slider {
+      &_container {
+        width: 40% !important;
+      }
+      .swiper-slide,
+      &_item {
+        width: 300px !important;
+      }
+      .img {
+        width: 200px;
+        height: auto;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    height: unset;
+    max-height: unset;
+
+    &_slider {
+      .swiper-slide,
+      &_item {
+        width: 100vw !important;
+      }
+    }
+    .asterisks {
+      width: 50px;
+      margin: 20px auto;
+    }
+    .description {
+      margin: 10px 0 0px 0;
+      font-size: 16px;
+      padding: 0px 20px;
+    }
+
+    &-contenedor {
+      flex-direction: column;
+      &-title {
+        padding: 0px 0 40px 0;
+        width: 100% !important;
+        background-color: $yellow;
+        h2 {
+          font-size: 50px;
+          width: 100%;
+          text-align: left;
+          padding-left: 20px;
+          background-color: $aqua;
+          border-top: 1px solid $black;
+          border-bottom: 1px solid $black;
+        }
+      }
+    }
+    &_conoce {
+      margin: auto;
+      padding: 0px 20px 30px 20px;
+    }
+    &_slider {
+      &_container {
+        width: 100% !important;
+      }
+      &_item {
+        padding: 50px 0 !important;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-laptop) {
+    &-contenedor {
+      &-title {
+        h2 {
+          font-size: 60px;
+        }
+      }
+    }
+    &_conoce {
+      .primary-button {
+        width: 370px;
+        min-width: unset;
+        .relative {
+          height: 50px;
+        }
+        &_text {
+          font-size: 17px !important;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+  @media (max-width: 978px) {
+    &-contenedor {
+      &-title {
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    &_slider {
+    }
+    &-contenedor {
+      &-title {
+        padding: 0px;
+        overflow: hidden;
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+    &_conoce {
+      .primary-button {
+        width: 300px;
+        max-width: 95%;
+        min-width: unset;
+        .relative {
+          height: 40px;
+        }
+        &_text {
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+}
+
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.desktop-slider {
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.mobile-slider {
+  width: 100vw;
+  display: none;
+  padding: 40px 0;
+  .img {
+    width: 142px;
+    height: 250px;
+  }
+  .home-emprendimientos_slider_item {
+    border-right: unset;
+    padding: 0 !important;
+    span {
+      margin-bottom: 2px;
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
+}
+
+.mobile-separator {
+  display: none;
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+        background-size: cover;
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../../../assets/textura_division_home.png);
+
+  }
+  width: 100%;
+  height: 100px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

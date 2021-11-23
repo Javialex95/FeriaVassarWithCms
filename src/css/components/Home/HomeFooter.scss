@@ -1,0 +1,142 @@
+.home-footer {
+  background-color: $white;
+  .logos {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    & > * + * {
+      margin-left: 80px;
+    }
+  }
+  &_top {
+    padding: 15px 0;
+    width: 100%;
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
+  }
+  &_bottom {
+    margin: auto;
+    display: flex;
+    color: $black;
+    max-width: 1500px;
+    padding: 20px 50px;
+    justify-content: space-between;
+    font: normal normal 300 17px/19px Akzidenz-Grotesk Light;
+  }
+  .logo1 {
+    background-image: url(../../../assets/footer/ade_negro.png);
+  }
+  .logo2 {
+    background-image: url(../../../assets/footer/alina_velez_negro.png);
+  }
+  .logo3 {
+    background-image: url(../../../assets/footer/paramo_lab_negro.png);
+  }
+  &_logo {
+    width: 120px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-image: url(../../../assets/logo_paramo_web.svg);
+  }
+  @media (max-width: $breakpoint-laptop) {
+    &_top {
+      padding: 20px 20px;
+    }
+    &_bottom {
+      font: normal normal 300 14px/19px Akzidenz-Grotesk Light;
+    }
+    &_logo {
+      width: 150px;
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    &_logo {
+      // width: 220px;
+    }
+    
+    .logos {
+      & > * + * {
+        margin-left: 50px;
+      }
+    }
+    
+  }
+  &_bottom {
+    padding: 20px 10px;
+  }
+}
+
+.vassar_footer {
+  .logos {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    & > * + * {
+      margin-left: 80px;
+    }
+  }
+  &_top {
+    padding: 5px 0;
+    width: 100%;
+    background-color: $white;
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
+  }
+  &_bottom {
+    margin: auto;
+    display: flex;
+    color: $white;
+    max-width: 1500px;
+    padding: 20px 50px;
+    background-color: $pink;
+    justify-content: space-between;
+    font: normal normal 300 17px/19px Akzidenz-Grotesk Light;
+  }
+  .logo1 {
+    background-image: url(../../../assets/footer/ade_negro.png);
+  }
+  .logo2 {
+    background-image: url(../../../assets/footer/alina_velez_negro.png);
+  }
+  .logo3 {
+    background-image: url(../../../assets/footer/paramo_lab_negro.png);
+  }
+  &_logo {
+    width: 120px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media (max-width: $breakpoint-laptop) {
+    &_top {
+      padding: 5px 20px;
+    }
+    &_bottom {
+      font: normal normal 300 14px/19px Akzidenz-Grotesk Light;
+    }
+    &_logo {
+      width: 100px;
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    &_logo {
+      // width: 220px;
+    }
+    
+    .logos {
+      & > * + * {
+        margin-left: 50px;
+      }
+    }
+    &_bottom { 
+      color: $black;
+      background-color: $white;
+    }
+  }
+  &_bottom {
+    padding: 20px 10px;
+  }
+}

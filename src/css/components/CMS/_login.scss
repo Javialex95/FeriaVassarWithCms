@@ -1,0 +1,89 @@
+.login {
+  min-height: 100vh;
+  padding-top: 100px;
+  text-align: center;
+  background-color: $white;
+  h1 {
+    color: $orange;
+    margin-bottom: 50px;
+    font: normal normal bold 80px/90px Maison Neue Light;
+    strong {
+      font-family: Maison Neue Bold;
+    }
+  }
+  &_container {
+    margin: auto;
+    max-width: 900px;
+  }
+  &_form {
+    @extend .flex-center;
+    flex-direction: column;
+  }
+
+  .form-field {
+    input {
+      width: 500px;
+      max-width: 90vw;
+      border: none;
+      outline: none;
+      height: 50px;
+      color: $black;
+      @extend .transition;
+      padding-left: 10px;
+      background-color: transparent;
+      border-bottom: 2px solid $purple;
+      &:focus {
+        background-color: white;
+      }
+      &,
+      &::placeholder {
+        font: normal normal bold 20px/30px Maison Neue Light;
+      }
+      &::placeholder {
+        color: rgba($black, 0.4);
+      }
+    }
+  }
+  .primary-button {
+    margin-top: 100px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    h1 {
+      font: normal normal bold 40px/50px Maison Neue Light;
+    }
+    .form-field {
+      input {
+        &:focus {
+          background-color: white;
+        }
+        &,
+        &::placeholder {
+          font: normal normal bold 15px/17px Maison Neue Light;
+        }
+        &::placeholder {
+          color: rgba($black, 0.4);
+        }
+      }
+    }
+  }
+}
+
+.forms {
+  .primary-button {
+    min-width: unset;
+    .relative {
+      height: 60px;
+    }
+    &_text {
+      font-size: 20px;
+      padding: 10px 80px 10px 30px;
+      font-family: Maison Neue Bold;
+    }
+  }
+}
+.error-msg,
+.file-btn_error-msg {
+  color: $red;
+  font-size: 14px;
+}

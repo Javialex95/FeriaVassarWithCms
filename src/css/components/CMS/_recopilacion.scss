@@ -1,0 +1,236 @@
+.recopilacion {
+  display: flex;
+  height: 100vh;
+  background-color: $white;
+
+  &_left {
+    width: 33%;
+    height: 100%;
+    padding: 100px 50px;
+    background-color: $purple;
+
+    h1 {
+      color: $white;
+      margin-bottom: 50px;
+      font: normal normal bold 60px/70px Maison Neue Light;
+      strong {
+        font-family: Maison Neue Bold;
+      }
+    }
+
+    &_buttons {
+      width: 100%;
+      display: flex;
+      cursor: pointer;
+      margin-top: 150px;
+      align-items: center;
+      justify-content: space-between;
+      .button {
+        padding: 10px 30px;
+        border-radius: 50px;
+        @extend .transition;
+        &:hover {
+          background-color: rgba($orange, 0.4);
+        }
+        span {
+          color: $white;
+          font-size: 17px;
+        }
+        &--active {
+          border: 1px solid rgba($orange, 0.4);
+        }
+      }
+    }
+  }
+  &_right {
+    width: 66%;
+    height: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 100px;
+  }
+  &_form {
+    padding: 70px 100px;
+    // @extend .flex-center;
+    flex-direction: column;
+
+    .indication {
+      font-size: 20px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      color: rgba($black, 0.6);
+    }
+
+    .last-indication{
+      margin-bottom: 50px;
+    }
+
+    .file-field {
+      display: flex;
+      align-items: center;
+      .indication {
+        color: $black;
+        margin-top: 0px;
+      }
+    }
+
+    .form-field {
+      margin-bottom: 100px;
+      &,
+      input,
+      textarea {
+        width: 100%;
+      }
+      input {
+        height: 40px;
+        padding-left: 20px;
+      }
+      textarea {
+        height: 200px;
+        padding: 20px 20px;
+      }
+      input,
+      textarea {
+        color: $black;
+        outline: none;
+        @extend .transition;
+        border-radius: 20px;
+        border: 1px solid $black;
+        background-color: white;
+        &:focus {
+          background-color: white;
+        }
+        &,
+        &::placeholder {
+          letter-spacing: 2px;
+          font: normal normal bold 13px/16px Akzidenz-Grotesk Light;
+        }
+        &::placeholder {
+          color: rgba($black, 0.4);
+        }
+      }
+    }
+
+    .global-error{
+      margin-top: 50px;
+    }
+  }
+
+  &_section {
+    text-align: left;
+    align-self: flex-start;
+    h2 {
+      font-weight: 100;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+    .file-field {
+      margin-bottom: 50px;
+    }
+  }
+
+  &_submit {
+    margin-top: 50px;
+  }
+
+  @media (max-width: $breakpoint-laptop) {
+    &_left {
+      padding: 100px 20px;
+      h1 {
+        font-size: 40px;
+        line-height: 45px;
+      }
+
+      &_buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        .button {
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    &_form {
+      .indication {
+        font-size: 17px;
+      }
+    }
+  }
+
+  @media (max-width: 842px) {
+    flex-direction: column;
+    &_left,
+    &_right {
+      width: 100%;
+    }
+    &_left {
+      padding: 20px 10px;
+      height: unset;
+      h1 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 40px;
+      }
+      &_buttons {
+        margin-top: 0px;
+        justify-content: space-between;
+        gap: 5px;
+        .button {
+          padding: 5px 15px;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &_right {
+      overflow-y: unset;
+      max-height: unset;
+      h2 {
+        font-size: 16px;
+      }
+    }
+
+    &_form {
+      padding: 50px 20px;
+      .form-field {
+        input,
+        textarea {
+          &::placeholder {
+            letter-spacing: 1px;
+            font: normal normal bold 12px/15px Akzidenz-Grotesk Light;
+          }
+        }
+      }
+      .indication {
+        font-size: 14px;
+      }
+    }
+
+    .primary-button {
+      width: 190px;
+      .relative {
+        height: 40px;
+      }
+      &_text {
+        font-size: 15px;
+        .light {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .error-msg,
+  .file-btn_error-msg {
+      padding-left: 10px;
+  }
+}
+
+.light {
+  font-size: 23px;
+  font-family: Akzidenz-Grotesk Light;
+}

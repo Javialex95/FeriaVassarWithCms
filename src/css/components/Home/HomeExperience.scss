@@ -1,0 +1,235 @@
+.home-experience {
+  &_title {
+    color: $white;
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid $black;
+    background-color: $red-darker;
+    font: normal normal bold 35px/100px Maison Neue Bold;
+    h2 {
+      display: inline-block;
+    }
+  }
+  &_container {
+    display: flex;
+    padding: 30px 0;
+    @extend .flex-center;
+    flex-direction: column;
+    border-bottom: 1px solid $black;
+    background-color: $green-darker;
+    .text {
+      padding: 0 20px;
+      font: normal normal 300 18px/22px Akzidenz-Grotesk Light;
+    }
+  }
+  &_hover {
+    width: 147px;
+    height: 56px;
+    color: $white;
+    border-radius: 28px;
+    @extend .flex-center;
+    background: rgba(#231f20, 0.14);
+    border: 1px solid rgba(#ffffff, 0.3);
+    font: normal normal 300 18px/33px Maison Neue Light;
+  }
+  @media (max-width: $breakpoint-laptop) {
+    &_hover {
+      width: 130px; height: 40px;
+      font: normal normal 300 20px/33px Maison Neue Light;
+    }
+    button {
+      font: normal normal 300 20px/33px Maison Neue Light;
+    }
+    &_title {
+      font: normal normal bold 30px/60px Maison Neue Bold;
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    &_hover {
+      display: none;
+    }
+    &_title {
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    &_title {
+      font: normal normal bold 20px/40px Maison Neue Bold;
+    }
+  }
+  &_images {
+    width: 100vw;
+    overflow: hidden;
+    max-width: 1800px;
+    height: 50vh;
+    min-height: 550px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .image {
+      position: absolute;
+      &--hidden {
+        opacity: 0;
+        @extend .transition;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      &-1 {
+        z-index: 9;
+        top: 50px;
+        width: 300px;
+        @extend .absolute-centered;
+        transform: translate(-50%, 0);
+      }
+      &-2 {
+        z-index: 10;
+        left: 30%;
+        top: 35%;
+        width: 320px;
+        transform: translate(-30%, -20%);
+      }
+      &-3 {
+        z-index: 8;
+        right: 50%;
+        top: 50%;
+        width: 535px;
+        transform: translate(100%, -20px);
+      }
+      &-4 {
+        z-index: 11;
+        right: 40%;
+        top: 20%;
+        transform: translate(90%, 50px);
+        img {
+          width: 288px;
+        }
+      }
+      &-5 {
+        z-index: 10;
+        left: 25%;
+        top: 5%;
+        transform: translate(-50%, 0px);
+        img {
+          width: 200px;
+        }
+      }
+      &-6 {
+        z-index: 11;
+        left: 20%;
+        bottom: 20%;
+        transform: translate(-50%, 0px);
+        img {
+          width: 200px;
+        }
+      }
+      &-7 {
+        z-index: 11;
+        right: 20%;
+        bottom: 20%;
+        transform: translate(50%, 0px);
+        img {
+          width: 200px;
+        }
+      }
+      @media (max-width: $breakpoint-laptop) {
+        &-1 {
+          top: 50px;
+          width: 200px;
+        }
+        &-2 {
+          width: 180px;
+          top: 50%;
+          transform: translate(-0%, -20%);
+        }
+        &-3 {
+          top: 30%;
+          width: 400px;
+        }
+        &-7 {
+          width: 200px;
+        }
+      }
+    }
+    @media (max-width: $breakpoint-laptop) {
+      min-height: 400px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      min-height: 450px;
+      .image {
+        &--hidden {
+          display: none;
+        }
+        &-1 {
+          width: 220px;
+          top: 25%; right: 10%; left: unset;
+          transform: translate(-10%, 0);
+        }
+        &-2 {
+          width: 175px;
+          height: 233px;
+          top: 20%; left: 5%;
+        }
+        &-3 {
+          right: 5%; left: unset;
+          top: 5% !important;
+          width: 253px; height: 169px;
+          transform: translate(0%, 0%);
+        }
+        &-4 {
+          top: 40%;
+        }
+        &-5 {
+          top: 70%;
+          z-index: 11;
+        }
+        &-7 {
+          top: 75%;
+          transform: translate(20%, -40px);
+          img {
+            width: 300px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+  button {
+    border: none;
+    display: flex;
+    color: $white;
+    cursor: pointer;
+    @extend .flex-center;
+    background: transparent;
+    padding: 50px 0 25px 0;
+    font: normal normal 300 18px/33px Maison Neue Light;
+    &:hover {
+      text-decoration: underline;
+    }
+    svg {
+      margin-left: 20px;
+      width: 15px;
+      height: 15px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      margin-left: auto;
+      margin-right: 20px;
+      font-size: 15px;
+      padding: 20px 0 0px 0;
+      svg {
+        width: 12px;
+        height: 12px;
+        g {
+          stroke-width: 4;
+        }
+      }
+      &, svg {
+        color: $black;
+      }
+    }
+  }
+}

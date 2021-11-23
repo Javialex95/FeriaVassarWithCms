@@ -1,0 +1,161 @@
+.experience {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+  &_title {
+    width: 100%;
+    height: 180px;
+    flex: 0 0 auto;
+    padding: 0px 120px;
+    color: $black;
+    @extend .flex-center;
+    align-items: start;
+    background-color: $yellow;
+    flex-direction: column;
+    h1 {
+      text-transform: capitalize;
+      font: normal normal bold 60px/100px Maison Neue Bold;
+    }
+    .hidden {
+    }
+  }
+  &_content {
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    background-color: $pink;
+    &_container {
+      display: flex;
+      height: 100%;
+    }
+    &_left, &_right {
+      height: 100%;
+    }
+    &_left {
+      width: 40%;
+      color: $white;
+      padding: 0 120px;
+      font-size: 32px;
+      @extend .flex-center;
+    }
+    &_right {
+      width: 60%;
+      max-height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+
+  &_item {
+    &_image {
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &_content {
+      color: $black;
+      padding: 40px 30px;
+      background-color: $white;
+      .title {
+        margin-top: 10px;
+        font: normal normal 300 47px/63px Maison Neue Light;
+      }
+      .description {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-laptop) {
+    &_content {
+      &_left {
+        padding: 0 40px;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &_content {
+      &_left {
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    height: unset;
+    &_title {
+      height: unset;
+      transition: 0.3s ease-in-out;
+      padding: 130px 20px 20px 20px;
+      h1 {
+        font: normal normal bold 40px/80px Maison Neue Bold;
+      }
+    }
+    &_content {
+      &_container {
+        flex-direction: column;
+      }
+      &_left {
+        display: none;
+      }
+      &_right {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        padding-bottom: 80px;
+        justify-content: space-around;
+      }
+    }
+
+    &_item {
+      width: 40%;
+      margin-top: 50px;
+      &_image {
+        img {
+          transition: 0.3s ease-in-out;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+      }
+      &_content {
+        padding: 10px;
+        text-align: center;
+        background-color: transparent;
+        .title {
+          color: $white;
+          font: normal normal 300 14px/19px Maison Neue Light;
+        }
+        .description {
+          display: none;
+        }
+      }
+      &:hover {
+          img {
+            transform: scale(1.05);
+          }
+        .title {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+}
+.desktop-hide {
+  display: none;
+  @media (max-width: $breakpoint-tablet) {
+    display: block;
+  }
+}
+.mobile-hide {
+  display: unset;
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}

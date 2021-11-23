@@ -1,0 +1,233 @@
+.home-manifesto {
+  margin-top: -4px;
+  &-contenedor {
+    > div {
+      width: 50%;
+    }
+
+    .titulo {
+      padding: 10px 20px;
+      h2 {
+        margin-top: -10px;
+      }
+    }
+
+    &-title {
+      display: flex;
+      color: $white;
+
+      align-items: center;
+      background: $purple;
+      h2 {
+        letter-spacing: 1px;
+        font: normal normal bold 90px/120px Maison Neue Bold;
+        font-size: 80px;
+      }
+      p {
+        font: normal normal 20px/27px Maison Neue Light;
+        font-weight: lighter;
+        letter-spacing: 5px;
+        font-size: 14px;
+      }
+
+      &-aros {
+        width: 25%;
+        height: 100%;
+        background-size: cover;
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-position: 20% center;
+        background-image: url(../../../assets/textura_division_manifesto_web.svg);
+
+        @media (max-width: $breakpoint-tablet){
+          background-image: url(../../../assets/textura_division_home.png);
+        }
+      }
+    }
+    @media (max-width: $breakpoint-laptop) {
+      &-title {
+        h2 {
+          font: normal normal bold 60px/100px Maison Neue Bold;
+        }
+        p {
+          font: normal normal 13px/17px Maison Neue Light;
+          letter-spacing: 5px;
+        }
+      }
+    }
+  }
+  &-text {
+    color: $white;
+    padding: 54px 100px 54px 40px;
+    background: $orange;
+    h2 {
+      font: normal normal normal 50px/55px Segoe UI;
+    }
+    h3 {
+      font: normal normal 300 30px/30px Segoe UI;
+    }
+    p {
+      margin: 30px 0;
+      font: normal normal 300 18px/20px Akzidenz-Grotesk Light;
+    }
+    @media (max-width: $breakpoint-laptop) {
+      padding: 54px 40px 54px 30px;
+
+      h2 {
+        font: normal normal normal 40px/45px Segoe UI;
+      }
+      h3 {
+        font: normal normal 300 25px/25px Segoe UI;
+      }
+      p {
+        font: normal normal 300 16px/19px Akzidenz-Grotesk Light;
+      }
+    }
+  }
+
+  &_button {
+    z-index: 10;
+    position: absolute;
+    bottom: 50px; left: 50%;
+    transform: translateX(-50%);
+    
+    span {
+      font-size: 20px !important;
+      color: #000;
+    }
+    .primary-button {
+      min-width: unset;
+      width: 370px;
+      .relative {
+        height: 60px;
+      }
+      &_text {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .imagen {
+    height: 100vh;
+    position: relative;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    &-contenedor {
+      flex-direction: column;
+      &-title {
+        .titulo {
+          padding: 50px 0 25px 20px;
+        }
+        flex-direction: column;
+        width: 100% !important;
+        align-items: flex-start;
+        &-aros {
+          width: 100%;
+          height: 100px;
+          background-position: center center;
+        }
+      }
+    }
+    &-text {
+      width: 100% !important;
+    }
+    &_button {
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      padding: 30px 0;
+      background: $white;
+      justify-content: center;
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+      .primary-button {
+        width: 300px;
+        min-width: unset;
+        .relative {
+          height: 45px;
+        }
+        span {
+          font-size: 15px !important;
+        }
+        &_text {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    &-text {
+      p {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 30px;
+        margin-bottom: 50px;
+      }
+      h2 {
+        font-size: 45px;
+        margin-bottom: 50px;
+        .wordUp {
+          line-height: 45px;
+          gap: 0.1ex 0.5ex;
+        }
+      }
+    }
+    .titulo {
+      p {
+        font: normal normal 16px/15px Maison Neue Light;
+        letter-spacing: 1px;
+      }
+      h2 {
+        font: normal normal bold 50px/80px Maison Neue Bold !important;
+      }
+    }
+  }
+
+  &_iframe {
+    width: 100%;
+    height: 100vh;
+    display: block;
+  }
+}
+
+.test1 {
+  width: 200px;
+}
+.test {
+  width: 200px;
+}
+.test2 {
+  left: 0;
+  width: 300px;
+}
+
+.word-hover {
+  &_hover {
+    z-index: 2;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid$black;
+    font-weight: 600;
+  }
+  &_word {
+    font-family: 'Maison Neue Bold';
+    cursor: pointer;
+    font-weight: 800;
+    font: normal normal medium 25px/30px Akzidenz-Grotesk Medium;
+  }
+}
+
+.wordUp {
+  user-select: none;
+  display: flex;
+  cursor: pointer;
+  flex-wrap: wrap;
+  gap: 0.2ex 0.5ex; // Need workaround?
+  // * + * {
+  //   margin-left: 0.5ex;
+  // }
+  &_word {
+  }
+}

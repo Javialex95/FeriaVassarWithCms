@@ -15,9 +15,12 @@ export const HomeEntradas = () => {
                 </span>
             </div>
 
-            <Button >
-                Adquiere tus entradas a <strong>Vassar</strong>
-            </Button>
+            <a href="https://www.entradasamarillas.com/event/feria-vassar" target="_blank" rel="noreferrer">
+
+                <Button >
+                    Adquiere tus entradas a <strong>Vassar</strong>
+                </Button>
+            </a>
 
         </div>
     )

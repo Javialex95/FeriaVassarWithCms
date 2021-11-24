@@ -19,10 +19,11 @@ export const EmprenForm = ({ data }) => {
     const formRef = useRef(null);
     const [perfil, setPerfil] = useState({})
     const [globalError, setGlobalError] = useState(false)
-    const [loading, setLoading] = useState(false)
+    const [globalErrorArchivos, setGlobalErrorArchivos] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     const realCategory = () => {
-        return categorias.find(categ => categ.value == perfil.categoria);
+        return categorias.find(categ => categ.value === perfil.categoria);
     }
 
 
@@ -53,8 +54,16 @@ export const EmprenForm = ({ data }) => {
             urlWeb: urlWeb
         }
 
+        console.log(galeriaImg1,
+            galeriaImg2,
+            galeriaImg3,
+            galeriaImg4,
+            galeriaImg5,
+            imagenMenu,
+            logo)
+
         if (galeriaImg1 === '' || galeriaImg2 === '' || galeriaImg3 === '' || imagenMenu === '' || logo === '') {
-            return setGlobalError(true)
+            return setGlobalErrorArchivos(true)
         }
 
         // GUARDAR IMAGENES
@@ -252,14 +261,20 @@ export const EmprenForm = ({ data }) => {
                                     <div className="file-btn_error-msg global-error">
                                         <span className="file-btn_error-msg">
                                             EXISTEN ERRORES EN EL FORMULARIO
-                                            <br/><br/>
-                                            RECUERDA SUBIR LOS ARCHIVOS DE IMÁGENES OBLIGATORIOS
+
                                         </span>
                                     </div>
                                 }
+
+                                {globalErrorArchivos &&
+                                    <div className="file-btn_error-msg global-error">
+                                        <span className="file-btn_error-msg">
+                                            <p>RECUERDA SUBIR LOS ARCHIVOS DE IMÁGENES OBLIGATORIOS</p>
+                                        </span>
+                                    </div>
+                                }
+
                                 <div className="recopilacion_submit">
-
-
 
                                     {!loading ?
                                         <Button hoverDirection="left" className="inline mx-auto" onClick={doSubmit}>
@@ -267,7 +282,7 @@ export const EmprenForm = ({ data }) => {
                                         </Button>
 
                                         :
-                                        <div>
+                                        <div className="loading-msg">
                                             <span>Estamos guardando tu información: Por favor no cierres esta pestaña. </span>
                                         </div>
                                     }

@@ -53,6 +53,8 @@
             span{
                 cursor: pointer;
                 transition: 0.5s all;
+    font-family: 'Maison Neue Bold';
+
             }
 
             @media (max-width: $breakpoint-tablet){
@@ -84,9 +86,11 @@
         }
     }
 
-    .header-movil-lista{
-        height: 50vh;
-    }
+  
+}
+
+.header-movil-lista{
+    height: 50vh;
 }
 
 .lista-emprendi-container{
@@ -136,5 +140,16 @@
             padding-bottom: 25px;
         }
   
+    }
+}
+
+.button-movil-galeria{
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 215px;
+
+    .primary-button_text{
+        font-size: 15px;
     }
 }

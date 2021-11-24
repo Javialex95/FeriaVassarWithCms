@@ -26,6 +26,10 @@ $breakpoint-mobile: 425px;
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
     color: $black;

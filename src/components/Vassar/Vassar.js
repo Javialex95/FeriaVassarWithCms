@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import vassarIcon from '../../assets/logo_es_vassar_web.svg'
 import { chevronUp } from '../Common/Icons'
 import { WordUp } from '../Common/WordUp'
-import image from '../../assets/imagen_experiencia_5_web@2x.png'
+import gif_vassar from '../../assets/gif_vassar.gif';
 
 export const Vassar = () => {
     const [wordsAnim1, setWordsAnim1] = useState(false);
@@ -14,7 +14,7 @@ export const Vassar = () => {
         <section id="top" className="vassar">
             <div className="vassar_images">
                 <div className="">
-                    <img src={image} alt="" />
+                    <img src={gif_vassar} alt="" />
                 </div>
             </div>
             <div className="vassar_content">

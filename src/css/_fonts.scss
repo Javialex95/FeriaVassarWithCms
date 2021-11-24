@@ -76,3 +76,14 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: 'BaskervilleRegular';
+    src: url('../assets/fonts/LibreBaskerville-Regular.eot'),
+        url('../assets/fonts/LibreBaskerville-Regular.woff2') format('woff2'),
+        url('../assets/fonts/LibreBaskerville-Regular.woff') format('woff'),
+        url('../assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

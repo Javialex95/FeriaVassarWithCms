@@ -30,9 +30,9 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
                         <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.VASSAR}>Es <b>Vassar</b> </Link> <br />
                         <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.EXPERIENCE}> Experiencia </Link> <br />
                         <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.FAQ}>FAQ</Link> <br />
-                        <a href="https://www.entradasamarillas.com/event/feria-vassar">Adquiere tus <b>entradas</b> </a><br />
+                        <a href="https://www.entradasamarillas.com/event/feria-vassar" target="_blank" rel="noreferrer">Adquiere tus <b>entradas</b> </a><br />
 
-                        <a href="/#contacto" onClick={() => { closeMenu(); toggleMenu(); }}>Contacto</a>
+                        <a href="http://localhost:3000/#/#contacto" onClick={() => { closeMenu(); toggleMenu(); }}>Contacto</a>
                     </ul>
 
                     <SearchMenu

@@ -2,6 +2,11 @@ import React from 'react'
 import { chevronUp, envelope } from '../Common/Icons'
 
 export const HomeContacto = () => {
+    
+    const toTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div className="home-contacto" id="contacto">
             <div className="home-contacto_container">
@@ -18,7 +23,7 @@ export const HomeContacto = () => {
                     <h4>DEJANOS TU OPINION</h4>
                     <h2>Contáctanos</h2>
                     <h3>
-                        <a href="feriavassar@paramopresenta.com">
+                        <a href="mailto:feriavassar@paramopresenta.com">
                             feriavassar@paramopresenta.com
                         </a>
                     </h3>
@@ -28,12 +33,12 @@ export const HomeContacto = () => {
 
 
             <div className="home-contacto_comebackUp">
-                <a href="#home" className="scrollTo">
+                <div onClick={toTop} className="scrollTo">
                     <span>Volver arriba</span>
                     <div className="">
                         {chevronUp}
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     )

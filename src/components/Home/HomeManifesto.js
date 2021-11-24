@@ -5,6 +5,7 @@ import { Button } from '../Common/Button'
 import { WordUp } from '../Common/WordUp'
 import { useInView } from "react-intersection-observer";
 import iframeImage from '../../assets/frame-video.jpg'
+import { Link } from 'react-router-dom'
 
 export const HomeManifesto = () => {
     const [wordsAnim1, setWordsAnim1] = useState(false);
@@ -21,12 +22,11 @@ export const HomeManifesto = () => {
         setTimeout(() => {
             setWordsAnim1(true)
         }, 500);
-        console.log("triggered")
     }, [inView])
 
     const test = <img className="word-hover_hover test" src={foto_background_1} alt="manifesto" />
-    const test1 = <img className="word-hover_hover test1" src={foto_background_1} alt="manifesto" />
-    const test2 = <img className="word-hover_hover test2" src={foto_background_1} alt="manifesto" />
+    // const test1 = <img className="word-hover_hover test1" src={foto_background_1} alt="manifesto" />
+    // const test2 = <img className="word-hover_hover test2" src={foto_background_1} alt="manifesto" />
 
     return (
         <section className="home-manifesto">
@@ -98,9 +98,12 @@ export const HomeManifesto = () => {
                     src="https://www.youtube.com/embed/Z4RjCSjRAuw" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen muted autoPlay>
                 </iframe>
                 <div className="home-manifesto_button">
-                    <Button>
-                        <span>Conoce qué es <strong>Vassar</strong></span>
-                    </Button>
+
+                    <Link to="/vassar">
+                        <Button>
+                            <span>Conoce qué es <strong>Vassar</strong></span>
+                        </Button>
+                    </ Link >
                 </div>
             </div>
         </section>

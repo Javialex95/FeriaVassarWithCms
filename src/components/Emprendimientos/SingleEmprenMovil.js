@@ -89,6 +89,14 @@ export const SingleEmprenMovil = () => {
                                 <a href={perfil.urlInsta} target="_blank" rel="noreferrer">
                                     <img src={instagram} alt="instagram" />
                                 </a>
+
+                                <Link to="/emprendimientos">
+                                        <Button
+                                            children="Regresar a "
+                                            lastWord="galería"
+                                            className="boton-pagina"
+                                        />
+                                    </Link>
                             </div>
 
                             {userId === id &&

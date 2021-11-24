@@ -84,11 +84,22 @@ export const SingleEmpren = () => {
                                     </a>
                                 </div>
 
+                                <div className="botones flex">
+                                    <Link to="/emprendimientos">
+                                        <Button
+                                            children="Regresar a "
+                                            lastWord="galería"
+                                            className="boton-pagina"
+                                        />
+                                    </Link>
+                                </div>
+
+
+
                                 {userId === id &&
                                     <Link className="go-back-perfil" to={`/profile`}>
                                         <Button
                                             children="Editar perfil"
-
                                         />
                                     </Link>
                                 }

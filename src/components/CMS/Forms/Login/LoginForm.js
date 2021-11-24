@@ -60,7 +60,7 @@ export const LoginForm = () => {
                             </div>
 
                             <div className="form-field mt-3">
-                                <Input control={control} name="password" placeholder="Contraseña" maxLength="21" />
+                                <Input control={control} name="password" placeholder="Contraseña"  />
                             </div>
 
                             <>

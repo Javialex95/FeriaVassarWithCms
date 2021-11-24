@@ -1,8 +1,8 @@
-import music from '../../assets/portada_musica_web.png'
-import parches from '../../assets/portada_parches_web.png'
-import cultura from '../../assets/portada_cultura_web.png'
-import gastronomia from '../../assets/portada_gastronomia_web.png'
-import espacio from '../../assets/portada_espacio_web.png'
+import music from '../../assets/portada_musica_web.jpg'
+import parches from '../../assets/portada_parches_web.jpg'
+import cultura from '../../assets/portada_cultura_web.jpg'
+import gastronomia from '../../assets/portada_gastronomia_web.jpg'
+import espacio from '../../assets/portada_espacio_web.jpg'
 
 export const experiences = [
     {

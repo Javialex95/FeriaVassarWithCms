@@ -1,5 +1,5 @@
 .menu-opener {
-    top: 10px;
+    top: 5%;
     right: 10px;
     z-index: 101;
     width: 300px;
@@ -8,7 +8,7 @@
     cursor: pointer;
     
     #Line_12, #Line_13{
-        stroke: $white
+        stroke: white
     }
 
     @media (max-width: $breakpoint-tablet){
@@ -31,7 +31,7 @@
 
     &:hover {
         circle {
-            fill: $white;
+            fill: white;
         }
         #logo-svg {
             color: $black;
@@ -46,7 +46,7 @@
 #logo-svg {
     width: 10px;
     height: auto;
-    color: $white;
+    color: white;
 }
 
 .menu{
@@ -69,7 +69,7 @@
     &-items{
         position: relative;
         width: 50%;
-        border-right: 2px solid $white;
+        border-right: 2px solid white;
 
         @media (max-width: $breakpoint-tablet){
             width: 90%;
@@ -85,7 +85,7 @@
 
             a{
                 display: inline-block;
-                color: $white;
+                color: white;
                 font-size: 35px;
                 font-weight: 300;
                 padding-bottom: 15px;
@@ -126,11 +126,11 @@
         }
 
         input {
-            color: $white;
-            border-color: $white;
+            color: white;
+            border-color: white;
 
             &::placeholder{
-                color: $white;
+                color: white;
             }
         }
     }

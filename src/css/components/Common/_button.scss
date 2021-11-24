@@ -8,7 +8,6 @@
   border-radius: 100px;
   display: inline-block;
   border: 1px solid$black;
-  min-width: 450px;
   &,span {
     @extend .transition;
     background-color: $white;
@@ -39,7 +38,7 @@
   }
   & > * {
     // BUTTON HEIGHT
-    height: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -3,31 +3,35 @@ import { chevronUp } from './Common/Icons'
 
 export const Footer = () => {
 
-    const toTop = () =>{
+    const toTop = () => {
         window.scrollTo(0, 0);
     }
 
 
     return (
-        <section className="footer ">
+        <>
+            <section className="footer ">
 
-            <div onClick={toTop} className="footer_comeback_container flex">
-                <span>Volver arriba</span>
-                <div className="footer_flechaArriba">
-                    {chevronUp}
+                <div onClick={toTop} className="footer_comeback_container flex">
+                    <span>Volver arriba</span>
+                    <div className="footer_flechaArriba">
+                        {chevronUp}
+                    </div>
                 </div>
-            </div>
 
+
+            </section>
+            
             <div className="footer_bottom flex">
                 <div>
-                © VASSAR 2021
+                    © VASSAR 2021
                 </div>
 
                 <div>
                     Todos los derechos reservados
                 </div>
             </div>
-        </section>
+        </>
     )
 }
 

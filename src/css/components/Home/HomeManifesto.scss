@@ -61,26 +61,26 @@
     padding: 54px 100px 54px 40px;
     background: $orange;
     h2 {
-      font: normal normal normal 50px/55px Segoe UI;
+      font: normal normal normal 50px/55px Maison Neue Light;
     }
     h3 {
-      font: normal normal 300 30px/30px Segoe UI;
+      font: normal normal 300 30px/30px Maison Neue Light;
     }
     p {
       margin: 30px 0;
-      font: normal normal 300 18px/20px Akzidenz-Grotesk Light;
+      font: normal normal 300 18px/20px Maison Neue Light;
     }
     @media (max-width: $breakpoint-laptop) {
       padding: 54px 40px 54px 30px;
 
       h2 {
-        font: normal normal normal 40px/45px Segoe UI;
+        font: normal normal normal 40px/45px Maison Neue Light;
       }
       h3 {
-        font: normal normal 300 25px/25px Segoe UI;
+        font: normal normal 300 25px/25px Maison Neue Light;
       }
       p {
-        font: normal normal 300 16px/19px Akzidenz-Grotesk Light;
+        font: normal normal 300 16px/19px Maison Neue Light;
       }
     }
   }
@@ -160,6 +160,7 @@
     &-text {
       p {
         font-size: 18px;
+        line-height: 1.2;
       }
       h3 {
         font-size: 30px;
@@ -189,6 +190,9 @@
     width: 100%;
     height: 100vh;
     display: block;
+    @media (max-width: $breakpoint-mobile){
+      height: 350px;
+    }
   }
 }
 
@@ -215,7 +219,7 @@
     // font-family: 'Maison Neue Bold';
     cursor: pointer;
     font-weight: 800;
-    font: normal normal medium 25px/30px Akzidenz-Grotesk Medium;
+    font: normal normal medium 25px/30px;
   }
 }
 

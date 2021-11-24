@@ -16,6 +16,7 @@ const fieldsToIgnore = []; // ["nombre"]
 
 export const EmprenForm = ({ data }) => {
     const triggerSubmit = useRef(null);
+    const formRef = useRef(null);
     const [perfil, setPerfil] = useState({})
     const [globalError, setGlobalError] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -90,30 +91,28 @@ export const EmprenForm = ({ data }) => {
         triggerSubmit.current.click()
     }
 
-
-
-
     useEffect(() => {
         const userId = localStorage.getItem('userId')
-
         getPerfil(userId).then(data =>
             setPerfil(data.data.perfil)
         )
-
-
     }, []);
+
+    const onErrors = errors => {
+        console.log("aa", errors)
+        if (Object.keys(errors).length > 0)
+            setGlobalError(true)
+    }
 
     const userId = localStorage.getItem('userId')
 
     if (!userId) {
         return <Redirect to="/login" />
-
     }
-
 
     return (
         <>
-            <Form validationSchema={emprenSchema} onSubmit={submitContenido} render={({ control }) => {
+            <Form ref={formRef} validationSchema={emprenSchema} onErrors={onErrors} onSubmit={submitContenido} render={({ control }) => {
                 return (
                     <>
                         {Object.keys(perfil).length !== 0 ?
@@ -252,6 +251,8 @@ export const EmprenForm = ({ data }) => {
                                 {globalError &&
                                     <div className="file-btn_error-msg global-error">
                                         <span className="file-btn_error-msg">
+                                            EXISTEN ERRORES EN EL FORMULARIO
+                                            <br/><br/>
                                             RECUERDA SUBIR LOS ARCHIVOS DE IMÁGENES OBLIGATORIOS
                                         </span>
                                     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useImperativeHandle, useState } from 'react'
 import { useController, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -52,9 +52,9 @@ const FormItem = (props) => {
 }
 
 
-const FormContainer = (props) => {
-    const { onSubmit, render, validationSchema } = props;
-    const { handleSubmit, control, formState } = useForm({
+const FormContainer = React.forwardRef((props, ref) => {
+    const { onSubmit, render, validationSchema, onErrors } = props;
+    const { handleSubmit, control, formState: { errors } } = useForm({
         mode: 'onChange',
         resolver: yupResolver(validationSchema),
     });
@@ -63,9 +63,16 @@ const FormContainer = (props) => {
         if (onSubmit) onSubmit(data);
     };
 
+    useImperativeHandle(ref, () => ({
+        getErrors: () => errors
+     }));
+
+    useEffect(() => {
+        if (onErrors) onErrors(errors)
+    }, [errors, onErrors])
+
     function __doSubmit(e) {
         e.preventDefault()
-        console.log("formState", formState)
         handleSubmit(__onSubmit)();
     }
 
@@ -74,7 +81,7 @@ const FormContainer = (props) => {
             {render({ control })}
         </form>
     )
-}
+})
 
 FormContainer.FormItem = FormItem;
 

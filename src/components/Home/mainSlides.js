@@ -4,15 +4,15 @@ import accesorioRight from '../../assets/slides/right/ACCESORIOS.png';
 
 import arteSlider from '../../assets/slides/left/arte_diseño_slider.jpg';
 import arteLogo from '../../assets/slides/left/arte_diseño_texto.png';
-import arteRight from '../../assets/slides/right/ARTE Y DISEÑO.png';
+import arteRight from '../../assets/slides/right/ARTE-Y-DISEÑO.png';
 
 import gastronomiaSlider from '../../assets/slides/left/gastronomia_slider.jpg';
 import gastronomiaLogo from '../../assets/slides/left/gastronomia_texto.png';
-import gastronomiaRight from '../../assets/slides/right/MERCADO GASTRONOMICO.png';
+import gastronomiaRight from '../../assets/slides/right/MERCADO-GASTRONOMICO.png';
 
 import hogarSlider from '../../assets/slides/left/hogar_decoracion_slider.jpg';
 import hogarLogo from '../../assets/slides/left/hogar_decoracion_texto.png';
-import hogarRight from '../../assets/slides/right/HOGAR Y DECORACIÓN.png';
+import hogarRight from '../../assets/slides/right/HOGAR-Y-DECORACIÓN.png';
 
 import kidsSlider from '../../assets/slides/left/kids_slider.jpg';
 import kidsLogo from '../../assets/slides/left/kids_texto.png';
@@ -28,7 +28,7 @@ import restaurantesRight from '../../assets/slides/right/RESTAURANTES.png';
 
 import saludSlider from '../../assets/slides/left/salud_belleza_slider.jpg';
 import saludLogo from '../../assets/slides/left/salud_belleza_texto.png';
-import saludRight from '../../assets/slides/right/SALUD Y BELLEZA.png';
+import saludRight from '../../assets/slides/right/SALUD-Y-BELLEZA.png';
 
 export const mainSlides = [
     {

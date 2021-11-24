@@ -14,3 +14,11 @@
         transform: rotate(-360deg);
     }
 }
+@keyframes bounce {
+    0% {
+        transform: translateY(-30%);
+    }
+    100% {
+        transform: translateY(-80%);
+    }
+}

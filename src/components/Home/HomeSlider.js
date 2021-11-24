@@ -4,6 +4,7 @@ import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import { EffectFade } from 'swiper';
 import { mainSlides } from './mainSlides';
+import { arrowDown } from '../Common/Icons';
 
 export const HomeSlider = () => {
     const swiperRef = useRef(null);
@@ -52,6 +53,10 @@ export const HomeSlider = () => {
                 }
 
             </Swiper>
+
+            <div className="mobile-arrowDown">
+                {arrowDown}
+            </div>
         </div>
     )
 }

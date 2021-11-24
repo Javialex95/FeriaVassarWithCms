@@ -3,10 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import { EffectFade } from 'swiper';
-
-import image1LeftT from '../../assets/slides/slide1Top.jpg'
-import image1LeftB from '../../assets/slides/slide1Bottom.jpg'
-import image1Right from '../../assets/1right.jpg'
+import { mainSlides } from './mainSlides';
 
 export const HomeSlider = () => {
     const swiperRef = useRef(null);
@@ -26,30 +23,36 @@ export const HomeSlider = () => {
                 loop={true}
                 centeredSlides={true}
                 slidesPerView={1}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                    autoplayDisableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                }}
+                // autoplay={{
+                //     delay: 5000,
+                //     disableOnInteraction: false,
+                //     autoplayDisableOnInteraction: false,
+                //     pauseOnMouseEnter: true,
+                // }}
                 observeParents={true}
                 observer={true}
                 className="home-slider_swiper"
             >
-                <SwiperSlide>
-                    <div className="slide slide-1">
-                        <div className="left-img">
-                            <img className="top" src={image1LeftT} alt="" />
-                            <img className="bottom" src={image1LeftB} alt="" />
-                        </div>
-                        <div className="text">
-                            <div className="">MOVIMIENTO CREATIVO</div>
-                        </div>
-                        <div className="right-img" style={{backgroundImage: `url(${image1Right})` }}>
-                            {/* <img src={image1Right} alt="" /> */}
-                        </div>
-                    </div>
-                </SwiperSlide>
+                {
+                    mainSlides.map((slide, index) => {
+                        return (
+                            <SwiperSlide index={index}>
+                                <div className={`slide slide-1 ${slide.className}`}>
+                                    <div className="left-img" style={{ backgroundImage: `url(${slide.leftImg})` }}>
+                                        <img className="top" src={slide.logo} alt="" />
+                                    </div>
+                                    <div className="text">
+                                        <div className="">{slide.text}</div>
+                                    </div>
+                                    <div className="right-img" style={{ backgroundImage: `url(${slide.rightImg})` }}>
+                                        {/* <img src={image1Right} alt="" /> */}
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })
+                }
+
             </Swiper>
         </div>
     )

@@ -39,25 +39,38 @@
       }
     }
 
-    .bottom,
     .top {
-      width: 100%;
-      height: 40%;
-      display: block;
-      object-fit: cover;
+      left: 50%;
+      width: 50%;
+      top: 40px;
+      z-index: 10;
+      position: absolute;
+      object-fit: contain;
+      transform: translate(-50%, 0);
     }
-    .bottom {
-      height: 60%;
-      object-fit: cover;
-      object-position: top center;
+    .top {
+      height: auto;
+      display: block;
+    }
+    .left-img {
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
     @media (max-width: 900px) {
       .top {
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        width: 70%;
+        max-width: 250px;
       }
       .bottom {
-        display: none;
+        // display: none;
+      }
+    }
+    @media (max-width: $breakpoint-mobile) {
+      .top {
+        max-width: 150px;
       }
     }
   }
@@ -95,7 +108,7 @@
     }
     .left-img {
       width: 100%;
-      height: 50vh;
+      height: 50vh !important;
     }
   }
 }
@@ -106,8 +119,87 @@
 }
 .left-img {
   width: 40%;
+  position: relative;
 }
 .left-img,
 .text {
   max-height: 100vh;
+}
+
+.hogar-slide {
+  .top {
+    bottom: 20px;
+    top: unset !important;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .left-img {
+      background-position: bottom center !important;
+    }
+  }
+}
+
+.accesorio-slide {
+  .top {
+    top: 30px;
+  }
+}
+.arte-slide {
+  .top {
+    top: 30px !important;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .left-img {
+      background-position: top center !important;
+    }
+    .top {
+      top: 0px !important;
+    }
+  }
+}
+.gastronomia-slide {
+  @media (max-width: $breakpoint-tablet) {
+    .top {
+      top: 20px !important;
+    }
+  }
+}
+.kids-slide {
+  @media (max-width: $breakpoint-tablet) {
+    .left-img {
+      background-position: top center !important;
+    }
+  }
+}
+.moda-slide {
+  .top {
+    top: 10px !important;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .left-img {
+      background-position: top center !important;
+    }
+  }
+}
+.restaurantes-slide {
+  .top {
+    top: 10px !important;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .left-img {
+      background-position: top center !important;
+    }
+  }
+}
+.salud-slide {
+  .top {
+    top: 100px !important;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .top {
+      top: 20px !important;
+    }
+    .left-img {
+      background-position: top center !important;
+    }
+  }
 }

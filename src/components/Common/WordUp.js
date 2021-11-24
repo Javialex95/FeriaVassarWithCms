@@ -6,7 +6,7 @@ export const WordUp = ({ text, isActive }) => {
     const [words, setWords] = useState([]);
 
     useEffect(() => {
-        setWords(text.split(' '))
+        setWords([text])
     }, [text])
 
     return (

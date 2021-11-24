@@ -16,19 +16,17 @@ export const HomeSlider = () => {
 
     return (
         <div className="home-slider">
-
             <Swiper
                 modules={[EffectFade]} effect="fade"
                 ref={swiperRef}
                 loop={true}
                 centeredSlides={true}
                 slidesPerView={1}
-                // autoplay={{
-                //     delay: 5000,
-                //     disableOnInteraction: false,
-                //     autoplayDisableOnInteraction: false,
-                //     pauseOnMouseEnter: true,
-                // }}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    autoplayDisableOnInteraction: false,
+                }}
                 observeParents={true}
                 observer={true}
                 className="home-slider_swiper"

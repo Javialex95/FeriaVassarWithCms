@@ -20,7 +20,7 @@ export const EmprenForm = ({ data }) => {
     const [perfil, setPerfil] = useState({})
     const [globalError, setGlobalError] = useState(false)
     const [globalErrorArchivos, setGlobalErrorArchivos] = useState(false)
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
     const realCategory = () => {
         return categorias.find(categ => categ.value === perfil.categoria);
@@ -54,13 +54,6 @@ export const EmprenForm = ({ data }) => {
             urlWeb: urlWeb
         }
 
-        console.log(galeriaImg1,
-            galeriaImg2,
-            galeriaImg3,
-            galeriaImg4,
-            galeriaImg5,
-            imagenMenu,
-            logo)
 
         if (galeriaImg1 === '' || galeriaImg2 === '' || galeriaImg3 === '' || imagenMenu === '' || logo === '') {
             return setGlobalErrorArchivos(true)
@@ -153,7 +146,8 @@ export const EmprenForm = ({ data }) => {
 
                                 <div className="form-field mb-2">
                                     <div className="indication">
-                                        Adjunta los links de su marca
+                                        Adjunta los links de su marca <br />
+                                        Por favor escribe el URL completo copiándolo y pegándolo desde tu navegador arrancando por https://…
                                     </div>
 
                                     <Input control={control} name="urlWeb" placeholder="LINK DE WEB" maxLength="200" defaultValue={perfil.urlWeb} />

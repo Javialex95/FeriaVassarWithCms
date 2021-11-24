@@ -12,8 +12,13 @@ export const rightArrowLong = (
             <path id="Path_87" data-name="Path 87" d="M-128.368,2066.473l21.029,7.693v.747l-21.029,7.618" transform="translate(143.862 -2066.473)" fill="none" stroke="#e1dbcd" strokeWidth="1" />
         </g>
     </svg>
+)
 
-
+export const rightArrowEmpre = (
+    <svg width="100" height="100" viewBox="0 0 68 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path className="arrowLine" d="M35 8.03004H68" stroke="#231F20" />
+        <path d="M46.6964 0L68 7.69402V8.44118L46.6964 16.06" stroke="#231F20" />
+    </svg>
 )
 
 export const chevronUp = (

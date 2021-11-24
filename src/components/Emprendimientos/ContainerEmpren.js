@@ -3,7 +3,7 @@ import { Startup } from './Startup'
 import { Header } from './Header';
 import { Link } from 'react-router-dom';
 import { Button } from '../Common/Button';
-import { rightArrow } from '../Common/Icons';
+import { rightArrowEmpre } from '../Common/Icons';
 import { Cargando } from '../Common/Cargando';
 
 export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => {
@@ -22,9 +22,9 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
         }
 
         if (filtro === undefined) {
-            
+
             const newProfiles = perfiles.filter(perf => perf.logo !== '');
-   
+
             let result = splitToBulks(newProfiles, 20);
             setPerfilesNew(result)
 
@@ -43,10 +43,12 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
                 window.innerWidth > 700 &&
 
                 <>
-                    <Header />
+                    <Header
+                        galeria={true}
+                    />
 
                     <div className="narrow-right">
-                        {rightArrow}
+                        {rightArrowEmpre}
                     </div>
                 </>
 

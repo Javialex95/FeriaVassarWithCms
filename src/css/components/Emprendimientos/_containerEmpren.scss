@@ -51,10 +51,47 @@
         text-align: right;
         padding-right: 10px;
         position: absolute;
-        right: 0;
+        right: 5%;
         top: 22%;
+        animation: narrow-right 6s forwards;
         .arrowLine {
             d: path("M0 8.03004H68");
+        }
+    }
+
+    @keyframes narrow-right {
+        0%{
+            transform: translate(-30px, 0);
+            opacity: 1;
+        }
+
+        20%{
+            transform: translate(0px, 0);
+            opacity: 0.6;
+
+        }
+
+        40%{
+            transform: translate(-30px, 0);
+            opacity: 1;
+
+        }
+
+        60%{
+            transform: translate(0px, 0);
+            opacity: 0.6;
+
+        }
+
+        80%{
+            transform: translate(-30px, 0);
+            opacity: 1;
+
+        }
+        100%{
+            transform: translate(0px, 0);
+            opacity: 1;
+
         }
     }
 

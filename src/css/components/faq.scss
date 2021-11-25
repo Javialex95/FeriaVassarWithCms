@@ -17,6 +17,9 @@
     padding-top: 25vh;
   }
   &_content {
+    * {
+      outline: none !important;
+    }
     width: 54%;
     overflow-y: auto;
     max-height: 100vh;

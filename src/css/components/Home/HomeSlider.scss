@@ -1,6 +1,9 @@
 .home-slider {
   width: 100%;
   height: 100vh;
+  .mobile-arrowDown {
+    display: none;
+  }
 
   &_swiper {
     // height: 100vh;
@@ -88,6 +91,7 @@
   }
 
   @media (max-width: 900px) {
+    position: relative;
     .slide {
       img {
         display: block;
@@ -111,8 +115,24 @@
       width: 100%;
       height: 50vh !important;
     }
+
+    .mobile-arrowDown {
+      display: block;
+      z-index: 10;
+      width: 20px;
+      position: absolute;
+      left: 50%; bottom: 0%;
+      transform: translate(-50%, 0);
+      animation: bounce 1s ease-in-out infinite forwards alternate;
+      path {
+        stroke: $orange;
+      }
+    }
   }
 }
+
+
+
 .right-img {
   flex-grow: 1;
   background-size: cover;

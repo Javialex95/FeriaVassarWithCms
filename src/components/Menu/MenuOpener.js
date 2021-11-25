@@ -7,6 +7,7 @@ import { useOuterClick } from '../Common/Hooks/useOutsideClick';
 import { Menu } from './Menu';
 import { useLocation } from 'react-router';
 import { ROUTES } from '../Router/routes';
+import { useWindowSize } from '../Common/Hooks/useWindowSize';
 
 const test = {
     show: {
@@ -21,7 +22,7 @@ const test = {
 
 const test1 = {
     show: {
-        x: 40,
+        // x: 40,
         opacity: 1,
         transition: {
             x: {
@@ -33,7 +34,7 @@ const test1 = {
         },
     },
     hidden: {
-        x: 150,
+        // x: 150,
         opacity: 0,
         transition: {
             x: {
@@ -53,6 +54,7 @@ export const MenuOpener = () => {
     const [active, setActive] = useState(false);
     const [redirect, setRedirect] = useState(false);
     const location = useLocation();
+    const size = useWindowSize();
 
     const innerRef = useOuterClick(ev => outsideClick());
 
@@ -93,13 +95,22 @@ export const MenuOpener = () => {
         return null;
     }
 
+    const handleOnMouseEnter = () => {
+        if (size.width > 768)
+            setHover(true);
+    }
+    const handleOnMouseLeave = () => {
+        if (size.width > 768)
+            setHover(false);
+    }
+
     return (
         <>
-            <div className="menu-opener"
+            <div className={`menu-opener ${hover && 'menu-opener_hover'}`}
                 ref={innerRef}
                 onClick={toggleMenu}
-                onMouseEnter={() => { setHover(true) }}
-                onMouseLeave={() => { setHover(false) }}
+                onMouseEnter={handleOnMouseEnter}
+                onMouseLeave={handleOnMouseLeave}
             >
                 <svg viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>

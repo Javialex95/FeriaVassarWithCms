@@ -1,6 +1,7 @@
 .home-manifesto {
   margin-top: -4px;
   &-contenedor {
+    overflow: hidden;
     > div {
       width: 50%;
     }
@@ -136,6 +137,7 @@
       width: 100%;
       display: flex;
       padding: 30px 0;
+      position: relative;
       background: $white;
       justify-content: center;
       border-top: 1px solid $black;

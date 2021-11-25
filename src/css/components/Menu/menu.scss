@@ -1,4 +1,5 @@
 .menu-opener {
+    $ctx: &;
     top: 5%;
     right: 10px;
     z-index: 101;
@@ -14,6 +15,18 @@
     @media (max-width: $breakpoint-tablet){
         width: 180px;
         top: 0;
+        #{$ctx}_hover {
+            circle {
+                fill: unset !important;
+            }
+            #logo-svg {
+                color: unset !important;
+            }
+    
+            #Line_12, #Line_13{
+                stroke: unset !important;
+            }
+        }
     }
     svg {
         width: 100%;
@@ -22,6 +35,7 @@
 
     text {
         font-size: 25px;
+        -webkit-transform: translateX(40px);-ms-transform: translateX(40px);transform: translateX(40px);
         font-family: Maison Neue Light;
     }
     circle {
@@ -29,7 +43,7 @@
         fill: $purple;
     }
 
-    &:hover {
+    &_hover {
         circle {
             fill: white;
         }
@@ -141,6 +155,9 @@
         bottom: 5%;
         width: 4%;
         max-width: 50px;
+        @media (max-width: $breakpoint-tablet) {
+            bottom: 10%;
+        }
     }
 }
 

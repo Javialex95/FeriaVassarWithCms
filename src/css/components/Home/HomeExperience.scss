@@ -82,15 +82,15 @@
       &-1 {
         z-index: 9;
         top: 50px;
-        width: 300px;
+        width: 250px;
         @extend .absolute-centered;
         transform: translate(-50%, 0);
       }
       &-2 {
         z-index: 10;
-        left: 30%;
-        top: 35%;
-        width: 320px;
+        left: 37%;
+        top: 50%;
+        width: 200px;
         transform: translate(-30%, -20%);
       }
       &-3 {
@@ -111,7 +111,7 @@
       }
       &-5 {
         z-index: 10;
-        left: 25%;
+        left: 29%;
         top: 5%;
         transform: translate(-50%, 0px);
         img {
@@ -120,17 +120,17 @@
       }
       &-6 {
         z-index: 11;
-        left: 20%;
-        bottom: 20%;
+        left: 25%;
+        bottom: 10%;
         transform: translate(-50%, 0px);
         img {
-          width: 200px;
+          width: 300px;
         }
       }
       &-7 {
         z-index: 11;
-        right: 20%;
-        bottom: 20%;
+        right: 15%;
+        bottom: 0%;
         transform: translate(50%, 0px);
         img {
           width: 200px;
@@ -138,16 +138,18 @@
       }
       @media (max-width: $breakpoint-laptop) {
         &-1 {
-          top: 50px;
+          top: 20px;
           width: 200px;
         }
         &-2 {
           width: 180px;
           top: 50%;
+          left: 31%;
           transform: translate(-0%, -20%);
         }
         &-3 {
-          top: 30%;
+          top: 50%;
+          right: 45%;
           width: 400px;
         }
         &-7 {
@@ -166,8 +168,8 @@
         }
         &-1 {
           width: 220px;
-          top: 25%; right: 10%; left: unset;
-          transform: translate(-10%, 0);
+          top: 25%; right: 50%; left: unset;
+          transform: translate(50%, 0);
         }
         &-2 {
           width: 175px;

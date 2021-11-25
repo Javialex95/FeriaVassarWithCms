@@ -6,27 +6,34 @@ import { WordUp } from '../Common/WordUp'
 import { useInView } from "react-intersection-observer";
 import iframeImage from '../../assets/frame-video.jpg'
 import { Link } from 'react-router-dom'
+import {useWindowSize} from '../Common/Hooks/useWindowSize'
 
 export const HomeManifesto = () => {
     const [wordsAnim1, setWordsAnim1] = useState(false);
     const [wordsAnim2, setWordsAnim2] = useState(false);
-    const [ref, inView] = useInView({
-        rootMargin: "1000px 0px 0px 0px",
+    
+    const [wordAnim1Ref, inViewAnim1] = useInView({
+        rootMargin: "0px 0px -400px 0px",
         triggerOnce: true,
-        threshold: 1,
+        threshold: 0,
+    });
+    const [wordAnim2Ref, inViewAnim2] = useInView({
+        rootMargin: "0px 0px -400px 0px",
+        triggerOnce: true,
+        threshold: 0,
     });
 
     useEffect(() => {
-        if (!inView) return
+        if (!inViewAnim1) return
+        setWordsAnim1(true)
+    }, [inViewAnim1])
+
+    useEffect(() => {
+        if (!inViewAnim2) return
         setWordsAnim2(true)
-        setTimeout(() => {
-            setWordsAnim1(true)
-        }, 500);
-    }, [inView])
+    }, [inViewAnim2])
 
     const test = <img className="word-hover_hover test" src={foto_background_1} alt="manifesto" />
-    // const test1 = <img className="word-hover_hover test1" src={foto_background_1} alt="manifesto" />
-    // const test2 = <img className="word-hover_hover test2" src={foto_background_1} alt="manifesto" />
 
     return (
         <section className="home-manifesto">
@@ -43,8 +50,8 @@ export const HomeManifesto = () => {
                     </div>
                 </div>
 
-                <div ref={ref} className="home-manifesto-text">
-                    <h2 onClick={() => setWordsAnim2(!wordsAnim2)}>
+                <div className="home-manifesto-text">
+                    <h2 ref={wordAnim2Ref} onClick={() => setWordsAnim2(!wordsAnim2)}>
                         <WordUp text="Más que una feria, somos una plataforma." isActive={wordsAnim2} />
                     </h2>
                     <p>
@@ -62,7 +69,7 @@ export const HomeManifesto = () => {
                         que se transforma.
                     </p>
 
-                    <h3 onClick={() => setWordsAnim1(!wordsAnim1)}>
+                    <h3 ref={wordAnim1Ref} onClick={() => setWordsAnim1(!wordsAnim1)}>
                         <WordUp text="Es momento de unirnos en una fuerza creadora." isActive={wordsAnim1} />
                     </h3>
 

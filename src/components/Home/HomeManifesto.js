@@ -15,6 +15,7 @@ import nuevos_espacios_19 from '../../assets/nuevos_espacios_19.png'
 import mundo_15 from '../../assets/mundo_15.png'
 import diseno_5 from '../../assets/diseno_5.png'
 import creativa_1 from '../../assets/creativa_1.png'
+import { wordUpBreak1, wordUpBreak2 } from '../Animations/wordUpBreak';
 
 
 export const HomeManifesto = () => {
@@ -22,12 +23,12 @@ export const HomeManifesto = () => {
     const [wordsAnim2, setWordsAnim2] = useState(false);
     
     const [wordAnim1Ref, inViewAnim1] = useInView({
-        rootMargin: "0px 0px -400px 0px",
+        rootMargin: "0px 0px -50px 0px",
         triggerOnce: true,
         threshold: 0,
     });
     const [wordAnim2Ref, inViewAnim2] = useInView({
-        rootMargin: "0px 0px -400px 0px",
+        rootMargin: "0px 0px -200px 0px",
         triggerOnce: true,
         threshold: 0,
     });
@@ -68,7 +69,7 @@ export const HomeManifesto = () => {
 
                 <div className="home-manifesto-text">
                     <h2 ref={wordAnim2Ref} onClick={() => setWordsAnim2(!wordsAnim2)}>
-                        <WordUp text="Más que una feria, somos una plataforma." isActive={wordsAnim2} />
+                        <WordUp text="Más que una feria, somos una plataforma." variant={wordUpBreak1} isActive={wordsAnim2} />
                     </h2>
                     <p>
                         Una comunidad
@@ -86,7 +87,7 @@ export const HomeManifesto = () => {
                     </p>
 
                     <h3 ref={wordAnim1Ref} onClick={() => setWordsAnim1(!wordsAnim1)}>
-                        <WordUp text="Es momento de unirnos en una fuerza creadora." isActive={wordsAnim1} />
+                        <WordUp text="Es momento de unirnos en una fuerza creadora." variant={wordUpBreak2} isActive={wordsAnim1} />
                     </h3>
 
                     <p>

@@ -93,8 +93,18 @@
         text-align: center;
         justify-content: center;
         background-color: $white;
-        text-decoration: underline;
         font: normal normal 300 20px/40px Maison Neue Light;
+        transition: 0.5s all;
+        cursor: pointer;
+        span{
+            transition: 0.5s all;
+            &:hover{
+                border-bottom: 1px solid black;
+            }
+
+        }
+        
+  
 
         svg {
             width: 15px;

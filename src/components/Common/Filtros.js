@@ -64,15 +64,15 @@ export const Filtros = ({ setHideSearch }) => {
 
             <div className="filtro-container-filtros">
                 <p onClick={() => { showFiltro(); filtrar('TODO'); setHeaderText('TODO') }}>TODO</p>
-                <p onClick={() => { showFiltro(); filtrar('MASCOTAS'); setHeaderText('MODA & ACCESORIOS') }}> Mascotas</p>
-                <p onClick={() => { showFiltro(); filtrar('HOGAR'); setHeaderText('MUNDO ARTESANO') }}> Hogar y decoración</p>
-                <p onClick={() => { showFiltro(); filtrar('ACCESORIOS'); setHeaderText('ARTE & DISEÑO') }}> Accesorios</p>
-                <p onClick={() => { showFiltro(); filtrar('RESTAURANTE'); setHeaderText('NIÑOS') }}> Restaurante </p>
-                <p onClick={() => { showFiltro(); filtrar('KIDS'); setHeaderText('HOGAR & DECORACIÓN') }}> Kids </p>
-                <p onClick={() => { showFiltro(); filtrar('SALUD'); setHeaderText('HOGAR & DECORACIÓN') }}> Salud y belleza </p>
-                <p onClick={() => { showFiltro(); filtrar('MERCADO'); setHeaderText('HOGAR & DECORACIÓN') }}> Mercado gastronómico </p>
-                <p onClick={() => { showFiltro(); filtrar('MODA'); setHeaderText('HOGAR & DECORACIÓN') }}> Moda </p>
-                <p onClick={() => { showFiltro(); filtrar('ARTE'); setHeaderText('HOGAR & DECORACIÓN') }}> Arte y diseño</p>
+                <p onClick={() => { showFiltro(); filtrar('MASCOTAS'); setHeaderText('MASCOTAS') }}> Mascotas</p>
+                <p onClick={() => { showFiltro(); filtrar('HOGAR'); setHeaderText('HOGAR Y DECORACIÓN') }}> Hogar y decoración</p>
+                <p onClick={() => { showFiltro(); filtrar('ACCESORIOS'); setHeaderText('ACCESORIOS') }}> Accesorios</p>
+                <p onClick={() => { showFiltro(); filtrar('RESTAURANTE'); setHeaderText('RESTAURANTE') }}> Restaurante </p>
+                <p onClick={() => { showFiltro(); filtrar('KIDS'); setHeaderText('KIDS') }}> Kids </p>
+                <p onClick={() => { showFiltro(); filtrar('SALUD'); setHeaderText('SALUD Y BELLEZA') }}> Salud y belleza </p>
+                <p onClick={() => { showFiltro(); filtrar('MERCADO'); setHeaderText('MERCADO GASTRONÓMICO') }}> Mercado gastronómico </p>
+                <p onClick={() => { showFiltro(); filtrar('MODA'); setHeaderText('MODA') }}> Moda </p>
+                <p onClick={() => { showFiltro(); filtrar('ARTE'); setHeaderText('ARTE Y DISEÑO') }}> Arte y diseño</p>
             </div>
 
 

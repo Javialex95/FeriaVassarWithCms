@@ -43,7 +43,7 @@ export const Search = ({ setHideFilter, setSearched, setPerfiles, className }) =
                         name="search"
                         id=""
                         onChange={onChange}
-                        placeholder="Por nombre, productos"
+                        placeholder="Por nombre"
                     />
                 </div>
 

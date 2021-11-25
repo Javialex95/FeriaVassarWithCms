@@ -78,25 +78,29 @@ export const SingleEmprenMovil = () => {
                             <hr />
 
                             <div className="botones flex" target="_blank" rel="noreferrer">
-                                <a href={perfil.urlWeb}>
-                                    <Button
-                                        children="Ir a página"
-                                        lastWord="web"
-                                        className="boton-pagina"
-                                    />
-                                </a>
 
-                                <a href={perfil.urlInsta} target="_blank" rel="noreferrer">
-                                    <img src={instagram} alt="instagram" />
-                                </a>
-
-                                <Link to="/emprendimientos">
+                                {perfil.urlWeb !== '' &&
+                                    <a href={perfil.urlWeb}>
                                         <Button
-                                            children="Regresar a "
-                                            lastWord="galería"
+                                            children="Ir a página"
+                                            lastWord="web"
                                             className="boton-pagina"
                                         />
-                                    </Link>
+                                    </a>
+                                }
+
+                                {perfil.urlInsta !== '' &&
+                                    <a href={perfil.urlInsta} target="_blank" rel="noreferrer">
+                                        <img src={instagram} alt="instagram" />
+                                    </a>
+                                }
+                                <Link to="/emprendimientos">
+                                    <Button
+                                        children="Regresar a "
+                                        lastWord="galería"
+                                        className="go-back-galeria"
+                                    />
+                                </Link>
                             </div>
 
                             {userId === id &&

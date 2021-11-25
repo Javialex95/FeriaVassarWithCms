@@ -94,7 +94,8 @@
             padding-left: 100px;
 
             @media (max-width: $breakpoint-tablet){
-                padding-left: 20px;
+            padding-top: 100px; 
+            padding-left: 20px;
             }
 
             a{
@@ -137,6 +138,8 @@
 
         @media (max-width: $breakpoint-tablet){
             padding-left: 20px;
+            bottom: 20%;
+
         }
 
         input {
@@ -156,7 +159,7 @@
         width: 4%;
         max-width: 50px;
         @media (max-width: $breakpoint-tablet) {
-            bottom: 10%;
+            bottom: 20%;
         }
     }
 }

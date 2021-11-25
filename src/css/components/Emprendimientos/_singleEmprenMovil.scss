@@ -20,8 +20,10 @@
         text-align: center;
         height: 200px;
         display: flex;
-        align-items: self-end;
-        -webkit-align-items: self-end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+       
         
         border-radius: 200px 200px 0 0;
         border-right: 1px solid$black;
@@ -40,8 +42,7 @@
     .single-emprend-galeria{
         height: auto;
         width: 100%;
-        
-    margin-top: 50px;
+        margin-top: 50px;
 
 
         img{
@@ -91,6 +92,26 @@
         .primary-button {
             width: 220px;
             min-width: auto;
+            .relative {
+              height: 40px;
+            }
+            &_text {
+              font-size: 15px;
+              .light {
+                font-size: 17px;
+              }
+            }
+          }
+    }
+
+    .go-back-galeria{
+        background-color: $orange;
+        margin-top: 50px;
+
+        .primary-button {
+            width: 250px;
+            min-width: auto;
+
             .relative {
               height: 40px;
             }

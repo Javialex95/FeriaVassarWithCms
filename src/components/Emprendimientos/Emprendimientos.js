@@ -8,7 +8,7 @@ import {
 import { searchPerfiles } from '../lib/api';
 
 
-export const Emprendimientos = ({perfilesFilter, perfiles, searched, error, setSearched, setPerfiles, setPerfilesFilter }) => {
+export const Emprendimientos = ({ perfilesFilter, perfiles, searched, error, setSearched, setPerfiles, setPerfilesFilter }) => {
 
     let { search } = useParams();
     let { filtro } = useParams();
@@ -22,7 +22,7 @@ export const Emprendimientos = ({perfilesFilter, perfiles, searched, error, setS
 
 
     useEffect(() => {
-        if(filtro !== undefined && perfiles.length !== 0){
+        if (filtro !== undefined && perfiles.length !== 0) {
             const result = perfiles.filter(perfil => perfil.categoria === filtro.toLowerCase());
             setPerfilesFilter(result)
         }
@@ -33,9 +33,11 @@ export const Emprendimientos = ({perfilesFilter, perfiles, searched, error, setS
         <div className="flex emprendimientos-container">
             {
                 window.innerWidth < 700 &&
-
-                <Header />
+                <Header
+                    galeria={true}
+                />
             }
+
             <Sidebar
                 setSearched={setSearched}
                 perfiles={perfiles}

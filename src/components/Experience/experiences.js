@@ -3,6 +3,7 @@ import parches from '../../assets/portada_parches_web.jpg'
 import cultura from '../../assets/portada_cultura_web.jpg'
 import gastronomia from '../../assets/portada_gastronomia_web.jpg'
 import espacio from '../../assets/portada_espacio_web.jpg'
+import compra from '../../assets/compras_exp.jpg'
 
 export const experiences = [
     {
@@ -21,7 +22,7 @@ export const experiences = [
         id: 3,
         title: "ALMACENAMIENTO PARA COMPRAS",
         description: "En Vassar encontrarás una amplia oferta gastronómica dentro de nuestra zona de comidas. Además, dispondremos de un gran mercado en el que podrás comprar ingredientes frescos y exclusivos de nuestros emprendedores.",
-        image: music,
+        image: compra,
     },
     {
         id: 4,

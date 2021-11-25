@@ -46,11 +46,18 @@ export const ListaEmprend = ({ perfiles, error }) => {
 
 
             </div>
-            <Button className="button-movil-galeria" >
-                Ver <b>galería</b>
-            </ Button >
+            {window.innerWidth < 700 &&
 
-            <Footer />
+                <>
+                    <Button className="button-movil-galeria" >
+                        Ver <b>galería</b>
+                    </ Button >
+
+                    <Footer />
+                </>
+
+            }
+
         </>
     )
 }

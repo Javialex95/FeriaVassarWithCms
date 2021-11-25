@@ -23,7 +23,7 @@ export const HomeContacto = () => {
                     <h4>DEJANOS TU OPINION</h4>
                     <h2>Contáctanos</h2>
                     <h3>
-                        <a href="mailto:feriavassar@paramopresenta.com">
+                        <a href="mailto:feriavassar@paramopresenta.com" target="_blank" rel="noreferrer">
                             feriavassar@paramopresenta.com
                         </a>
                     </h3>

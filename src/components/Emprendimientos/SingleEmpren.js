@@ -71,17 +71,21 @@ export const SingleEmpren = () => {
                                 </div>
 
                                 <div className="botones flex">
-                                    <a href={perfil.urlWeb} target="_blank" rel="noreferrer">
-                                        <Button
-                                            children="Ir a página"
-                                            lastWord="web"
-                                            className="boton-pagina"
-                                        />
-                                    </a>
+                                    {perfil.urlWeb !== '' &&
+                                        <a href={perfil.urlWeb} target="_blank" rel="noreferrer">
+                                            <Button
+                                                children="Ir a página"
+                                                lastWord="web"
+                                                className="boton-pagina"
+                                            />
+                                        </a>
+                                    }
 
-                                    <a className="instagram" href={perfil.urlInsta} target="_blank" rel="noreferrer">
-                                        {instagram}
-                                    </a>
+                                    {perfil.urlInsta !== '' &&
+                                        <a className="instagram" href={perfil.urlInsta} target="_blank" rel="noreferrer">
+                                            {instagram}
+                                        </a>
+                                    }
                                 </div>
 
                                 <div className="botones flex">
@@ -89,7 +93,7 @@ export const SingleEmpren = () => {
                                         <Button
                                             children="Regresar a "
                                             lastWord="galería"
-                                            className="boton-pagina"
+                                            className="go-back-galeria"
                                         />
                                     </Link>
                                 </div>

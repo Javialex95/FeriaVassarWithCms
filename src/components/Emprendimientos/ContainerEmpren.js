@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../Common/Button';
 import { rightArrowEmpre } from '../Common/Icons';
 import { Cargando } from '../Common/Cargando';
+import { Footer } from '../Footer';
 
 export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => {
 
@@ -58,6 +59,12 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
 
             <div className="container-startups-itemsContainer">
 
+                {window.innerWidth < 700 &&
+                    < div className="narrow-right">
+                        {rightArrowEmpre}
+                    </div>
+                }
+
                 <div className="container-startups-itemsContainer-items">
 
                     {perfilesNew.length !== 0 &&
@@ -94,16 +101,11 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
 
 
                     {perfiles.length === 0 && error === '' &&
-
-
                         <Cargando />
-
-
                     }
 
                     {perfiles.length === 0 && error !== '' &&
                         <div className="cargando" >
-
                             <h3>{error} </h3>
                         </div>
 
@@ -111,18 +113,22 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
                 </div>
 
                 {window.innerWidth < 700 &&
-                    <Link className="movil-boton" to="/emprendimientos-lista" >
-                        <Button
-                            children="Ver lista"
-                            className="sidebarButton"
+                    <>
+                        <Link className="movil-boton" to="/emprendimientos-lista" >
+                            <Button
+                                children="Ver lista"
+                                className="sidebarButton"
 
-                        />
-                    </Link>
+                            />
+                        </Link>
+
+                        <Footer />
+                    </>
                 }
 
 
             </div>
 
-        </div>
+        </div >
     )
 }

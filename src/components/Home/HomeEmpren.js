@@ -17,7 +17,7 @@ export const HomeEmpren = () => {
     useEffect(() => {
         setTimeout(() => {
             window.dispatchEvent(new Event('resize')); // Swiper thingies
-        }, 1000);
+        }, 5000);
     }, [])
 
     return (
@@ -42,7 +42,7 @@ export const HomeEmpren = () => {
                             slidesPerView={'1'}
                             centeredSlides={true}
                             autoplay={{
-                                delay: 3000,
+                                delay: 6000,
                                 disableOnInteraction: false,
                                 autoplayDisableOnInteraction: false,
                                 pauseOnMouseEnter: true,

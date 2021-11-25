@@ -58,6 +58,12 @@ export const AppRouter = () => {
                         <Home />
                     </Route>
 
+                    <Route exact path={ROUTES.HOMECONTACTO}>
+                        <Home
+                            contacto={true}
+                        />
+                    </Route>
+
                     <Route exact path={ROUTES.STARTUPS}>
                         <Emprendimientos
                             perfiles={perfiles}
@@ -114,9 +120,9 @@ export const AppRouter = () => {
                     <Route exact path={ROUTES.FAQ}>
                         <Faq />
                     </Route>
-                    
+
                     <Route exact path={ROUTES.EXPERIENCE}>
-                        <Experience/>
+                        <Experience />
                     </Route>
 
                     <Route exact path={ROUTES.VASSAR}>

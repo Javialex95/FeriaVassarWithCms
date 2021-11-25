@@ -2,7 +2,7 @@ export const faqs = [
     {
         id: 1,
         title: '¿CUÁNDO Y DÓNDE?',
-        description: 'Vassar Feria tendrá lugar del xx al xx de Diciembre de 2021. En xxx. Bogotá, Colombia.'
+        description: 'Del ​​10 l 16 de diciembre en el Parque El Country Calle 127 # 12 en Bogotá.'
     },
     {
         id: 2,
@@ -25,26 +25,6 @@ export const faqs = [
         description: 'Son 9 las categorías participantes, entre las cuales se encuentran moda y accesorios, mundo artesano, arte y diseño, gastronomy market, la librería, decoración y hogar, entre otros.'
     },
     {
-        id: 6,
-        title: '¿CUÁNDO EMPIEZAN LAS VENTAS DE BOLETERÍA?',
-        description: 'El xx de xx.'
-    },
-    {
-        id: 7,
-        title: '¿CÓMO SE ELIGEN A LOS EMPRENDIMIENTOS QUE HARÁN PARTE DE LA FERIA?',
-        description: 'La curaduría de la feria será 100% realizada por la Asociación de Emprendedores (AdeE), para garantizar la transparencia en los procesos de selección de los participantes.'
-    },
-    {
-        id: 8,
-        title: '¿CUÁLES SON LAS CATEGORÍAS QUE SE ENCONTRARÁN EN VASSAR FERIA?',
-        description: 'Son 9 las categorías participantes, entre las cuales se encuentran moda y accesorios, mundo artesano, arte y diseño, gastronomy market, la librería, decoración y hogar, entre otros.'
-    },
-    {
-        id: 9,
-        title: '¿CUÁNDO EMPIEZAN LAS VENTAS DE BOLETERÍA?',
-        description: 'El xx de xx.'
-    },
-    {
         id: 10,
         title: '¿CUÁLES SON LAS CATEGORÍAS QUE SE ENCONTRARÁN EN VASSAR FERIA?',
         description: 'Son 9 las categorías participantes, entre las cuales se encuentran moda y accesorios, mundo artesano, arte y diseño, gastronomy market, la librería, decoración y hogar, entre otros.'
@@ -52,6 +32,6 @@ export const faqs = [
     {
         id: 11,
         title: '¿CUÁNDO EMPIEZAN LAS VENTAS DE BOLETERÍA?',
-        description: 'El xx de xx.'
+        description: 'El 23 de noviembre a través de entradas amarillas.com'
     },
 ]

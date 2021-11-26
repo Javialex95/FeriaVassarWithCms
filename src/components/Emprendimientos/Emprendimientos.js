@@ -8,7 +8,7 @@ import {
 import { searchPerfiles } from '../lib/api';
 
 
-export const Emprendimientos = ({ perfilesFilter, perfiles, searched, error, setSearched, setPerfiles, setPerfilesFilter }) => {
+export const Emprendimientos = ({ perfilesFiltrados, perfilesFilter, perfiles, searched, error, setSearched, setPerfiles, setPerfilesFilter, setPerfilesFiltrados }) => {
 
     let { search } = useParams();
     let { filtro } = useParams();
@@ -39,16 +39,19 @@ export const Emprendimientos = ({ perfilesFilter, perfiles, searched, error, set
             }
 
             <Sidebar
-                setSearched={setSearched}
                 perfiles={perfiles}
-                setPerfiles={setPerfiles}
                 buttonText='Ver'
                 lastWord='listado'
                 url="/emprendimientos-lista"
                 search={search}
                 filtro={filtro}
-            />
+                setSearched={setSearched}
+                setPerfiles={setPerfiles}
+                setPerfilesFiltrados={setPerfilesFiltrados}
+                galeria={true}
+                />
             <ContainerEmpren
+                perfilesFiltrados={perfilesFiltrados}
                 perfiles={perfiles}
                 searched={searched}
                 error={error}

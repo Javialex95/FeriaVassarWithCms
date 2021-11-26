@@ -7,12 +7,32 @@ import { rightArrowEmpre } from '../Common/Icons';
 import { Cargando } from '../Common/Cargando';
 import { Footer } from '../Footer';
 
-export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => {
+import flecha from '../../assets/flecha_boton_ver_listado_web_hover.png';
+import flecha_boton_right from '../../assets/flecha_boton_right.png';
+
+export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, perfiles, error }) => {
 
     const [perfilesNew, setPerfilesNew] = useState([])
 
+    const scrollTo = (id) => {
+        const containerScroll = document.querySelector(`.${id}`)
+        let calScroll = containerScroll.scrollLeft
+        containerScroll.scrollTo(calScroll + 300, 0)
+
+        console.log(containerScroll.scrollLeft)
+    }
+
+    const scrollToRight = (id) => {
+        const containerScroll = document.querySelector(`.${id}`)
+        let calScroll = containerScroll.scrollLeft
+        containerScroll.scrollTo(calScroll - 300, 0)
+
+        console.log(containerScroll.scrollLeft)
+    }
 
     useEffect(() => {
+
+
 
         function splitToBulks(arr, bulkSize = 20) {
             const bulks = [];
@@ -29,13 +49,21 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
             let result = splitToBulks(newProfiles, 20);
             setPerfilesNew(result)
 
-        } else {
-            let result = splitToBulks(perfilesFilter, 20);
+        }
+
+        if (perfilesFiltrados.length !== 0) {
+            let result = splitToBulks(perfilesFiltrados, 20);
             setPerfilesNew(result)
         }
 
+        if (filtro !== undefined) {
+            let result = splitToBulks(perfilesFilter, 20);
+            setPerfilesNew(result)
 
-    }, [filtro, perfiles, perfilesFilter]);
+        }
+
+
+    }, [filtro, perfiles, perfilesFilter, perfilesFiltrados]);
 
 
     return (
@@ -48,9 +76,9 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
                         galeria={true}
                     />
 
-                    <div className="narrow-right">
+                    {/* <div className="narrow-right">
                         {rightArrowEmpre}
-                    </div>
+                    </div> */}
                 </>
 
             }
@@ -70,30 +98,43 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
                     {perfilesNew.length !== 0 &&
                         <>
                             {perfilesNew.map((perf, i) => (
-                                <div className={`items-container items-container_${i + 1}`}>
+                                <>
+                                    <div className={`items-container items-container_${i + 1}`}>
 
-                                    <div className="items flex">
-                                        {perf.map((perfil, i) => (
-                                            <>
-
-
-                                                {perfil.logoUrl !== '' &&
-                                                    <Link to={`/emprendimiento/${perfil._id}`}>
-                                                        <Startup
-                                                            key={perfil._id}
-                                                            perfil={perfil}
-                                                        />
-                                                    </Link>
-                                                }
+                                        <div className="items flex">
+                                            {perf.map((perfil, i) => (
+                                                <>
 
 
-                                            </>
-                                        ))}
+                                                    {perfil.logoUrl !== '' &&
+                                                        <Link to={`/emprendimiento/${perfil._id}`}>
+                                                            <Startup
+                                                                key={perfil._id}
+                                                                perfil={perfil}
+                                                            />
+                                                        </Link>
+                                                    }
+
+
+                                                </>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex flecha-scroll-horiz" >
+                                        <div className="flecha-right" onClick={() => scrollToRight(`items-container_${i + 1}`)}>
+                                            <img src={flecha_boton_right} alt="flecha" />
+                                        </div>
+
+                                        <div className="flecha-left" onClick={() => scrollTo(`items-container_${i + 1}`)}>
+                                            <img src={flecha} alt="flecha" />
+                                        </div>
                                     </div>
 
-                                </div>
+                                </>
                             ))
                             }
+
                         </>
 
                     }
@@ -118,7 +159,6 @@ export const ContainerEmpren = ({ perfilesFilter, filtro, perfiles, error }) => 
                             <Button
                                 children="Ver lista"
                                 className="sidebarButton"
-
                             />
                         </Link>
 

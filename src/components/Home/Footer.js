@@ -9,9 +9,7 @@ export const HomeFooter = ({showLogos}) => {
                 showLogos &&
                 <div className="home-footer_top">
                     <div className="logos">
-                        <div className="home-footer_logo logo1"></div>
-                        <div className="home-footer_logo logo2"></div>
-                        <div className="home-footer_logo logo3"></div>
+                   
                     </div>
                 </div>
             }

@@ -147,7 +147,8 @@ export const EmprenForm = ({ data }) => {
                                 <div className="form-field mb-2">
                                     <div className="indication">
                                         Adjunta los links de su marca <br />
-                                        Por favor escribe el URL completo copiándolo y pegándolo desde tu navegador arrancando por https://…
+                                        Por favor escribe el URL completo copiándolo y pegándolo desde tu navegador arrancando por https://… <br />
+                                        Si no tienes sitio web o instagram, dejar el campo vacío.
                                     </div>
 
                                     <Input control={control} name="urlWeb" placeholder="LINK DE WEB" maxLength="200" defaultValue={perfil.urlWeb} />

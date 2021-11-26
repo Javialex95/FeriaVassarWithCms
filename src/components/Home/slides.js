@@ -56,7 +56,7 @@ export const homeEmprenSlides = [
         title: 'RESTAURANTES',
         image: image9,
         className: 'bg-color_brown brightness',
-        link: '/emprendimientos/filter/restaurantes',
+        link: '/emprendimientos/filter/restaurante',
     },
     {
         title: 'SALUD & BELLEZA',

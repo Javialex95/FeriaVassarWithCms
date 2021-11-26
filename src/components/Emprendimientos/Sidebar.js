@@ -6,7 +6,7 @@ import {
     Link
 } from "react-router-dom";
 
-export const Sidebar = ({ setSearched, setPerfiles, className, buttonText, url, perfiles, filtro, search, lastWord }) => {
+export const Sidebar = ({ setSearched, setPerfiles, className, buttonText, url, perfiles, filtro, search, lastWord,setPerfilesFiltrados, galeria }) => {
 
     const [hideSearch, setHideSearch] = useState(false);
     const [hideFilter, setHideFilter] = useState(false);
@@ -33,7 +33,10 @@ export const Sidebar = ({ setSearched, setPerfiles, className, buttonText, url, 
                         <Filtros
                             perfiles={perfiles}
                             filtro={filtro}
+                            setPerfiles={setPerfiles}
                             setHideSearch={setHideSearch}
+                            setPerfilesFiltrados={setPerfilesFiltrados}
+                            galeria={galeria}
                         />
                         :
                         null

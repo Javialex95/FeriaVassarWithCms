@@ -20,7 +20,7 @@ export const HomeContacto = () => {
                     </div>
                 </div>
                 <div className="home-contacto_text">
-                    <h4>DEJANOS TU OPINION</h4>
+                    <h4>DÉJANOS TU OPINION</h4>
                     <h2>Contáctanos</h2>
                     <h3>
                         <a href="mailto:feriavassar@paramopresenta.com" target="_blank" rel="noreferrer">

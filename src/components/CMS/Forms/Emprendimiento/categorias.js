@@ -43,5 +43,10 @@ export const categorias = [
         id: 9,
         value: 'arte',
         label: 'Arte y diseño',
+    },
+    {
+        id: 10,
+        value: 'fundaciones',
+        label: 'Fundaciones',
     }
 ]

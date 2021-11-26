@@ -49,9 +49,12 @@ export const ListaEmprend = ({ perfiles, error }) => {
             {window.innerWidth < 700 &&
 
                 <>
-                    <Button className="button-movil-galeria" >
-                        Ver <b>galería</b>
-                    </ Button >
+                    <Link to={`/emprendimientos`}>
+
+                        <Button className="button-movil-galeria" >
+                            Ver <b>galería</b>
+                        </ Button >
+                    </Link>
 
                     <Footer />
                 </>

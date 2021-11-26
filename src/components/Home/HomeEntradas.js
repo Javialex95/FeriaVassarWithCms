@@ -11,8 +11,9 @@ export const HomeEntradas = () => {
                     <strong>Parque El Country</strong>
                 </h2>
                 <span>
-                    CALLE 127 # 12, BOGOTÁ
+                    CALLE 127 # 12, BOGOTÁ De 11:00 am a 10:00 pm
                 </span>
+
             </div>
 
             <a href="https://www.entradasamarillas.com/event/feria-vassar" target="_blank" rel="noreferrer">

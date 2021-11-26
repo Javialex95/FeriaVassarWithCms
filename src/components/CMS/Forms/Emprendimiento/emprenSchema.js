@@ -74,8 +74,6 @@ export const emprenSchema = Yup.object().shape({
     nombre: Yup.string().required(requiredTxt).nullable(),
     categoria: Yup.string().required(requiredTxt).nullable(),
     descripcion: Yup.string().required(requiredTxt).nullable(),
-    urlWeb: Yup.string().required(requiredTxt).nullable(),
-    urlInsta: Yup.string().required(requiredTxt).nullable(),
     'galeriaImg1': brandOptionalImageValidation,
     'galeriaImg2': brandOptionalImageValidation,
     'galeriaImg3': brandOptionalImageValidation,

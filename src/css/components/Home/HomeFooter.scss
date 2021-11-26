@@ -9,10 +9,29 @@
     }
   }
   &_top {
-    padding: 15px 0;
+
     width: 100%;
     border-top: 2px solid $black;
     border-bottom: 2px solid $black;
+    background: $black;
+
+    .logos{
+      background: url('../../../assets/barra_logos_dekstop.png');
+      height: 137px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      max-width: 1600px;
+
+      @media (max-width: $breakpoint-mobile){
+        background: url('../../../assets//barra_logos_movil.png');
+        height: 720px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    
+    }
   }
   &_bottom {
     margin: auto;
@@ -43,7 +62,7 @@
   }
   @media (max-width: $breakpoint-laptop) {
     &_top {
-      padding: 20px 20px;
+      // padding: 20px 20px;
     }
     &_bottom {
       font: normal normal 300 14px/19px Akzidenz-Grotesk Light;

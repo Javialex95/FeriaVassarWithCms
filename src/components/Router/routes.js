@@ -10,6 +10,8 @@ export const ROUTES = {
     FAQ: "/faq",
     EXPERIENCE: "/experiencia",
     VASSAR: "/vassar",
+    PATROCINADORES: "/patrocinadores",
+    FUNDACIONES: "/fundaciones",
 
     CMS_LOGIN: "/login",
     CMS_EMPRENDIMIENTO: "/profile",

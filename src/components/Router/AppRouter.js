@@ -19,10 +19,12 @@ import { MenuOpener } from '../Menu/MenuOpener';
 import { Vassar } from '../Vassar/Vassar';
 import { ROUTES } from './routes';
 import { ScrollToTop } from '../Common/ScrollToTop';
+import { Patrocinadores } from '../Patrocinadores/Patrocinadores';
 
 export const AppRouter = () => {
     const [searched, setSearched] = useState([])
     const [perfiles, setPerfiles] = useState([]);
+    const [perfilesFiltrados, setPerfilesFiltrados] = useState([])
     const [perfilesFilter, setPerfilesFilter] = useState([]);
     const [error, setError] = useState('')
 
@@ -71,8 +73,10 @@ export const AppRouter = () => {
                             perfiles={perfiles}
                             searched={searched}
                             error={error}
+                            perfilesFiltrados={perfilesFiltrados}
                             setSearched={setSearched}
                             setPerfiles={setPerfiles}
+                            setPerfilesFiltrados={setPerfilesFiltrados}
                         />
                     </Route>
 
@@ -129,6 +133,10 @@ export const AppRouter = () => {
 
                     <Route exact path={ROUTES.VASSAR}>
                         <Vassar />
+                    </Route>
+
+                    <Route exact path={ROUTES.PATROCINADORES}>
+                        <Patrocinadores />
                     </Route>
 
                     <Route exact path={ROUTES.CMS_LOGIN}>

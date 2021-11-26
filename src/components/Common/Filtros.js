@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import flecha_faq from '../../assets/flecha_faq.svg'
 
-export const Filtros = ({ setHideSearch }) => {
-
+export const Filtros = ({ perfiles, setPerfiles, setHideSearch, setPerfilesFiltrados, galeria }) => {
 
     const [headerText, setHeaderText] = useState('Seleccione la categoría')
 
@@ -21,8 +20,6 @@ export const Filtros = ({ setHideSearch }) => {
 
         const themeSelected = document.querySelectorAll(`.${themeNormal}`)
         const startup = document.querySelectorAll('.startup')
-
-
 
         if (theme === 'TODO') {
             setHideSearch(false)
@@ -52,6 +49,21 @@ export const Filtros = ({ setHideSearch }) => {
     }
 
 
+    const filtrarGaleria = (theme) => {
+        let themeNormal = theme.toLowerCase();
+        const newPerfilesFiltrador = perfiles.filter(perfil => perfil.categoria === themeNormal);
+
+        if (theme === 'TODO') {
+            setHideSearch(false)
+            setPerfilesFiltrados([])
+        } else {
+            setHideSearch(true)
+            setPerfilesFiltrados(newPerfilesFiltrador)
+        }
+
+    }
+
+
 
     return (
         <div className="filtro">
@@ -62,18 +74,36 @@ export const Filtros = ({ setHideSearch }) => {
             </div>
 
 
-            <div className="filtro-container-filtros">
-                <p onClick={() => { showFiltro(); filtrar('TODO'); setHeaderText('TODO') }}>TODO</p>
-                <p onClick={() => { showFiltro(); filtrar('MASCOTAS'); setHeaderText('MASCOTAS') }}> Mascotas</p>
-                <p onClick={() => { showFiltro(); filtrar('HOGAR'); setHeaderText('HOGAR Y DECORACIÓN') }}> Hogar y decoración</p>
-                <p onClick={() => { showFiltro(); filtrar('ACCESORIOS'); setHeaderText('ACCESORIOS') }}> Accesorios</p>
-                <p onClick={() => { showFiltro(); filtrar('RESTAURANTE'); setHeaderText('RESTAURANTE') }}> Restaurante </p>
-                <p onClick={() => { showFiltro(); filtrar('KIDS'); setHeaderText('KIDS') }}> Kids </p>
-                <p onClick={() => { showFiltro(); filtrar('SALUD'); setHeaderText('SALUD Y BELLEZA') }}> Salud y belleza </p>
-                <p onClick={() => { showFiltro(); filtrar('MERCADO'); setHeaderText('MERCADO GASTRONÓMICO') }}> Mercado gastronómico </p>
-                <p onClick={() => { showFiltro(); filtrar('MODA'); setHeaderText('MODA') }}> Moda </p>
-                <p onClick={() => { showFiltro(); filtrar('ARTE'); setHeaderText('ARTE Y DISEÑO') }}> Arte y diseño</p>
-            </div>
+            {galeria ?
+
+                <div className="filtro-container-filtros">
+                    <p onClick={() => { showFiltro(); filtrarGaleria('TODO'); setHeaderText('TODO') }}>TODO</p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('MASCOTAS'); setHeaderText('MASCOTAS') }}> Mascotas</p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('HOGAR'); setHeaderText('HOGAR Y DECORACIÓN') }}> Hogar y decoración</p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('ACCESORIOS'); setHeaderText('ACCESORIOS') }}> Accesorios</p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('RESTAURANTE'); setHeaderText('RESTAURANTE') }}> Restaurante </p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('KIDS'); setHeaderText('KIDS') }}> Kids </p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('SALUD'); setHeaderText('SALUD Y BELLEZA') }}> Salud y belleza </p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('MERCADO'); setHeaderText('MERCADO GASTRONÓMICO') }}> Mercado gastronómico </p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('MODA'); setHeaderText('MODA') }}> Moda </p>
+                    <p onClick={() => { showFiltro(); filtrarGaleria('ARTE'); setHeaderText('ARTE Y DISEÑO') }}> Arte y diseño</p>
+                </div>
+                :
+
+                <div className="filtro-container-filtros">
+                    <p onClick={() => { showFiltro(); filtrar('TODO'); setHeaderText('TODO') }}>TODO</p>
+                    <p onClick={() => { showFiltro(); filtrar('MASCOTAS'); setHeaderText('MASCOTAS') }}> Mascotas</p>
+                    <p onClick={() => { showFiltro(); filtrar('HOGAR'); setHeaderText('HOGAR Y DECORACIÓN') }}> Hogar y decoración</p>
+                    <p onClick={() => { showFiltro(); filtrar('ACCESORIOS'); setHeaderText('ACCESORIOS') }}> Accesorios</p>
+                    <p onClick={() => { showFiltro(); filtrar('RESTAURANTE'); setHeaderText('RESTAURANTE') }}> Restaurante </p>
+                    <p onClick={() => { showFiltro(); filtrar('KIDS'); setHeaderText('KIDS') }}> Kids </p>
+                    <p onClick={() => { showFiltro(); filtrar('SALUD'); setHeaderText('SALUD Y BELLEZA') }}> Salud y belleza </p>
+                    <p onClick={() => { showFiltro(); filtrar('MERCADO'); setHeaderText('MERCADO GASTRONÓMICO') }}> Mercado gastronómico </p>
+                    <p onClick={() => { showFiltro(); filtrar('MODA'); setHeaderText('MODA') }}> Moda </p>
+                    <p onClick={() => { showFiltro(); filtrar('ARTE'); setHeaderText('ARTE Y DISEÑO') }}> Arte y diseño</p>
+                </div>
+            }
+
 
 
         </div>

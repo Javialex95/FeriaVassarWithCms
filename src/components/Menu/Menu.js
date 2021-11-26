@@ -31,6 +31,8 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
                         <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.EXPERIENCE}> Experiencia </Link> <br />
                         <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.FAQ}>FAQ</Link> <br />
                         <a href="https://www.entradasamarillas.com/event/feria-vassar" target="_blank" rel="noreferrer">Adquiere tus <b>entradas</b> </a><br />
+                        <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.FAQ}>Fundaciones</Link> <br />
+                        <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.PATROCINADORES}>Patrocinadores</Link> <br />
 
                         <Link to="/contacto" onClick={() => { closeMenu(); toggleMenu(); }}>Contacto</Link>
                     </ul>

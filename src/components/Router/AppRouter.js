@@ -18,6 +18,7 @@ import { getPerfiles } from '../lib/api';
 import { MenuOpener } from '../Menu/MenuOpener';
 import { Vassar } from '../Vassar/Vassar';
 import { ROUTES } from './routes';
+import { ScrollToTop } from '../Common/ScrollToTop';
 
 export const AppRouter = () => {
     const [searched, setSearched] = useState([])
@@ -52,6 +53,7 @@ export const AppRouter = () => {
 
             <Router>
                 <MenuOpener />
+                <ScrollToTop/>
 
                 <Switch>
                     <Route exact path={ROUTES.HOME}>

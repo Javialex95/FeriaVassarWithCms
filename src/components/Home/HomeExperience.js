@@ -40,10 +40,10 @@ export const HomeExperience = () => {
                     <div className="image image-3">
                         <img src={image5} alt="" />
                     </div>
-                    <div className="image image--hidden image-4">
+                    <div className="image image-4">
                         <img src={image6} alt="" />
                     </div>
-                    <div className="image image--hidden image-5">
+                    <div className="image image-5">
                         <img src={image10} alt="" />
                     </div>
                     <div className="image image--hidden image-6">

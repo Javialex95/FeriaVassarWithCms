@@ -136,6 +136,24 @@
           width: 200px;
         }
       }
+      &-8 {
+        z-index: 11;
+        right: 15%;
+        bottom: 50%;
+        transform: translate(50%, 0px);
+        img {
+          width: 200px;
+        }
+      }
+      &-9 {
+        z-index: 11;
+        left: 5%;
+        bottom: 50%;
+        transform: translate(50%, 0px);
+        img {
+          width: 200px;
+        }
+      }
       @media (max-width: $breakpoint-laptop) {
         &-1 {
           top: 20px;
@@ -152,8 +170,27 @@
           right: 45%;
           width: 400px;
         }
+        &-6 {
+          img {
+            width: 200px;
+          }
+        }
         &-7 {
-          width: 200px;
+          img {
+            width: 120px;
+          }
+        }
+        &-8 {
+          right: 10%;
+          img {
+            width: 120px;
+          }
+        }
+        &-9 {
+          left: 0;
+          img {
+            width: 150px;
+          }
         }
       }
     }

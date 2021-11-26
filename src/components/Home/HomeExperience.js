@@ -1,7 +1,4 @@
 import React from 'react'
-import image1 from '../../assets/imagen_experiencia_6_web.png'
-import image2 from '../../assets/imagen_experiencia_5_web.png'
-import image3 from '../../assets/imagen_experiencia_7_web.png'
 
 import image4 from '../../assets/experience/cuadrado/9.png'
 import image5 from '../../assets/experience/horizontal/1.png'
@@ -10,6 +7,8 @@ import image7 from '../../assets/experience/vertical/3.png'
 import image8 from '../../assets/experience/vertical/4.png'
 import image9 from '../../assets/experience/vertical/5.png'
 import image10 from '../../assets/experience/vertical/6.png'
+import image11 from '../../assets/experience/vertical/7.png'
+import image12 from '../../assets/experience/vertical/8.png'
 
 import { plus } from '../Common/Icons'
 import {Link} from 'react-router-dom'
@@ -51,6 +50,12 @@ export const HomeExperience = () => {
                     </div>
                     <div className="image image--hidden image-7">
                         <img src={image9} alt="" />
+                    </div>
+                    <div className="image image--hidden image-8">
+                        <img src={image11} alt="" />
+                    </div>
+                    <div className="image image--hidden image-9">
+                        <img src={image12} alt="" />
                     </div>
                 </div>
 

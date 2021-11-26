@@ -1,6 +1,8 @@
 import { categorias } from "../components/CMS/Forms/Emprendimiento/categorias"
+import smoothscroll from 'smoothscroll-polyfill';
 
 export const enableAnchorSmoothScroll = () => {
+    smoothscroll.polyfill();
     const links = document.querySelectorAll('a.scrollTo')
 
     for (const link of links) {

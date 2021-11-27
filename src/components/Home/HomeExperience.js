@@ -31,7 +31,7 @@ export const HomeExperience = () => {
 
                 <div className="home-experience_images">
                     <div className="image image-1">
-                        <img src={image7} alt="" />
+                        <img src={image11} alt="" />
                     </div>
                     <div className="image image-2">
                         <img src={image8} alt="" />
@@ -40,19 +40,19 @@ export const HomeExperience = () => {
                         <img src={image5} alt="" />
                     </div>
                     <div className="image image-4">
-                        <img src={image6} alt="" />
+                        <img src={image4} alt="" />
                     </div>
                     <div className="image image-5">
                         <img src={image10} alt="" />
                     </div>
                     <div className="image image--hidden image-6">
-                        <img src={image4} alt="" />
+                        <img src={image6} alt="" />
                     </div>
                     <div className="image image--hidden image-7">
                         <img src={image9} alt="" />
                     </div>
                     <div className="image image--hidden image-8">
-                        <img src={image11} alt="" />
+                        <img src={image7} alt="" />
                     </div>
                     <div className="image image--hidden image-9">
                         <img src={image12} alt="" />

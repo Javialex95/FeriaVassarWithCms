@@ -1,0 +1,162 @@
+.fundaciones {
+  flex-direction: column;
+  &,
+  header,
+  main {
+    display: flex;
+  }
+  .left {
+    width: 30%;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+  }
+  .right {
+    width: 70%;
+    background-color: $yellow;
+    border-bottom: 1px solid $black;
+  }
+  header {
+    height: 200px;
+    h1 {
+      font: normal normal bold 70px/80px Maison Neue Bold;
+      color: $black;
+    }
+    .left {
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+    .right {
+      height: 100%;
+      padding: 30px 50px;
+      border-bottom: unset;
+    }
+  }
+
+  main {
+    color: $black;
+    flex-direction: column;
+    .left {
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 150px 30px 50px;
+    }
+  }
+  &_item {
+    height: 500px;
+    display: flex;
+    &_buttons {
+      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-top: 50px;
+      .primary-button {
+        .primary-button_text {
+          padding: 10px 80px 10px 30px;
+        }
+        .relative {
+          height: 60px;
+        }
+        span {
+          display: block;
+          font-size: 20px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+    h2 {
+      font: normal normal bold 28px/30px Maison Neue Bold;
+    }
+    p {
+      margin-top: 30px;
+      font: normal normal 300 18px/20px "Akzidenz-Grotesk Light";
+    }
+  }
+
+  @media (max-width: 924px) {
+    h1 {
+      font-size: 60px !important;
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    h1 {
+      font-size: 50px !important;
+    }
+    .left {
+      width: 100%;
+      border-bottom: unset;
+    }
+    .right {
+      width: 100%;
+      border-bottom: 1px solid $black !important;
+    }
+    header {
+      height: auto;
+      .right,
+      .left {
+        height: 200px;
+      }
+      .right {
+        padding: 20px 30px;
+      }
+    }
+    &_item,
+    &,
+    header,
+    main {
+      flex-direction: column;
+    }
+    &_item {
+      height: auto;
+      .primary-button {
+        min-width: auto;
+        .relative {
+          height: 50px;
+        }
+        span {
+          font-size: 17px;
+        }
+      }
+    }
+    main {
+      .right {
+        padding: 50px 30px 50px 30px;
+      }
+      .left {
+        height: 60vh;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  @media (max-width: $breakpoint-mobile) {
+    h1 {
+      font-size: 40px !important;
+    }
+    header {
+      .right {
+        margin-top: -2px;
+      }
+    }
+    main {
+      p {
+        margin-top: 40px !important;
+      }
+      .primary-button {
+        .primary-button_text {
+          padding: 10px 70px 10px 30px;
+        }
+      }
+    }
+  }
+}

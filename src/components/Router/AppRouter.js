@@ -20,6 +20,7 @@ import { Vassar } from '../Vassar/Vassar';
 import { ROUTES } from './routes';
 import { ScrollToTop } from '../Common/ScrollToTop';
 import { Patrocinadores } from '../Patrocinadores/Patrocinadores';
+import { Fundaciones } from '../Fundaciones/Fundaciones';
 
 export const AppRouter = () => {
     const [searched, setSearched] = useState([])
@@ -29,7 +30,6 @@ export const AppRouter = () => {
     const [error, setError] = useState('')
 
     useEffect(() => {
-
         if (searched.length === 0) {
             getPerfiles().then(data => setPerfiles(data.data.perfiles))
         }
@@ -144,6 +144,9 @@ export const AppRouter = () => {
                     </Route>
                     <Route exact path={ROUTES.CMS_EMPRENDIMIENTO}>
                         <Recopilacion />
+                    </Route>
+                    <Route exact path={ROUTES.FUNDACIONES}>
+                        <Fundaciones />
                     </Route>
                 </Switch>
             </Router>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { ROUTES } from '../Router/routes';
 
 export const HomeFooter = ({showLogos}) => {
 

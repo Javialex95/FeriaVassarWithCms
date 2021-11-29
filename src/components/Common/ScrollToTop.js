@@ -10,7 +10,8 @@ export const ScrollToTop = () => {
             }
         })
         return () => unlisten()
-    }, [])
-    return (null)
+    }, [history])
+    
+    return null
 }
 

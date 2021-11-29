@@ -15,9 +15,12 @@ export const Emprendimientos = ({ perfilesFiltrados, perfilesFilter, perfiles, s
 
     useEffect(() => {
         if (search !== undefined) {
-            searchPerfiles(search).then(data => setSearched(data.data)
+            searchPerfiles(search).then(data => console.log(data.data)
+            
+
             );
         }
+
     }, [search, setSearched]);
 
 
@@ -49,11 +52,12 @@ export const Emprendimientos = ({ perfilesFiltrados, perfilesFilter, perfiles, s
                 setPerfiles={setPerfiles}
                 setPerfilesFiltrados={setPerfilesFiltrados}
                 galeria={true}
-                />
+            />
             <ContainerEmpren
                 perfilesFiltrados={perfilesFiltrados}
                 perfiles={perfiles}
                 searched={searched}
+                search={search}
                 error={error}
                 filtro={filtro}
                 perfilesFilter={perfilesFilter}

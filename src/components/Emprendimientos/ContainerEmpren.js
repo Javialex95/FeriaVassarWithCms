@@ -10,7 +10,7 @@ import { Footer } from '../Footer';
 import flecha from '../../assets/flecha_boton_ver_listado_web_hover.png';
 import flecha_boton_right from '../../assets/flecha_boton_right.png';
 
-export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, perfiles, error }) => {
+export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, search, perfiles, error }) => {
 
     const [perfilesNew, setPerfilesNew] = useState([])
 
@@ -18,21 +18,15 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, per
         const containerScroll = document.querySelector(`.${id}`)
         let calScroll = containerScroll.scrollLeft
         containerScroll.scrollTo(calScroll + 300, 0)
-
-        console.log(containerScroll.scrollLeft)
     }
 
     const scrollToRight = (id) => {
         const containerScroll = document.querySelector(`.${id}`)
         let calScroll = containerScroll.scrollLeft
         containerScroll.scrollTo(calScroll - 300, 0)
-
-        console.log(containerScroll.scrollLeft)
     }
 
     useEffect(() => {
-
-
 
         function splitToBulks(arr, bulkSize = 20) {
             const bulks = [];
@@ -42,28 +36,29 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, per
             return bulks;
         }
 
-        if (filtro === undefined) {
+        if (filtro === undefined && search === undefined) {
 
             const newProfiles = perfiles.filter(perf => perf.logo !== '');
 
             let result = splitToBulks(newProfiles, 20);
             setPerfilesNew(result)
 
+            if (perfilesFiltrados.length !== 0) {
+                let result = splitToBulks(perfilesFiltrados, 20);
+                setPerfilesNew(result)
+            }
+
         }
 
-        if (perfilesFiltrados.length !== 0) {
-            let result = splitToBulks(perfilesFiltrados, 20);
-            setPerfilesNew(result)
-        }
+
 
         if (filtro !== undefined) {
             let result = splitToBulks(perfilesFilter, 20);
             setPerfilesNew(result)
-
         }
 
 
-    }, [filtro, perfiles, perfilesFilter, perfilesFiltrados]);
+    }, [filtro, perfiles, perfilesFilter, perfilesFiltrados, search]);
 
 
     return (
@@ -120,7 +115,7 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, per
                                             ))}
                                         </div>
                                     </div>
-                                    
+
                                     <div className="flex flecha-scroll-horiz" >
                                         <div className="flecha-right" onClick={() => scrollToRight(`items-container_${i + 1}`)}>
                                             <img src={flecha_boton_right} alt="flecha" />

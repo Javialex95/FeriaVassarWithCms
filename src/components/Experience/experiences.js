@@ -1,6 +1,5 @@
 import music from '../../assets/portada_musica_web.jpg'
 import parches from '../../assets/portada_parches_web.jpg'
-import cultura from '../../assets/portada_cultura_web.jpg'
 import gastronomia from '../../assets/portada_gastronomia_web.jpg'
 import espacio from '../../assets/portada_espacio_web.jpg'
 import compra from '../../assets/compras_exp.jpg'

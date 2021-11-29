@@ -5,7 +5,6 @@ import { WordUp } from '../Common/WordUp'
 import { useInView } from "react-intersection-observer";
 import iframeImage from '../../assets/frame-video.jpg'
 import { Link } from 'react-router-dom'
-import {useWindowSize} from '../Common/Hooks/useWindowSize'
 
 import consumo_11 from '../../assets/consumo_11.png'
 import comunidad_20 from '../../assets/comunidad_20.png'

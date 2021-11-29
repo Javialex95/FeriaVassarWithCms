@@ -1,8 +1,5 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react'
-// import { cross } from '../Common/Icons';
-import cross from '../../assets/mas_ver_mas_experiencia_web.png'
-import equisClose from '../../assets/equis_cerrar_boton_va_web_hover.svg';
 import { useOuterClick } from '../Common/Hooks/useOutsideClick';
 import { Menu } from './Menu';
 import { useLocation } from 'react-router';

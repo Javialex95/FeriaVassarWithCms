@@ -12,7 +12,6 @@ import { SingleEmpren } from '../Emprendimientos/SingleEmpren';
 import { SingleEmprenMovil } from '../Emprendimientos/SingleEmprenMovil';
 import { Experience } from '../Experience/Experience';
 import { Faq } from '../Faq/Faq';
-import { HomeFooter } from '../Home/Footer';
 import { Home } from '../Home/Home';
 import { getPerfiles } from '../lib/api';
 import { MenuOpener } from '../Menu/MenuOpener';

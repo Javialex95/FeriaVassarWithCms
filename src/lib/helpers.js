@@ -46,9 +46,9 @@ export const formatData = (data) => {
     });
 
     if ( result.categoria ) {
-        result.categoria = categorias.find(categ =>  categ.value == result.categoria );
-        if (!result.categoria)
-            throw 'Categoria no encontrada';
+        result.categoria = categorias.find(categ =>  categ.value === result.categoria );
+        // eslint-disable-next-line no-throw-literal
+        if (!result.categoria) throw 'Categoria no encontrada';
     } 
 
     return result

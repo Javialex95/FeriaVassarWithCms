@@ -22,3 +22,12 @@
         transform: translateY(-80px);
     }
 }
+
+@keyframes bounce-vassar {
+    0% {
+        transform: translate(110%, 0%) rotate(90deg);
+    }
+    100% {
+        transform: translate(110%, 50%) rotate(90deg);
+    }
+}

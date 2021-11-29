@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import vassarIcon from '../../assets/logo_es_vassar_web.svg'
-import { chevronUp } from '../Common/Icons'
+import { chevronUp, rightArrowLong } from '../Common/Icons'
 import { WordUp } from '../Common/WordUp'
 import gif_vassar from '../../assets/gif_vassar.gif';
 
@@ -56,6 +56,10 @@ export const Vassar = () => {
                             <WordUp text="¡Vassar es la casa de todos! Bienvenidos a esta nueva comunidad con la que crearemos una nueva cultura emprendedora. Éste nuevo hogar en el que encontrarán más de 200 hermanos, amigos y co trabajadores, enfocados en que la interacción y el intercambio de experiencias generen oportunidades ganadoras para todos, en pro de nuestro sector, y en pro de nuestro país." 
                             isActive={wordsAnim4}/>
                         </p>
+                    </div>
+
+                    <div className="arrow">
+                        {rightArrowLong}
                     </div>
 
                     <h3 className="vassar_welcome">¡Bienvenidos!</h3>

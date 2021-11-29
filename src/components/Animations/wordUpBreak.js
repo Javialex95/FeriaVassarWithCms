@@ -18,15 +18,15 @@ export const wordUpBreak1 = {
         opacity: 1,
         fontSize: '50px',
         transition: {
-            duration: 0.2,
+            duration: 1,
         },
     }),
     hidden: {
-        fontSize: '45px',
-        opacity: 0.8,
+        fontSize: '47.5px',
+        opacity: 0.6,
         y: 15,
         transition: {
-            duration: 0.2,
+            duration: 1,
         },
     },
 }
@@ -37,15 +37,15 @@ export const wordUpBreak2 = {
         opacity: 1,
         fontSize: '30px',
         transition: {
-            duration: 0.2,
+            duration: 1,
         },
     }),
     hidden: {
-        fontSize: '25px',
-        opacity: 0.8,
+        fontSize: '27.5px',
+        opacity: 0.6,
         y: 15,
         transition: {
-            duration: 0.2,
+            duration: 1,
         },
     },
 }

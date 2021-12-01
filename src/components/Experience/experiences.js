@@ -20,13 +20,13 @@ export const experiences = [
     {
         id: 3,
         title: "ALMACENAMIENTO PARA COMPRAS",
-        description: "En Vassar encontrarás una amplia oferta gastronómica dentro de nuestra zona de comidas. Además, dispondremos de un gran mercado en el que podrás comprar ingredientes frescos y exclusivos de nuestros emprendedores.",
+        description: "Vassar es una feria para toda la familia. Hombres, mujeres, niños y jóvenes encontrarán experiencias y marcas con las que se sentirán identificados.",
         image: compra,
     },
     {
         id: 4,
         title: "GASTRONOMÍA",
-        description: "Vassar es una feria para toda la familia. Hombres, mujeres, niños y jóvenes encontrarán experiencias y marcas con las que se sentirán identificados.",
+        description: "En Vassar encontrarás una amplia oferta gastronómica dentro de nuestra zona de comidas. Además, dispondremos de un gran mercado en el que podrás comprar ingredientes frescos y exclusivos de nuestros emprendedores.",
         image: gastronomia,
     },
     // {

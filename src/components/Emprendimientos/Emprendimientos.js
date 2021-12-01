@@ -15,7 +15,7 @@ export const Emprendimientos = ({ perfilesFiltrados, perfilesFilter, perfiles, s
 
     useEffect(() => {
         if (search !== undefined) {
-            searchPerfiles(search).then(data => console.log(data.data)
+            searchPerfiles(search).then(data => setSearched(data.data)
             
 
             );

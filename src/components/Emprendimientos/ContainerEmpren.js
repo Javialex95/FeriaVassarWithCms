@@ -10,7 +10,7 @@ import { Footer } from '../Footer';
 import flecha from '../../assets/flecha_boton_ver_listado_web_hover.png';
 import flecha_boton_right from '../../assets/flecha_boton_right.png';
 
-export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, search, perfiles, error }) => {
+export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, search, searched, perfiles, error }) => {
 
     const [perfilesNew, setPerfilesNew] = useState([])
 
@@ -39,7 +39,6 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, sea
         if (filtro === undefined && search === undefined) {
 
             const newProfiles = perfiles.filter(perf => perf.logo !== '');
-
             let result = splitToBulks(newProfiles, 20);
             setPerfilesNew(result)
 
@@ -52,13 +51,21 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, sea
 
 
 
+        if(search !== undefined && searched.perfiles){
+            let result = splitToBulks(searched.perfiles, 20);
+            setPerfilesNew(result)
+        }
+
+        console.log(searched)
+
+
         if (filtro !== undefined) {
             let result = splitToBulks(perfilesFilter, 20);
             setPerfilesNew(result)
         }
 
 
-    }, [filtro, perfiles, perfilesFilter, perfilesFiltrados, search]);
+    }, [filtro, perfiles, perfilesFilter, perfilesFiltrados, search, searched]);
 
 
     return (

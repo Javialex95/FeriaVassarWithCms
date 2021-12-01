@@ -25,10 +25,11 @@
 
       @media (max-width: $breakpoint-mobile){
         background: url('../../../assets//barra_logos_movil.png');
-        height: 720px;
+        height: 115px;
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
+        width: 100%;
       }
     
     }

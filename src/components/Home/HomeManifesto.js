@@ -76,7 +76,7 @@ export const HomeManifesto = () => {
                         , una sociedad emprendedora e inclusiva, un movimiento de creadores, de visionarios del
                         <HoverWord className="relative" hover={testdiseno_5}> diseño</HoverWord>
                         . Un espacio para vivir el
-                        <HoverWord className="relative" hover={testconsumo_11}> consumo de otra manera</HoverWord>
+                        <HoverWord className="relative word-consumo" hover={testconsumo_11}> consumo de otra manera</HoverWord>
                         , desde un entendimiento de la proveniencia de las cosas, de su proceso, de su materialidad.<br />
                         Un espacio donde la compra es un acto
                         <HoverWord className="relative" hover={testsolidario_12}> solidario </HoverWord>
@@ -95,7 +95,7 @@ export const HomeManifesto = () => {
                         en torno a
                         <HoverWord className="relative" hover={testnuevos_espacios_19}> nuevos espacios </HoverWord>
                         que aporten a la sociedad y a la cultura, donde la interacción, el intercambio y la experiencia vivida creen una
-                        <HoverWord className="relative" hover={testcomunidad_20}> comunidad </HoverWord>
+                        <HoverWord className="relative word-comunidad" hover={testcomunidad_20}> comunidad </HoverWord>
                         que se potencia entre ella.
                     </p>
                 </div>

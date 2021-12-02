@@ -1,7 +1,7 @@
 .home-manifesto {
   margin-top: -4px;
   &-contenedor {
-    overflow: hidden;
+    // overflow: hidden;
     > div {
       width: 50%;
     }
@@ -211,7 +211,7 @@
 
 .word-hover {
   &_hover {
-    z-index: 2;
+    z-index: 200;
     position: absolute;
     border-radius: 10px;
     font-weight: 600;
@@ -234,5 +234,18 @@
   //   margin-left: 0.5ex;
   // }
   &_word {
+  }
+}
+
+.word-comunidad {
+  img {
+    left: 0;
+    top: 100%;
+  }
+}
+.word-consumo {
+  img {
+    left: 0;
+    top: 100%;
   }
 }

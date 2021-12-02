@@ -18,7 +18,7 @@ export const HoverWord = ({ hover, children, className }) => {
                 {
                     isHover &&
                     <motion.span
-                        animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}>
+                        animate={{ opacity: 1, zIndex: 1000 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }}>
                         {hover}
                     </motion.span>
                 }

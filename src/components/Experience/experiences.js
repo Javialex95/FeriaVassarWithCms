@@ -3,8 +3,15 @@ import parches from '../../assets/portada_parches_web.jpg'
 import gastronomia from '../../assets/portada_gastronomia_web.jpg'
 import espacio from '../../assets/portada_espacio_web.jpg'
 import compra from '../../assets/compras_exp.jpg'
+import movilidad from '../../assets/imagen-movilidad.png'
 
 export const experiences = [
+    {
+        id: 7,
+        title: "MOVILIDAD",
+        description: "Vassar no tendrá parqueadero privado, pero contarás con diferentes opciones de parqueo en la zona. ¡También podrás llegar en bici o patineta! Estarán vigiladas todo el tiempo.",
+        image: movilidad,
+    },
     {
         id: 1,
         title: "MÚSICA",

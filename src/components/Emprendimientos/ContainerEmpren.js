@@ -39,6 +39,7 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, sea
         if (filtro === undefined && search === undefined) {
 
             const newProfiles = perfiles.filter(perf => perf.logo !== '');
+            
             let result = splitToBulks(newProfiles, 20);
             setPerfilesNew(result)
 
@@ -51,12 +52,11 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, sea
 
 
 
-        if(search !== undefined && searched.perfiles){
+        if (search !== undefined && searched.perfiles) {
             let result = splitToBulks(searched.perfiles, 20);
             setPerfilesNew(result)
         }
 
-        console.log(searched)
 
 
         if (filtro !== undefined) {
@@ -66,7 +66,6 @@ export const ContainerEmpren = ({ perfilesFiltrados, perfilesFilter, filtro, sea
 
 
     }, [filtro, perfiles, perfilesFilter, perfilesFiltrados, search, searched]);
-
 
     return (
         <div className="container-startups">

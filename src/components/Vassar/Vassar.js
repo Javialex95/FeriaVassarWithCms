@@ -26,14 +26,14 @@ export const Vassar = () => {
                 <div className="vassar_text">
                     <div className="vassar_text_container">
                         <p onClick={() => setWordsAnim1(!wordsAnim1)}>
-                            <WordUp text="Siempre hemos sido unos profundos creyentes de la colectividad. De que, aunque sea un cliché, la unión hace la fuerza. Por eso, en 2021, tras todos los aprendizajes que nos trajeron hasta aquí, y una canasta llena de sueños, decidimos formar la <strong>Asociación de Emprendedores de Colombia.</strong> Una colectividad que busca luchar por y para los suyos por medio de acciones creativas en pro de su visibilidad y crecimiento." 
-                            isActive={wordsAnim1}/>
+                            <WordUp text="Es <strong>Vassar</strong>"
+                                isActive={wordsAnim1} />
                         </p>
                         <br />
                         <br />
                         <p onClick={() => setWordsAnim2(!wordsAnim2)}>
-                            <WordUp text="De allí nació <strong>Vassar Feria</strong>, un espacio que, para nosotros, es más que un evento que espera convocar a cientos de soñadores. Es, en definitiva, una plataforma para materializar un deseo que siempre estuvo latente y que era momento de materializar." 
-                            isActive={wordsAnim2}/>
+                            <WordUp text="Siempre hemos sido unos profundos creyentes de la colectividad. De que, aunque sea un cliché, la unión hace la fuerza. Por eso, en 2021, tras todos los aprendizajes que nos trajeron hasta aquí y una canasta llena de sueños, decidimos formar la Asociación de Emprendedores. Una colectividad que busca luchar por y para los suyos por medio de acciones creativas en pro de su visibilidad y crecimiento."
+                                isActive={wordsAnim2} />
                         </p>
                         <br />
                         <br />
@@ -47,22 +47,28 @@ export const Vassar = () => {
                         </div>
 
                         <p onClick={() => setWordsAnim3(!wordsAnim3)}>
-                            <WordUp text="<strong>Vassar</strong> es una comunidad creativa, una sociedad emprendedora e inclusiva que trae consigo un movimiento de creadores que han innovado por años gracias a sus cualidades visionarias detrás del diseño, de una idea o un concepto. Es una invitación para que ustedes, visitantes, invitados, amigos, compañeros, vivan el consumo de una manera única, entendiendo la proveniencia de las cosas, de su proceso y de su materialidad." 
-                            isActive={wordsAnim3}/>
+                            <WordUp text="De allí nació <strong>Vassar Feria</strong>, un espacio que, para nosotros, es más que un evento que espera convocar a cientos de soñadores. Es, en definitiva, una plataforma para materializar un deseo que siempre estuvo latente y que era momento de materializar."
+                                isActive={wordsAnim3} />
                         </p>
                         <br />
                         <br />
                         <p onClick={() => setWordsAnim4(!wordsAnim4)}>
-                            <WordUp text="¡Vassar es la casa de todos! Bienvenidos a esta nueva comunidad con la que crearemos una nueva cultura emprendedora. Éste nuevo hogar en el que encontrarán más de 200 hermanos, amigos y co trabajadores, enfocados en que la interacción y el intercambio de experiencias generen oportunidades ganadoras para todos, en pro de nuestro sector, y en pro de nuestro país." 
-                            isActive={wordsAnim4}/>
+                            <WordUp text="Vassar es una comunidad creativa, una sociedad emprendedora e inclusiva que trae consigo un movimiento de creadores que han innovado por años gracias a sus cualidades visionarias detrás del diseño, de una idea o un concepto. Es una invitación para que ustedes, visitantes, invitados, amigos, compañeros, vivan el consumo de una manera única, entendiendo la proveniencia de las cosas, de su proceso y de su materialidad."
+                                isActive={wordsAnim4} />
+                                <br /><br />
+                            <h3 >¡Bienvenidos!</h3>
+
                         </p>
+
+
                     </div>
+
+
 
                     <div className="arrow">
                         {rightArrowLong}
                     </div>
 
-                    <h3 className="vassar_welcome">¡Bienvenidos!</h3>
                 </div>
 
                 <footer className="vassar_footer">

@@ -3,7 +3,7 @@ import { HoverWord } from '../Common/HoverWord'
 import { Button } from '../Common/Button'
 import { WordUp } from '../Common/WordUp'
 import { useInView } from "react-intersection-observer";
-import iframeImage from '../../assets/frame-video.jpg'
+import iframeImage from '../../assets/frame-video.png'
 import { Link } from 'react-router-dom'
 
 import consumo_11 from '../../assets/consumo_11.png'
@@ -20,7 +20,7 @@ import { wordUpBreak1, wordUpBreak2 } from '../Animations/wordUpBreak';
 export const HomeManifesto = () => {
     const [wordsAnim1, setWordsAnim1] = useState(false);
     const [wordsAnim2, setWordsAnim2] = useState(false);
-    
+
     const [wordAnim1Ref, inViewAnim1] = useInView({
         rootMargin: "0px 0px -50px 0px",
         triggerOnce: true,
@@ -90,13 +90,7 @@ export const HomeManifesto = () => {
                     </h3>
 
                     <p>
-                        Es momento de
-                        <HoverWord className="relative" hover={testreunirnos_18}> reunirnos </HoverWord>
-                        en torno a
-                        <HoverWord className="relative" hover={testnuevos_espacios_19}> nuevos espacios </HoverWord>
-                        que aporten a la sociedad y a la cultura, donde la interacción, el intercambio y la experiencia vivida creen una
-                        <HoverWord className="relative word-comunidad" hover={testcomunidad_20}> comunidad </HoverWord>
-                        que se potencia entre ella.
+                        Vassar es el movimiento creativo con la grandeza de destacar lo mejor del emprendimiento colombiano. Por ello, el 30% de los ingresos por boletería serán destinados a crear un fondo para apoyar a esos talentos que han decidido emprender. Por medio de la Asociación de Emprendedores queremos ayudar a que puedan aprovechar las oportunidades que el nuevo año traerá consigo y fortalecer así un sector en crecimiento.
                     </p>
                 </div>
 
@@ -115,7 +109,7 @@ export const HomeManifesto = () => {
                             </style>
                             <a href=https://www.youtube.com/embed/Z4RjCSjRAuw> 
                                 <img src=${iframeImage}>
-                                <span>▶</span>
+                  
                             </a>
                     `}
                     src="https://www.youtube.com/embed/Z4RjCSjRAuw" title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen muted autoPlay>

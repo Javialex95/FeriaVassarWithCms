@@ -7,6 +7,7 @@ import { HomeRedes } from './HomeRedes'
 import { HomeContacto } from './HomeContacto'
 import { HomeFooter } from './Footer'
 import { HomeEntradas } from './HomeEntradas'
+import { HomeGaleria } from './HomeGaleria'
 
 export const Home = ({ contacto }) => {
 
@@ -23,8 +24,8 @@ export const Home = ({ contacto }) => {
     return (
         <div id="home" className="home">
             <HomeSlider />
-            <HomeEntradas />
             <HomeManifesto />
+            <HomeGaleria />
             <HomeEmpren />
             <HomeExperience />
             <HomeRedes />

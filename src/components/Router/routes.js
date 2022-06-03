@@ -12,6 +12,7 @@ export const ROUTES = {
     VASSAR: "/vassar",
     PATROCINADORES: "/patrocinadores",
     FUNDACIONES: "/fundaciones",
+    GALERIA: "/galeria",
 
     CMS_LOGIN: "/login",
     CMS_EMPRENDIMIENTO: "/profile",

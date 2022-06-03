@@ -20,6 +20,7 @@ import { ROUTES } from './routes';
 import { ScrollToTop } from '../Common/ScrollToTop';
 import { Patrocinadores } from '../Patrocinadores/Patrocinadores';
 import { Fundaciones } from '../Fundaciones/Fundaciones';
+import { Galeria } from '../galeria/galeria';
 
 export const AppRouter = () => {
     const [searched, setSearched] = useState([])
@@ -146,6 +147,10 @@ export const AppRouter = () => {
                     </Route>
                     <Route exact path={ROUTES.FUNDACIONES}>
                         <Fundaciones />
+                    </Route>
+
+                    <Route exact path={ROUTES.GALERIA}>
+                        <Galeria />
                     </Route>
                 </Switch>
             </Router>

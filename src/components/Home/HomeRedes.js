@@ -7,19 +7,19 @@ export const HomeRedes = () => {
         <div className="home-redes">
             <div className="home-redes_container">
                 <div className="home-redes_item">
-                    <a href="https://www.instagram.com/vassarferia/" target="_blank" without rel="noreferrer" >{instagram}</a>
+                    <a href="https://www.instagram.com/vassarferia/" target="_blank" rel="noreferrer" >{instagram}</a>
                 </div>
                 {/* <div className="home-redes_item">
-                    <a href="!#" target="_blank" without rel="noreferrer" >{twitter}</a>
+                    <a href="!#" target="_blank" rel="noreferrer"  without rel="noreferrer" >{twitter}</a>
                 </div>
                 <div className="home-redes_item">
-                    <a href="mailto:maria.pardo@paramopresenta.com" target="_blank" without rel="noreferrer" >{envelope}</a>
+                    <a href="mailto:maria.pardo@paramopresenta.com" target="_blank" rel="noreferrer"  without rel="noreferrer" >{envelope}</a>
                 </div>
                 <div className="home-redes_item">
-                    <a href="!#" target="_blank" without rel="noreferrer" >{facebook}</a>
+                    <a href="!#" target="_blank" rel="noreferrer"  without rel="noreferrer" >{facebook}</a>
                 </div>
                 <div className="home-redes_item">
-                   <a href="!#" target="_blank" without rel="noreferrer" > {whatsapp}</a>
+                   <a href="!#" target="_blank" rel="noreferrer"  without rel="noreferrer" > {whatsapp}</a>
                 </div> */}
             </div>
         </div>

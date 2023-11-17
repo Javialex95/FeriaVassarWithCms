@@ -6,9 +6,9 @@
   h1 {
     color: $orange;
     margin-bottom: 50px;
-    font: normal normal bold 80px/90px Maison Neue Light;
+    font: normal normal bold 80px/90px Lato Light;
     strong {
-      font-family: Maison Neue Bold;
+      font-family: Lato Bold;
     }
   }
   &_container {
@@ -37,7 +37,7 @@
       }
       &,
       &::placeholder {
-        font: normal normal bold 20px/30px Maison Neue Light;
+        font: normal normal bold 20px/30px Lato Light;
       }
       &::placeholder {
         color: rgba($black, 0.4);
@@ -50,7 +50,7 @@
 
   @media (max-width: $breakpoint-tablet) {
     h1 {
-      font: normal normal bold 40px/50px Maison Neue Light;
+      font: normal normal bold 40px/50px Lato Light;
     }
     .form-field {
       input {
@@ -59,13 +59,18 @@
         }
         &,
         &::placeholder {
-          font: normal normal bold 15px/17px Maison Neue Light;
+          font: normal normal bold 15px/17px Lato Light;
         }
         &::placeholder {
           color: rgba($black, 0.4);
         }
       }
     }
+  }
+
+  .loading{
+    margin-top: 50px;
+    font-size: 20px;
   }
 
 
@@ -80,7 +85,7 @@
     &_text {
       font-size: 20px;
       padding: 10px 80px 10px 30px;
-      font-family: Maison Neue Bold;
+      font-family: Lato Bold;
     }
   }
 }

@@ -17,14 +17,14 @@
 
     .logos{
       background: url('../../../assets/barra_logos_dekstop.png');
-      height: 137px;
+      height: 275px;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       max-width: 1600px;
 
       @media (max-width: $breakpoint-mobile){
-        background: url('../../../assets//barra_logos_movil.png');
+        background: url('../../../assets/barra_logos_movil.png');
         height: 115px;
         background-position: center;
         background-size: contain;
@@ -61,6 +61,8 @@
     background-position: center center;
     // background-image: url(../../../assets/logo_paramo_web.svg);
   }
+
+  
   @media (max-width: $breakpoint-laptop) {
     &_top {
       // padding: 20px 20px;

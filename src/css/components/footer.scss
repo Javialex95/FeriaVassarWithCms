@@ -1,29 +1,25 @@
-.footer{
+.footer {
+  &_comeback_container {
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    color: $black;
+    font-size: 15px;
 
-
-    &_comeback_container{
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-        border-top: 1px solid $black;
-        border-bottom: 1px solid $black;
-        color: $black;
-        font-size: 15px;
-
-        .footer_flechaArriba{
-            width: 12px;
-            margin-left: 15px;
-        
-        }
-    
+    .footer_flechaArriba {
+      width: 12px;
+      margin-left: 15px;
     }
+  }
 
-    &_bottom{
-        width: 90%;
-        margin: 0px auto;
-        justify-content: space-between;
-        font-size: 12px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+  &_bottom {
+    width: 90%;
+    margin: 0px auto;
+    justify-content: space-between;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

@@ -46,10 +46,10 @@
   .small-title {
     letter-spacing: 2px;
     margin-bottom: -10px;
-    font: normal normal 300 12px/17px Maison Neue Light;
+    font: normal normal 300 12px/17px Lato Light;
   }
   .title {
-    font: normal normal bold 70px/120px Maison Neue Bold;
+    font: normal normal bold 70px/120px Lato Bold;
   }
 
   @media (max-width: $breakpoint-laptop) {
@@ -103,7 +103,7 @@
     }
     .title {
       margin-top: 10px;
-      font: normal normal bold 60px/80px Maison Neue Bold;
+      font: normal normal bold 60px/80px Lato Bold;
     }
   }
 }
@@ -112,7 +112,7 @@
   $ctx: &;
   color: $black;
   letter-spacing: 1.4px;
-  font: normal normal 300 14px/19px Maison Neue Light;
+  font: normal normal 300 14px/19px Lato Light;
   &_button {
     font-size: 20px;
     display: flex;

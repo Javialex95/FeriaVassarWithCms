@@ -5,7 +5,7 @@
     text-align: center;
     border: 1px solid $black;
     background-color: $red-darker;
-    font: normal normal bold 35px/100px Maison Neue Bold;
+    font: normal normal bold 35px/100px Lato Bold;
     h2 {
       display: inline-block;
     }
@@ -30,18 +30,18 @@
     @extend .flex-center;
     background: rgba(#231f20, 0.14);
     border: 1px solid rgba(#ffffff, 0.3);
-    font: normal normal 300 18px/33px Maison Neue Light;
+    font: normal normal 300 18px/33px Lato Light;
   }
   @media (max-width: $breakpoint-laptop) {
     &_hover {
       width: 130px; height: 40px;
-      font: normal normal 300 20px/33px Maison Neue Light;
+      font: normal normal 300 20px/33px Lato Light;
     }
     button {
-      font: normal normal 300 20px/33px Maison Neue Light;
+      font: normal normal 300 20px/33px Lato Light;
     }
     &_title {
-      font: normal normal bold 30px/60px Maison Neue Bold;
+      font: normal normal bold 30px/60px Lato Bold;
     }
   }
   @media (max-width: $breakpoint-tablet) {
@@ -55,7 +55,7 @@
   }
   @media (max-width: $breakpoint-mobile) {
     &_title {
-      font: normal normal bold 20px/40px Maison Neue Bold;
+      font: normal normal bold 20px/40px Lato Bold;
     }
   }
   &_images {
@@ -245,7 +245,7 @@
     @extend .flex-center;
     background: transparent;
     padding: 50px 0 25px 0;
-    font: normal normal 300 18px/33px Maison Neue Light;
+    font: normal normal 300 18px/33px Lato Light;
     &:hover {
       text-decoration: underline;
     }

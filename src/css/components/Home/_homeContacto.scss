@@ -1,6 +1,6 @@
 .home-contacto {
     
-    background-color: $red;
+    background-color: #FF4438;
     &_images {
         width: 50%;
         display: flex;
@@ -56,7 +56,7 @@
         width: 50%;
         h2 {
             margin: 20px 0 30px 0;
-            font: normal normal bold 60px/101px Maison Neue Bold;
+            font: normal normal bold 60px/101px Lato Bold;
         }
         h3 {
             font-size: 20px;
@@ -65,19 +65,19 @@
             font-family: "Akzidenz-Grotesk Medium";
         }
         h4 {
-            font: normal normal 300 20px/37px Maison Neue Light;
+            font: normal normal 300 20px/37px Lato Light;
             letter-spacing: 2.8px;
             font-weight: 100;
         }
         @media (max-width: $breakpoint-laptop) {
             h2 {
-                font: normal normal bold 50px/75px Maison Neue Bold;
+                font: normal normal bold 50px/75px Lato Bold;
             }
             h3 {
                 font-size: 25px;
             }
             h4 {
-                font: normal normal 300 17px/37px Maison Neue Light;
+                font: normal normal 300 17px/37px Lato Light;
             }
         }
     }
@@ -93,7 +93,7 @@
         text-align: center;
         justify-content: center;
         background-color: $white;
-        font: normal normal 300 20px/40px Maison Neue Light;
+        font: normal normal 300 20px/40px Lato Light;
         transition: 0.5s all;
         cursor: pointer;
         span{
@@ -124,7 +124,7 @@
         &_text {
             width: 45%;
             h3 {
-                font: normal normal 300 22px/20px Maison Neue Light;
+                font: normal normal 300 22px/20px Lato Light;
             }
         }
         &_container {
@@ -137,7 +137,7 @@
             }
         }
         &_comebackUp {
-            font: normal normal 300 23px/30px Maison Neue Light;
+            font: normal normal 300 23px/30px Lato Light;
             svg {
                 width: 20px;
                 margin-left: 40px;
@@ -171,16 +171,16 @@
             margin-top: 10px;
             margin-bottom: 0;
             padding-left: 20px;
-            font: normal normal bold 40px/50px Maison Neue Bold;
+            font: normal normal bold 40px/50px Lato Bold;
         }
         h3 {
             margin-top: 10px;
             padding-left: 20px;
-            font: normal normal 300 16px/20px Maison Neue Light;
+            font: normal normal 300 16px/20px Lato Light;
         }
         h4 {
             padding-left: 20px;
-            font: normal normal 300 16px/20px Maison Neue Light;
+            font: normal normal 300 16px/20px Lato Light;
         }
         &_images_envelope {
             .icon-btn {

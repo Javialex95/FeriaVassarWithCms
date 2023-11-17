@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1098.922" height="255.37" viewBox="0 0 1098.922 255.37">
   <defs>
-    <clipPath id="clip-path">
+    <clipPath id="clipPath">
       <rect id="Rectángulo_36" data-name="Rectángulo 36" width="1097.596" height="254.515" transform="translate(0 0)" fill="#fff" stroke="#707070" stroke-width="1"/>
     </clipPath>
   </defs>
   <g id="textura_division_manifesto_web" transform="translate(0 -1049)">
-    <g id="Enmascarar_grupo_2" data-name="Enmascarar grupo 2" transform="translate(0 1049)" clip-path="url(#clip-path)">
+    <g id="Enmascarar_grupo_2" data-name="Enmascarar grupo 2" transform="translate(0 1049)" clipPath="url(#clipPath)">
       <g id="Grupo_119" data-name="Grupo 119" transform="translate(-220.05 -495.774)">
         <g id="Grupo_82" data-name="Grupo 82">
           <path id="Trazado_178" data-name="Trazado 178" d="M1617.731,723.456c-205.065,0-397.86-79.79-542.862-224.673S850.008,161.266,850.008-43.629,929.865-441.157,1074.87-586.04s337.8-224.676,542.862-224.676,397.86,79.793,542.865,224.676,224.862,337.514,224.862,542.411S2305.6,353.9,2160.6,498.783,1822.8,723.456,1617.731,723.456Zm0-1528.233c-203.48,0-394.779,79.173-538.66,222.937S855.952-246.939,855.952-43.629s79.236,394.451,223.119,538.212,335.18,222.934,538.66,222.934,394.779-79.173,538.66-222.934,223.122-334.9,223.122-538.212-79.239-394.451-223.122-538.212S1821.211-804.777,1617.731-804.777Z" transform="translate(-850.008 810.716)" fill="#231f20"/>

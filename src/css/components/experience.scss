@@ -15,7 +15,7 @@
     flex-direction: column;
     h1 {
       text-transform: capitalize;
-      font: normal normal bold 60px/100px Maison Neue Bold;
+      font: normal normal bold 60px/100px Lato Bold;
     }
     .hidden {
     }
@@ -61,7 +61,7 @@
       background-color: $white;
       .title {
         margin-top: 10px;
-        font: normal normal 300 47px/63px Maison Neue Light;
+        font: normal normal 300 47px/63px Lato Light;
       }
       .description {
         margin-top: 20px;
@@ -93,7 +93,7 @@
       transition: 0.3s ease-in-out;
       padding: 130px 20px 20px 20px;
       h1 {
-        font: normal normal bold 40px/80px Maison Neue Bold;
+        font: normal normal bold 40px/80px Lato Bold;
       }
     }
     &_content {
@@ -151,7 +151,7 @@
         background-color: transparent;
         .title {
           color: $white;
-          font: normal normal 300 14px/19px Maison Neue Light;
+          font: normal normal 300 14px/19px Lato Light;
         }
         .description {
           z-index: 10;

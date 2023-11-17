@@ -1,74 +1,44 @@
-import React from 'react'
+import React from "react";
+import { plus } from "../Common/Icons";
+import { Link } from "react-router-dom";
 
-import image4 from '../../assets/experience/cuadrado/9.png'
-import image5 from '../../assets/experience/horizontal/1.png'
-import image6 from '../../assets/experience/horizontal/2.png'
-import image7 from '../../assets/experience/vertical/3.png'
-import image8 from '../../assets/experience/vertical/4.png'
-import image9 from '../../assets/experience/vertical/5.png'
-import image10 from '../../assets/experience/vertical/6.png'
-import image11 from '../../assets/experience/vertical/7.png'
-import image12 from '../../assets/experience/vertical/8.png'
+export const HomeExperience = ({ experiencia }) => {
+  return (
+    <div className="home-experience">
+      <div className="mobile-separator"></div>
 
-import { plus } from '../Common/Icons'
-import {Link} from 'react-router-dom'
+      <div className="home-experience_title">
+        <h2>La experiencia</h2>
+      </div>
 
-export const HomeExperience = () => {
-    return (
-        <div className="home-experience">
-
-            <div className="mobile-separator">
-
-            </div>
-
-            <div className="home-experience_title">
-                <h2>La experiencia</h2>
-            </div>
-
-            <div className="home-experience_container">
-
-                <div className="desktop-hide text">Descubre los espacios y experiencias que nos hacen diferentes.</div>
-
-                <div className="home-experience_images">
-                    <div className="image image-1">
-                        <img src={image11} alt="" />
-                    </div>
-                    <div className="image image-2">
-                        <img src={image8} alt="" />
-                    </div>
-                    <div className="image image-3">
-                        <img src={image5} alt="" />
-                    </div>
-                    <div className="image image-4">
-                        <img src={image4} alt="" />
-                    </div>
-                    <div className="image image-5">
-                        <img src={image10} alt="" />
-                    </div>
-                    <div className="image image--hidden image-6">
-                        <img src={image6} alt="" />
-                    </div>
-                    <div className="image image--hidden image-7">
-                        <img src={image9} alt="" />
-                    </div>
-                    <div className="image image--hidden image-8">
-                        <img src={image7} alt="" />
-                    </div>
-                    <div className="image image--hidden image-9">
-                        <img src={image12} alt="" />
-                    </div>
-                </div>
-
-                <Link to="/experiencia">
-                    <button>
-                        <span>Ver más</span>
-                        <div className="">
-                            {plus}
-                        </div>
-                    </button>
-                </Link>
-                
-            </div>
+      <div className="home-experience_container">
+        <div className="desktop-hide text">
+          Descubre los espacios y experiencias que nos hacen diferentes.
         </div>
-    )
-}
+
+        <div className="home-experience_images">
+          {experiencia.map((item, i) => (
+            <>
+              {i + 1 <= 5 ? (
+                <div className={`image image-${i + 1}`}>
+                  <img src={item.imagen.url} alt="" />
+                </div>
+              ) : (
+                <div className={`image image--hidden image-${i + 1}`}>
+                  <img src={item.imagen.url} alt="" />
+                </div>
+              )}
+            </>
+          ))}
+        </div>
+
+        <Link to="/experiencia">
+          <button>
+            <span>Ver más</span>
+            <div className="">{plus}</div>
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};

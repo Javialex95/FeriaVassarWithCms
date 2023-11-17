@@ -58,9 +58,10 @@
     }
     .left-img {
       height: 100vh;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
+      background-color: #D8CDBD ;
     }
     @media (max-width: 900px) {
       .top {

@@ -1,0 +1,277 @@
+.newsletter {
+  background-color: #c7a2ff;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 40px;
+  align-items: center;
+  .menu-opener {
+    height: 80px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+  }
+
+  &_title {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    svg {
+      width: 100px;
+      margin-left: 30px;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 45px;
+        height: 45px;
+        margin-left: 15px;
+      }
+    }
+
+    h2 {
+      font: normal normal bold 70px/80px Lato Bold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 90%;
+
+      h2 {
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+  }
+
+  &_info {
+    width: 50%;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 90%;
+    }
+
+    p {
+      font-size: 14px;
+      width: 50%;
+      margin: 0px auto;
+      padding-bottom: 20px;
+      text-align: center;
+
+      font-weight: 800;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+      }
+    }
+  }
+
+  &_modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s all;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
+
+    .imagen {
+      width: 50%;
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        height: 40vh;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &_form {
+    width: 50%;
+    height: 100vh;
+    background: #c7a2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      width: 70%;
+      margin: 0px auto;
+
+      a {
+        text-decoration: underline;
+      }
+
+      .flex {
+        p {
+          font-size: 12px;
+          width: 80%;
+
+          @media (max-width: $breakpoint-tablet) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .buton {
+      margin-top: 15px !important;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
+      height: 60vh;
+      align-items: center;
+      padding-top: 0px;
+    }
+
+    .logo {
+      position: fixed;
+      bottom: 5%;
+      right: 4%;
+      width: 40px;
+
+      @media (max-width: $breakpoint-tablet) {
+        bottom: 3%;
+        right: 5%;
+        width: 20px;
+      }
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid #231f20;
+      background-color: #dfcdf9;
+      border-radius: 5px;
+      height: 30px;
+      margin-bottom: 15px;
+
+      @media (max-width: $breakpoint-tablet) {
+        margin-bottom: 15px;
+      }
+    }
+
+    fieldset {
+      border: none;
+      width: 20%;
+    }
+    label {
+      font-size: 14px;
+      display: block;
+      color: #231f20;
+      font-weight: 800;
+      margin-bottom: 3px;
+    }
+
+    .flex {
+      justify-content: space-between;
+
+      div {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      .buton {
+        margin-top: 15px !important;
+      }
+    }
+  }
+  .buton {
+    background: #ff9050;
+    border: 3px solid black;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin: 0px auto;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    &:hover {
+      background: #ff9050bf;
+    }
+  }
+
+  .showModal {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.newsletterPopUp {
+  opacity: 1;
+  visibility: visible;
+  width: 90vw;
+  height: 90vh;
+  right: 0;
+  margin: 0px auto;
+  top: 50%;
+  transform: translate(0px, -50%);
+  border: 4px solid black;
+
+  .buton {
+    background: #ff9050;
+    border: 3px solid black;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin: 0px auto;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    &:hover {
+      background: #ff9050bf;
+    }
+  }
+
+  .menu-opener {
+    height: 70px;
+    position: absolute;
+    right: -50px;
+    top: 2%;
+  }
+  .newsletter_form {
+    height: 100%;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .imagen {
+      height: 35%;
+    }
+
+    .newsletter_form {
+      height: 65%;
+    }
+
+    input {
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    .menu-opener {
+      height: 60px;
+      top: 1%;
+      right: 0;
+    }
+  }
+}
+
+.hideModal {
+  opacity: 0;
+  visibility: hidden;
+}

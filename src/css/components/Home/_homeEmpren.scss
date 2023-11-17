@@ -34,13 +34,18 @@
   }
 
   .asterisks {
-    width: 165px;
-    margin: 80px 0 50px 0;
+    position: absolute;
+    right: 10%;
+    width: 70px;
+    top: 0%;
+    img {
+      width: 100%;
+    }
   }
 
   .description {
     margin: 30px 0 90px;
-    font-size: 18px;
+    font-size: 25px;
   }
 
   &_conoce {
@@ -61,16 +66,29 @@
     }
 
     h2 {
-      color: $black;
-      font: normal normal bold 70px/80px Maison Neue Bold;
+      line-height: 1 !important;
+      span {
+        font-size: 80px;
+      }
+      color: white;
+      font: normal normal bold 60px/80px Lato Bold;
     }
 
     &-title {
       padding: 0 4vw;
-      background: $aqua;
+      background: $purple;
       @extend .flex-center;
       flex-direction: column;
       align-items: flex-start;
+      color: $white;
+      position: relative;
+
+      .flex {
+        align-items: center;
+        text-transform: uppercase;
+        position: relative;
+        width: 100%;
+      }
     }
   }
   &_slider {
@@ -101,8 +119,8 @@
         opacity: 0.5;
         @extend .transition;
 
-        @media (max-width: $breakpoint-tablet){
-          opacity: 1;
+        @media (max-width: $breakpoint-tablet) {
+          opacity: 1 !important;
         }
       }
       span {
@@ -111,7 +129,7 @@
         margin-top: 40px;
         position: relative;
         letter-spacing: 2px;
-        font-family: "Maison Neue Light";
+        font-family: "Lato Light";
         &::before {
           content: "";
           position: absolute;
@@ -120,6 +138,10 @@
           width: 100%;
           height: 1px;
           background: rgba($black, 0.9);
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+          opacity: 1 !important;
         }
       }
       .img {
@@ -134,9 +156,7 @@
   }
 
   @media (max-width: $breakpoint-laptop) {
-    .asterisks {
-      width: 100px;
-    }
+
     .description {
       font-size: 16px;
     }
@@ -168,8 +188,10 @@
       }
     }
     .asterisks {
-      width: 50px;
-      margin: 20px auto;
+      position: absolute;
+      right: 17%;
+      width: 40px;
+      top: 8%;
     }
     .description {
       margin: 10px 0 0px 0;
@@ -188,6 +210,7 @@
           width: 100%;
           text-align: left;
           padding-left: 20px;
+          color: $white;
           background-color: $aqua;
           border-top: 1px solid $black;
           border-bottom: 1px solid $black;
@@ -211,7 +234,7 @@
     &-contenedor {
       &-title {
         h2 {
-          font-size: 60px;
+          font-size: 50px;
         }
       }
     }
@@ -246,7 +269,11 @@
         padding: 0px;
         overflow: hidden;
         h2 {
+          padding: 20px;
           font-size: 30px;
+          span {
+            font-size: 35px;
+          }
         }
       }
     }
@@ -291,6 +318,7 @@
     padding: 0 !important;
     span {
       margin-bottom: 2px;
+      opacity: 1 !important;
     }
   }
   @media (max-width: $breakpoint-tablet) {
@@ -302,12 +330,11 @@
   display: none;
   @media (max-width: $breakpoint-tablet) {
     display: block;
-        background-size: cover;
-        background-color: $white;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url(../../../assets/textura_division_home.png);
-
+    background-size: cover;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../assets/textura_division_home.png);
   }
   width: 100%;
   height: 100px;

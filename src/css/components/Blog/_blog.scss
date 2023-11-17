@@ -1,0 +1,63 @@
+.blog {
+  background: #e1dbcd;
+  overflow: hidden;
+
+  h2 {
+    font-family: "Lato Bold";
+  }
+
+  &_title {
+    background: #ffa2ce;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+
+    h2 {
+      margin-left: 100px;
+      font-size: 55px;
+      width: 60%;
+    }
+  }
+
+  &_leftImg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 78vh;
+    top: 22vh;
+    width: 8vw;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 10vw;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_logoVassar {
+    position: fixed;
+    bottom: 14%;
+    right: 1.5%;
+
+    img {
+      width: 2vw;
+    }
+
+    @media (max-width: $breakpoint-tablet){
+      right: 5%;
+      img {
+        width: 5vw;
+      }
+    }
+  }
+
+  @import "./posts";
+}
+
+.post {
+  @import "./post";
+}

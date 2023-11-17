@@ -17,7 +17,7 @@ export const Checkbox = ({ control, name, children, className, ...props }) => {
                                 <input id="checkbox" type="checkbox" onChange={val => doChange(val, onChange)} />
                                 <span className="checkmark"></span>
 
-                                <label htmlFor="checkbox">
+                                <label htmlhtmlFor= "checkbox">
                                     {children}
                                 </label>
                             </div>

@@ -1,12 +1,12 @@
-import image1 from '../../assets/portada_categoría_1_web.png'
-import image2 from '../../assets/portada_categoría_2_web.png'
-import image3 from '../../assets/portada_categoria_3_web.png'
-import image4 from '../../assets/poertada_arte.png'
+import image1 from '../../assets/portada_categoría_1_web.jpg'
+import image2 from '../../assets/portada_categoría_2_web.jpg'
+import image3 from '../../assets/portada_categoria_3_web.jpg'
+import image4 from '../../assets/poertada_arte.jpg'
 import image5 from '../../assets//portada_accesorios.png'
-import image6 from '../../assets/portada_moda.png'
-import image7 from '../../assets/portada_salud.png'
+import image6 from '../../assets/portada_moda.jpg'
+import image7 from '../../assets/portada_salud.jpg'
 
-import image8 from '../../assets/portada_gastronomia.png'
+import image8 from '../../assets/portada_gastronomia.jpg'
 import image9 from '../../assets/portada_restaurante.png'
 
 export const homeEmprenSlides = [

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="27.79" height="24.534" viewBox="0 0 27.79 24.534">
   <g id="logo_boton_hamburguesa" transform="translate(0 0)">
-    <path id="Path_118" data-name="Path 118" d="M368.558,398.295l4.837-16.894h2.033l-7.22,24.534h-.7l-7.15-24.534h3.435Z" transform="translate(-360.356 -381.401)" fill="#e1dbcd"/>
-    <path id="Path_119" data-name="Path 119" d="M513.818,381.4h2.1l7.22,24.534h-3.435l-1.367-4.977h-6.9l-1.332,4.977h-3.435Zm1.016,7.571-3.049,10.69h6.2Z" transform="translate(-495.351 -381.401)" fill="#e1dbcd"/>
+    <path id="Path_118" data-name="Path 118" d="M368.558,398.295l4.837-16.894h2.033l-7.22,24.534h-.7l-7.15-24.534h3.435Z" transform="translate(-360.356 -381.401)" fill="#BBB3A1"/>
+    <path id="Path_119" data-name="Path 119" d="M513.818,381.4h2.1l7.22,24.534h-3.435l-1.367-4.977h-6.9l-1.332,4.977h-3.435Zm1.016,7.571-3.049,10.69h6.2Z" transform="translate(-495.351 -381.401)" fill="#BBB3A1"/>
   </g>
 </svg>

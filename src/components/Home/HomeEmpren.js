@@ -1,15 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../Common/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
-import flornaranja from "../../assets/flornaranja.png";
 
 SwiperCore.use([Autoplay]);
 
-export const HomeEmpren = ({emprendimientos}) => {
+export const HomeEmpren = ({ emprendimientos }) => {
   const [speed, setSpeed] = useState(10000);
   const swiperRef = useRef(null);
 
@@ -23,20 +22,22 @@ export const HomeEmpren = ({emprendimientos}) => {
     <div className="home-emprendimientos">
       <div className="home-emprendimientos-contenedor">
         <div className="home-emprendimientos-contenedor-title">
-          <div className="flex">
-            <h2>
-              <span>Descubre</span> <br /> Emprendimientos
-            </h2>
+          <div className="title-bg flex">
+            <div >
+              <h2>
+                <span className="libre_font">Conoce nuestros</span> <br /> Emprendimientos
+              </h2>
 
-            <div className="asterisks">
-              <img src={flornaranja} alt="flornaranja" />{" "}
+              <Link to="/emprendimientos">
+                <Button>
+                  <span>
+                    Nuestros <strong>emprendimientos</strong>
+                  </span>
+                </Button>
+              </Link>
             </div>
           </div>
 
-          <p className="description">
-            CONOCE A LAS MARCAS QUE NOS <br />
-            ACOMPAÑAN EN ESTA VERSIÓN
-          </p>
           {/* ESTE SLIDER ES EL QUE SE VE EN MOBILE */}
           <div className="mobile-slider">
             <Swiper
@@ -56,8 +57,8 @@ export const HomeEmpren = ({emprendimientos}) => {
             >
               {emprendimientos.map((slide, index) => {
                 return (
-                  <Link to={slide.url}>
-                    <SwiperSlide>
+                  <SwiperSlide>
+                    <Link to={slide.url}>
                       <div className="home-emprendimientos_slider_item ">
                         <div className="img">
                           <img src={slide.imagen.url} alt="" />
@@ -65,21 +66,11 @@ export const HomeEmpren = ({emprendimientos}) => {
 
                         <span>{slide.nombre}</span>
                       </div>
-                    </SwiperSlide>
-                  </Link>
+                    </Link>
+                  </SwiperSlide>
                 );
               })}
             </Swiper>
-          </div>
-
-          <div className="home-emprendimientos_conoce">
-            <Link to="/emprendimientos">
-              <Button>
-                <span>
-                  Nuestros <strong>emprendimientos</strong>
-                </span>
-              </Button>
-            </Link>
           </div>
         </div>
 

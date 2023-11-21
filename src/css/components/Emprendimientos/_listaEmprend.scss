@@ -1,7 +1,7 @@
 .lista-emprend {
-  background: $orange;
+  background: #E6795D;
   width: 75vw;
-  color: $white;
+  color: #E1DBCD;
   &::-webkit-scrollbar {
     width: 0px;
     height: 0;
@@ -38,7 +38,7 @@
 
     .item {
       font-size: 20px;
-      color: $white;
+      color: #E1DBCD;
       text-transform: uppercase;
       font-weight: 600;
       padding-left: 25px;
@@ -61,7 +61,7 @@
       }
 
       &:hover span {
-        color: $aqua;
+        color: #e48d7a;
         text-decoration: underline;
       }
 
@@ -85,7 +85,7 @@
 }
 
 .lista-emprendi-container {
-  background: #e1dbcd;
+  background: #bbb3a1;
 
   @media (max-width: $breakpoint-tablet) {
     flex-direction: column;

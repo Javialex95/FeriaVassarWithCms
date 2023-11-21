@@ -1,13 +1,10 @@
 .blog {
-  background: #e1dbcd;
+  background: #BBB3A1;
   overflow: hidden;
-
-  h2 {
-    font-family: "Lato Bold";
-  }
-
+  
   &_title {
-    background: #ffa2ce;
+    background: $black;
+    color: $white;
     height: 22vh;
     display: flex;
     align-items: center;

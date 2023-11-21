@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -44,9 +44,11 @@ export const HomeSlider = ({ banner }) => {
                 >
                   <img className="top" src={slide.logo} alt="" />
                 </div>
-                {/* <div className="text">
-                  <div className="">{slide.text}</div>
-                </div> */}
+                <div className="text">
+                  <div className="">
+                  #VASSARNOSMUEVE
+                  </div>
+                </div>
                 <div
                   className="right-img"
                   style={{

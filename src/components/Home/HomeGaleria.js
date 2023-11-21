@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export const HomeGaleria = ({ galeria }) => {
   return (
     <div className="home-galeria">
-      <div className="mobile-separator"></div>
 
       <div className="home-galeria_title">
         <h2>Galería</h2>

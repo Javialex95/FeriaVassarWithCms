@@ -122,7 +122,7 @@ export const Close = () => {
             <motion.path
               transform="translate(0, 0)"
               d="M47.5 2.25H199.75V96.75H47.5C21.4045 96.75 0.25 75.5955 0.25 49.5C0.25 23.4045 21.4045 2.25 47.5 2.25Z"
-              fill="#E1DBCD"
+              fill="#BBB3A1"
               stroke="black"
               strokeWidth="0.5"
               variants={test}
@@ -154,7 +154,7 @@ export const Close = () => {
                   y2="69.607"
                   transform="translate(49.22 0) rotate(45)"
                   fill="black"
-                  stroke="#231f20"
+                  stroke="#241F20"
                   strokeWidth="2"
                 />
                 <line
@@ -163,7 +163,7 @@ export const Close = () => {
                   y1="69.607"
                   transform="translate(49.22 49.22) rotate(135)"
                   fill="none"
-                  stroke="#231f20"
+                  stroke="#241F20"
                   strokeWidth="2"
                 />
               </svg>

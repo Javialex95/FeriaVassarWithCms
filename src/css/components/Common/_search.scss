@@ -1,57 +1,53 @@
-.search{
+.search {
+  form {
+    justify-content: space-between;
+  }
 
-    form{
-        justify-content: space-between;
+  div {
+    width: 85%;
+  }
+
+  button {
+    border-radius: 60px;
+    border: none;
+    width: 10%;
+    cursor: pointer;
+    transition: 0.5s all;
+    background: transparent;
+    margin-left: 20px;
+
+    #lupa_bucador_galería {
+      transition: 0.5s all;
+      stroke: $black;
     }
 
-    div{
-        width: 85%;
+    &:hover #lupa_bucador_galería {
+      stroke: $white !important;
     }
+  }
 
-    button{
-        border-radius: 60px;  
-        border: none;
-        width: 10%;
-        cursor: pointer;
-        transition: 0.5s all;
-        background: transparent;
-
-  
-
-        #lupa_bucador_galería{
-            transition: 0.5s all;
-        }
-
-        &:hover #lupa_bucador_galería{
-                stroke: $white !important;
-        }
+  .menu-lupa {
+    #lupa_bucador_galería {
+      stroke: $white !important;
     }
+  }
 
-    .menu-lupa{
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $black;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 5px;
+  }
 
-        #lupa_bucador_galería{
-            stroke: $white !important;
-        }
-    }
+  input:focus-visible {
+    outline-offset: 0px;
+    outline: none;
+  }
 
-    input{
-        background: transparent;
-        border: none;
-        border-bottom: 2px solid $purple;
-        width: 100%;   
-        padding: 10px 0;
-        font-size: 15px   
-        
-     
-    }
-
-    input:focus-visible{
-        outline-offset: 0px;
-        outline: none;
-    }
-
-    input::placeholder{
-        font-size: 18px;
-        color: $blackLight;
-    }
+  input::placeholder {
+    font-size: 15px;
+    color: $blackLight;
+  }
 }

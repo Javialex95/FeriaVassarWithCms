@@ -19,7 +19,7 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    background-color: $pink;
+    background-color: $black;
   }
   &_icon {
     z-index: 10;
@@ -136,7 +136,7 @@
       padding-top: 1px;
       max-width: unset;
       font-size: 16px;
-      background: $pink;
+      background: $black;
       &_container {
         z-index: 1;
         position: relative;

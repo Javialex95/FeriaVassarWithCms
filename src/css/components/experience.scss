@@ -7,15 +7,18 @@
     width: 100%;
     height: 180px;
     flex: 0 0 auto;
-    padding: 0px 120px;
+    padding: 0px 20px;
     color: $black;
     @extend .flex-center;
     align-items: start;
-    background-color: $yellow;
+    background-color: #a14761;
     flex-direction: column;
+    color: $white;
     h1 {
-      text-transform: capitalize;
-      font: normal normal bold 60px/100px Lato Bold;
+      font-size: 40px;
+      span {
+        font-weight: 300;
+      }
     }
     .hidden {
     }
@@ -29,7 +32,8 @@
       display: flex;
       height: 100%;
     }
-    &_left, &_right {
+    &_left,
+    &_right {
       height: 100%;
     }
     &_left {
@@ -37,8 +41,10 @@
       color: $white;
       padding: 0 120px;
       font-size: 32px;
-    font-family: 'BaskervilleRegular';
-      @extend .flex-center;
+      font-family: "BaskervilleRegular";
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
     }
     &_right {
       width: 60%;
@@ -61,7 +67,7 @@
       background-color: $white;
       .title {
         margin-top: 10px;
-        font: normal normal 300 47px/63px Lato Light;
+        font-size: 40px;
       }
       .description {
         margin-top: 20px;
@@ -91,91 +97,27 @@
     &_title {
       height: unset;
       transition: 0.3s ease-in-out;
-      padding: 130px 20px 20px 20px;
+      padding: 60px 20px 60px 20px;
       h1 {
-        font: normal normal bold 40px/80px Lato Bold;
-      }
-    }
-    &_content {
-      &_container {
-        flex-direction: column;
-      }
-      &_left {
-        display: none;
-      }
-      &_right {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 50px;
-        padding-bottom: 80px;
-        justify-content: space-around;
+        font: normal normal bold 40px/80px;
+        padding-bottom: 20px;
       }
     }
 
-    &_item {
-      $ctx1: &;
-      width: 40%;
-      margin-top: 50px;
-      position: relative;
-      &:hover {
-        #{$ctx1}_image::after {
-            background-color: rgba($black, 0.5);
-        }
+    .experience_content_left {
+      display: none;
+    }
 
-        .description {
-          opacity: 1;
-        }
-      }
-      &_image {
-        overflow: hidden;
-        position: relative;
-        border-radius: 15px;
-        img {
-          transition: 0.3s ease-in-out;
-          height: 200px;
-          object-fit: cover;
-        }
-        &::after {
-          content: "";
-          z-index: 10;
-          top: 0; left: 0;
-          position: absolute;
-          width: 100%; height: 100%;
-          transition: 0.3s ease-in-out;
-        }
-      }
-      &_content {
-        padding: 10px;
-        text-align: center;
-        background-color: transparent;
-        .title {
-          color: $white;
-          font: normal normal 300 14px/19px Lato Light;
-        }
-        .description {
-          z-index: 10;
-          opacity: 0;
-          top: 0; left: 0;
-          font-size: 13px;
-          color: white;
-          position: absolute;
-          padding: 0 10px;
-          max-height: 160px;
-          overflow-y: auto;
-          transition: 0.3s ease-in-out;
-        }
-      }
-      &:hover {
-          img {
-            transform: scale(1.05);
-          }
-        .title {
-          text-decoration: underline;
-        }
-      }
+    .experience_content_right {
+      width: 100%;
     }
   }
+  
+@media (min-width: 999px) {
+  .experience_title {
+    display: none;
+  }
+}
 
 }
 .desktop-hide {

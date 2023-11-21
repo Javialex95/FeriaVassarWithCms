@@ -1,170 +1,178 @@
 .menu-opener {
-    $ctx: &;
-    top: 5%;
-    right: 10px;
-    z-index: 101;
-    width: 300px;
-    height: 100px;
-    position: fixed;
-    cursor: pointer;
-    
-    #Line_12, #Line_13{
-        stroke: white
-    }
+  $ctx: &;
+  top: 5%;
+  right: 10px;
+  z-index: 101;
+  width: 300px;
+  height: 100px;
+  position: fixed;
+  cursor: pointer;
+  color: white;
 
-    @media (max-width: $breakpoint-tablet){
-        width: 180px;
-        top: 0;
-        #{$ctx}_hover {
-            circle {
-                fill: unset !important;
-            }
-            #logo-svg {
-                color: unset !important;
-            }
-    
-            #Line_12, #Line_13{
-                stroke: unset !important;
-            }
-        }
-    }
-    svg {
-        width: 100%;
-        height: 100%;
-    }
+  #Line_12,
+  #Line_13 {
+    stroke: $black;
+  }
 
-    text {
-        font-size: 25px;
-        -webkit-transform: translateX(40px);-ms-transform: translateX(40px);transform: translateX(40px);
-        font-family: Lato Light;
+  @media (max-width: $breakpoint-tablet) {
+    width: 180px;
+    top: 0;
+    #{$ctx}_hover {
+ 
+      #logo-svg {
+        color: $white !important;
+      }
+
+      #Line_12,
+      #Line_13 {
+        stroke: unset !important;
+      }
     }
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  text {
+    font-size: 25px;
+    -webkit-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  circle {
+    @extend .transition;
+    // fill: $white;
+  }
+
+  &_hover {
     circle {
-        @extend .transition;
-        fill: $purple;
+      fill: $black;
+    }
+    #logo-svg {
+      color: $white;
     }
 
-    &_hover {
-        circle {
-            fill: white;
-        }
-        #logo-svg {
-            color: $black;
-        }
-
-        #Line_12, #Line_13{
-            stroke: $black;
-        }
+    #Line_12,
+    #Line_13 {
+      stroke: $white;
     }
+  }
 }
 
 #logo-svg {
-    width: 10px;
-    height: auto;
-    color: white;
+  width: 10px;
+  height: auto;
+  color: $black;
 }
 
-.menu{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: $aqua;
-    z-index: 100;
-    transition: 0.5s all;
-    opacity: 0;
-    visibility: hidden;
+.menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: #E66DF2;
+  z-index: 100;
+  transition: 0.5s all;
+  opacity: 0;
+  visibility: hidden;
 
-    .imagen_menu_web{
-        position: absolute;
-        width: 80%;
-        bottom: 5%;
-        right: 10%;
-    }
-
-    &-items{
-        position: relative;
-        width: 50%;
-        border-right: 2px solid white;
-
-        @media (max-width: $breakpoint-tablet){
-            width: 90%;
-            border: none;
-        }
-        &-list{
-            padding-top: 80px; 
-            padding-left: 100px;
-
-            @media (max-width: $breakpoint-tablet){
-            padding-top: 50px; 
-            padding-left: 20px;
-            }
-
-            a{
-                display: inline-block;
-                color: white;
-                font-size: 28px;
-                font-weight: 300;
-                padding-bottom: 15px;
-                transition: 0.5s all;
-
-                &:hover{
-                    text-decoration: underline;
-                }
-
-                @media (max-width: $breakpoint-tablet){
-                    font-size: 25px;
-                }
-            }
-        }
-    }
-
-    &-images{
-        width: 50%;
-        position: relative;
-        img{
-            width: 100%;
-        }
-        @media (max-width: $breakpoint-tablet){
-            display: none;
-        }
-
-       
-    }
-
-    .white-search{
-        padding-left: 100px;
-        position: absolute;
-        bottom: 5%;
-        width: 90%;
-
-        @media (max-width: $breakpoint-tablet){
-            padding-left: 20px;
-            bottom: 20%;
-
-        }
-
-        input {
-            color: white;
-            border-color: white;
-
-            &::placeholder{
-                color: white;
-            }
-        }
-    }
-
-    .logo_feria{
-        position: absolute;
-        right: 5%;
-        bottom: 5%;
-        width: 4%;
-        max-width: 50px;
-        @media (max-width: $breakpoint-tablet) {
-            bottom: 20%;
-        }
-    }
-}
-
-.show-menu{
-    opacity: 1;
-    visibility: visible;
+  .imagen_menu_web {
+    position: absolute;
+    width: 80%;
+    bottom: 0%;
+    right: -15%;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
   }
+
+  &-items {
+    position: relative;
+    width: 50%;
+    border-right: 2px solid $black;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 90%;
+      border: none;
+    }
+    &-list {
+      padding-top: 80px;
+      padding-left: 100px;
+
+      @media (max-width: $breakpoint-tablet) {
+        padding-top: 50px;
+        padding-left: 20px;
+      }
+
+      a {
+        display: inline-block;
+        color: $black;
+        font-size: 28px;
+        font-weight: 300;
+        padding-bottom: 15px;
+        transition: 0.5s all;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  &-images {
+    width: 50%;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  .white-search {
+    padding-left: 100px;
+    position: absolute;
+    bottom: 5%;
+    width: 90%;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding-left: 20px;
+      bottom: 20%;
+    }
+
+    input {
+      color: $black;
+      border-color: $black;
+
+      &::placeholder {
+        color: $black;
+      }
+    }
+
+    #lupa_bucador_galería {
+        stroke: $black !important;
+    }
+  }
+
+  .logo_feria {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 4%;
+    max-width: 50px;
+    @media (max-width: $breakpoint-tablet) {
+      bottom: 20%;
+    }
+  }
+}
+
+.show-menu {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useOuterClick } from "../Common/Hooks/useOutsideClick";
 import { Menu } from "./Menu";
 import { useLocation } from "react-router-dom";
@@ -125,18 +125,38 @@ export const MenuOpener = () => {
             <motion.path
               transform="translate(0, 0)"
               d="M47.5 2.25H199.75V96.75H47.5C21.4045 96.75 0.25 75.5955 0.25 49.5C0.25 23.4045 21.4045 2.25 47.5 2.25Z"
-              fill="#E1DBCD"
-              stroke="black"
+              fill="#241F20"
+              stroke="white"
               strokeWidth="0.5"
               variants={test}
               animate={hover ? "show" : "hidden"}
             />
-            <circle cx="200" cy="50" r="49.75" stroke="black" strokeWidth="1" />
+
+            {!active ? (
+              <circle
+                cx="200"
+                cy="50"
+                r="49.75"
+                stroke="#BBB3A1"
+                strokeWidth="1"
+                fill="#BBB3A1"
+              />
+            ) : (
+              <circle
+                cx="200"
+                cy="50"
+                r="49.75"
+                stroke="#BBB3A1"
+                strokeWidth="1"
+                fill="#811A92"
+              />
+            )}
 
             <motion.text
               font-size="25"
               y="60"
               variants={test1}
+              fill="#BBB3A1"
               animate={hover ? "show" : "hidden"}
             >
               {text}
@@ -157,8 +177,8 @@ export const MenuOpener = () => {
                     data-name="Line 12"
                     y2="69.607"
                     transform="translate(49.22 0) rotate(45)"
-                    fill="black"
-                    stroke="#231f20"
+                    fill="#BBB3A1"
+                    stroke="#BBB3A1"
                     strokeWidth="2"
                   />
                   <line
@@ -166,8 +186,8 @@ export const MenuOpener = () => {
                     data-name="Line 13"
                     y1="69.607"
                     transform="translate(49.22 49.22) rotate(135)"
-                    fill="none"
-                    stroke="#231f20"
+                    fill="#BBB3A1"
+                    stroke="#BBB3A1"
                     strokeWidth="2"
                   />
                 </svg>
@@ -179,17 +199,44 @@ export const MenuOpener = () => {
                   x="180"
                   width="40"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 50.196 44.315"
+                  viewBox="0 0 127.973 141.33"
                 >
                   <path
                     fill="currentColor"
-                    d="M14.814 30.514 23.55 0h3.672L14.181 44.315h-1.266L0-.001h6.2Z"
-                    data-name="Path 118"
+                    data-name="Trazado 1491"
+                    d="M846.6,75.673l-6.9,17.62,14.159,36.17,6.892-17.634Z"
+                    transform="translate(-763.374 -33.569)"
                   />
                   <path
                     fill="currentColor"
-                    d="M33.356-.001h3.8l13.041 44.315h-6.2l-2.469-8.99H29.051l-2.405 8.99h-6.2Zm1.836 13.675-5.508 19.309h11.205Z"
-                    data-name="Path 119"
+                    data-name="Trazado 1492"
+                    d="M864.847,98.319l6.892-17.635L860.354,51.595h-5.5L850.7,62.188Z"
+                    transform="translate(-755.139 -51.595)"
+                  />
+                  <path
+                    fill="currentColor"
+                    data-name="Trazado 1493"
+                    d="M868,73.733l8.654-22.138H859.333Z"
+                    transform="translate(-748.68 -51.595)"
+                  />
+                  <path
+                    fill="currentColor"
+                    id="Trazado_1494"
+                    data-name="Trazado 1494"
+                    d="M852.1,61.625l-6.9,17.62,14.149,36.15,6.894-17.634Z"
+                    transform="translate(-759.257 -44.086)"
+                  />
+                  <path
+                    fill="currentColor"
+                    data-name="Trazado 1495"
+                    d="M848.367,143.532l6.894-17.634L841.1,89.722l-6.9,17.62Z"
+                    transform="translate(-767.493 -23.052)"
+                  />
+                  <path
+                    fill="currentColor"
+                    data-name="Trazado 1496"
+                    d="M860.042,142.83l0,.005-35.726-91.24H796.052l55.25,141.33h17.473l5.434-13.9Z"
+                    transform="translate(-796.052 -51.595)"
                   />
                 </svg>
               </g>

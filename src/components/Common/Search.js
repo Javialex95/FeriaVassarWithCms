@@ -1,57 +1,53 @@
-import React, { useState } from 'react'
-import { searchPerfiles } from '../lib/api'
-import { lupa } from './Icons'
+import React, { useState } from "react";
+import { searchPerfiles } from "../lib/api";
+import { lupa } from "./Icons";
 
+export const Search = ({
+  setHideFilter,
+  setSearched,
+  setPerfiles,
+  className,
+}) => {
+  const [valueSearch, setValueSearch] = useState("");
 
-export const Search = ({ setHideFilter, setSearched, setPerfiles, className }) => {
+  const onChange = (e) => {
+    setHideFilter(true);
 
-    const [valueSearch, setValueSearch] = useState('')
-
-    const onChange = (e) => {
-        setHideFilter(true)
-
-        if (e.target.value === '') {
-            setHideFilter(false)
-
-        }
-        
-        const search = e.target.value;
-        setValueSearch(search)
+    if (e.target.value === "") {
+      setHideFilter(false);
     }
 
-    const search = (e) => {
-        e.preventDefault();
-        setPerfiles([])
+    const search = e.target.value;
+    setValueSearch(search);
+  };
 
-        setTimeout(() => {
-            if (valueSearch === "") {
-                setSearched([]);
-            } else {
-                searchPerfiles(valueSearch).then(data => setSearched(data.data)
-                );
-            }
-        }, 500);
-    }
+  const search = (e) => {
+    e.preventDefault();
+    setPerfiles([]);
 
-    return (
-        <div className={`search ${className}`}>
+    setTimeout(() => {
+      if (valueSearch === "") {
+        setSearched([]);
+      } else {
+        searchPerfiles(valueSearch).then((data) => setSearched(data.data));
+      }
+    }, 500);
+  };
 
-            <form onSubmit={search} className="flex">
-                <div>
-                    <input
-                        type="text"
-                        name="search"
-                        id=""
-                        onChange={onChange}
-                        placeholder="Por nombre"
-                    />
-                </div>
-
-                <button>
-                    {lupa}
-                </button>
-            </form>
-
+  return (
+    <div className={`search ${className}`}>
+      <form onSubmit={search} className="flex">
+        <div className="flex search_container">
+          <input
+            type="text"
+            name="search"
+            id=""
+            onChange={onChange}
+            placeholder="Por nombre"
+            />
+            <button>{lupa}</button>
         </div>
-    )
-}
+      </form>
+    </div>
+  );
+};

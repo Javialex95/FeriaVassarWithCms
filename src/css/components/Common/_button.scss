@@ -5,9 +5,8 @@
   position: relative;
   user-select: none;
   position: relative;
-  border-radius: 100px;
   display: inline-block;
-  border: 1px solid$black;
+  border: 1px solid $black;
   &,span {
     @extend .transition;
     background-color: $white;
@@ -47,7 +46,7 @@
     z-index: 10;
     text-align: left;
     font-size: 30px;
-    padding: 10px 100px 10px 30px;
+    padding: 10px 80px 10px 30px;
     span {
       padding-right: 5px;
       white-space: nowrap;

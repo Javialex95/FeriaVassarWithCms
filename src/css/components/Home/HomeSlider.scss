@@ -26,7 +26,7 @@
     min-height: 100vh;
     .text {
       width: 100px;
-      font-family: 'BaskervilleRegular';
+
       background: $white;
       position: relative;
       border-left: 2px solid $black;
@@ -61,7 +61,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
-      background-color: #D8CDBD ;
+      background-color: $black;
     }
     @media (max-width: 900px) {
       .top {

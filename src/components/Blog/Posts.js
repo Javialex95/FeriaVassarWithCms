@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import marcosemidiamante from "../../assets/marcosemidiamante.png";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
-import ReactMarkdown from "react-markdown";
+import { Parragraf } from "../Common/Parragraf";
 
 export const Posts = ({ posts }) => {
   const [updatedPosts, setUpdatedPosts] = useState([]);
@@ -31,43 +29,33 @@ export const Posts = ({ posts }) => {
     setUpdatedPosts(newPosts);
   }, [posts]);
 
+  if (updatedPosts.length <= 0) return "...cargando";
+
   return (
     <div className="posts">
-      {updatedPosts.length <= 0 ? (
-        <div style={{ paddingTop: "100px" }}>Cargando</div>
-      ) : (
-        <>
-          {updatedPosts.map((post) => (
-            <div className="posts_post">
-              <div className="post_img">
-                <img
-                  className="marco"
-                  src={marcosemidiamante}
-                  alt="marcosemidiamante"
-                />
-                <img
-                  className="img"
-                  src={post.imagen.formats.small.url}
-                  alt="imagen"
-                />
-              </div>
-              <div className="post_info">
-                <ReactMarkdown
-                  rehypePlugins={[rehypeRaw]}
-                  remarkPlugins={[remarkGfm]}
-                  className="text-justify prose"
-                >
-                  {post.infoCut}
-                </ReactMarkdown>
+      {updatedPosts.map((post) => (
+        <div className="posts_post">
+          <div className="post_img">
+            <img
+              className="marco"
+              src={marcosemidiamante}
+              alt="marcosemidiamante"
+            />
+            <img
+              className="img"
+              src={post.imagen.formats.small.url}
+              alt="imagen"
+            />
+          </div>
+          <div className="post_info">
+            <Parragraf text={post.infoCut} />
 
-                <div className="post_button">
-                  <Link to={`/blog/post/${post._id}`}>Ver más</Link>
-                </div>
-              </div>
+            <div className="post_button">
+              <Link to={`/blog/post/${post._id}`}><span className="libre_font">Ver</span> <strong>más</strong></Link>
             </div>
-          ))}
-        </>
-      )}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

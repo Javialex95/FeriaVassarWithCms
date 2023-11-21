@@ -1,11 +1,14 @@
 .home-experience {
   &_title {
     color: $white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 50px 100px 50px 100px;
     border: 1px solid $black;
-    background-color: $red-darker;
-    font: normal normal bold 35px/100px Lato Bold;
+    background-color: $black;
+    font-size: 40px;
+
+    p {
+      font-size: 20px;
+    }
     h2 {
       display: inline-block;
     }
@@ -16,10 +19,10 @@
     @extend .flex-center;
     flex-direction: column;
     border-bottom: 1px solid $black;
-    background-color: $green-darker;
+    background-color: #a14761;
     .text {
       padding: 0 20px;
-      font: normal normal 300 18px/22px Akzidenz-Grotesk Light;
+      font: normal normal 300 18px/22px;
     }
   }
   &_hover {
@@ -28,20 +31,21 @@
     color: $white;
     border-radius: 28px;
     @extend .flex-center;
-    background: rgba(#231f20, 0.14);
+    background: rgba(#241f20, 0.14);
     border: 1px solid rgba(#ffffff, 0.3);
-    font: normal normal 300 18px/33px Lato Light;
+    font: normal normal 300 18px/33px;
   }
   @media (max-width: $breakpoint-laptop) {
     &_hover {
-      width: 130px; height: 40px;
-      font: normal normal 300 20px/33px Lato Light;
+      width: 130px;
+      height: 40px;
+      font: normal normal 300 20px/33px;
     }
     button {
-      font: normal normal 300 20px/33px Lato Light;
+      font: normal normal 300 20px/33px;
     }
     &_title {
-      font: normal normal bold 30px/60px Lato Bold;
+      font: normal normal bold 30px/60px;
     }
   }
   @media (max-width: $breakpoint-tablet) {
@@ -55,7 +59,7 @@
   }
   @media (max-width: $breakpoint-mobile) {
     &_title {
-      font: normal normal bold 20px/40px Lato Bold;
+      font: normal normal bold 20px/40px;
     }
   }
   &_images {
@@ -205,18 +209,23 @@
         }
         &-1 {
           width: 220px;
-          top: 25%; right: 50%; left: unset;
+          top: 25%;
+          right: 50%;
+          left: unset;
           transform: translate(50%, 0);
         }
         &-2 {
           width: 175px;
           height: 233px;
-          top: 20%; left: 5%;
+          top: 5% !important;
+          left: 5%;
         }
         &-3 {
-          right: 5%; left: unset;
+          right: 5%;
+          left: unset;
           top: 5% !important;
-          width: 253px; height: 169px;
+          width: 253px;
+          height: 169px;
           transform: translate(0%, 0%);
         }
         &-4 {
@@ -245,7 +254,7 @@
     @extend .flex-center;
     background: transparent;
     padding: 50px 0 25px 0;
-    font: normal normal 300 18px/33px Lato Light;
+    font: normal normal 300 18px/33px;
     &:hover {
       text-decoration: underline;
     }
@@ -266,7 +275,8 @@
           stroke-width: 4;
         }
       }
-      &, svg {
+      &,
+      svg {
         color: $black;
       }
     }

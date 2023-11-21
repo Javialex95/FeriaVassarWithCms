@@ -1,15 +1,13 @@
 .newsletter {
-  background-color: #c7a2ff;
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 40px;
-  align-items: center;
+  width: 100%;
+  background-color: #1bbadd;
   .menu-opener {
     height: 80px;
   }
 
-  @media (max-width: $breakpoint-tablet) {
-    padding: 40px;
+  .container {
+    width: 90%;
+    margin: 0px auto;
   }
 
   @media (max-width: $breakpoint-tablet) {
@@ -17,9 +15,19 @@
   }
 
   &_title {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
+    background-image: url("../../../assets/2023/textura3.png");
+    object-fit: cover;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 150px;
+
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+    }
     svg {
       width: 100px;
       margin-left: 30px;
@@ -32,24 +40,23 @@
     }
 
     h2 {
-      font: normal normal bold 70px/80px Lato Bold;
+      font: normal normal bold 70px/80px;
     }
 
     @media (max-width: $breakpoint-tablet) {
-      width: 90%;
-
       h2 {
         font-size: 40px;
-        text-align: center;
+        text-align: left;
       }
     }
   }
 
   &_info {
     width: 50%;
+    padding: 50px 0;
 
     @media (max-width: $breakpoint-tablet) {
-      width: 90%;
+      width: 100%;
     }
 
     p {
@@ -57,9 +64,11 @@
       width: 50%;
       margin: 0px auto;
       padding-bottom: 20px;
-      text-align: center;
-
-      font-weight: 800;
+      text-align: left;
+      padding-bottom: 50px;
+      font-weight: 600;
+      font-weight: 300;
+      line-height: 20px;
 
       @media (max-width: $breakpoint-tablet) {
         width: 100%;
@@ -153,7 +162,7 @@
 
     input {
       width: 100%;
-      border: 1px solid #231f20;
+      border: 1px solid #241f20;
       background-color: #dfcdf9;
       border-radius: 5px;
       height: 30px;
@@ -171,8 +180,8 @@
     label {
       font-size: 14px;
       display: block;
-      color: #231f20;
-      font-weight: 800;
+      color: #241f20;
+      font-weight: 600;
       margin-bottom: 3px;
     }
 
@@ -191,18 +200,45 @@
     }
   }
   .buton {
-    background: #ff9050;
-    border: 3px solid black;
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: 40px;
-    margin: 0px auto;
-    font-weight: 800;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
     cursor: pointer;
     transition: 0.5s all;
+    font-weight: 800 !important;
 
     &:hover {
       background: #ff9050bf;
+    }
+  }
+
+  @media (min-width: 999px) {
+    display: flex;
+    justify-content: space-between;
+
+    .container{
+      width: 60%;
+    }
+
+    &_title {
+      width: 40%;
+      h2 {
+        font-size: 50px;
+      }
+    }
+
+    &_info {
+      width: 80%;
+      padding-left: 80px;
+
+      .buton{
+        width: 50%;
+      }
+      p {
+        margin: initial;
+        width: 100%;
+      }
+
     }
   }
 
@@ -230,7 +266,7 @@
     padding: 10px 20px;
     border-radius: 40px;
     margin: 0px auto;
-    font-weight: 800;
+    font-weight: 600;
     cursor: pointer;
     transition: 0.5s all;
 

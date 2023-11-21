@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../Common/Button";
 
 export const HomeEntradas = ({ fecha, lugar, direccion, boton }) => {
@@ -6,7 +5,7 @@ export const HomeEntradas = ({ fecha, lugar, direccion, boton }) => {
     <div className="home-entradas flex">
       <div className="fechas">
         <h2>
-          {fecha} <br />
+          <span className="libre_font">{fecha}</span> <br />
           <strong> {lugar} </strong>
         </h2>
         <span> {direccion} </span>
@@ -14,7 +13,8 @@ export const HomeEntradas = ({ fecha, lugar, direccion, boton }) => {
 
       <a href={boton} target="_blank" rel="noreferrer">
         <Button>
-          Compra tus entradas <strong>aquí</strong>.
+          <strong>Adquiere tus</strong>{" "}
+          <span className="libre_font">entradas</span>.
         </Button>
       </a>
     </div>

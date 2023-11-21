@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import vassarIcon from "../../assets/logo_es_vassar_web.png";
+import { useEffect, useState } from "react";
+import vassarIcon from "../../assets/2023/sello2.png";
 import { chevronUp, rightArrowLong } from "../Common/Icons";
-import { WordUp } from "../Common/WordUp";
 import gif_vassar from "../../assets/gif_vassar.gif";
 import { getEsVassar } from "../lib/api";
 import rehypeRaw from "rehype-raw";
@@ -41,7 +40,6 @@ export const Vassar = () => {
                 >
                   {esVassar.informacion}
                 </ReactMarkdown>
-            
               </div>
 
               <div className="arrow">{rightArrowLong}</div>

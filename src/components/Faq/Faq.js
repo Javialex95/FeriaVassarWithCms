@@ -15,10 +15,8 @@ export const Faq = () => {
   return (
     <>
       <section className="faq">
-        <div className="faq_bg"></div>
         <div className="faq_title">
-          <div className="small-title">PREGUNTAS FRECUENTES</div>
-          <div className="title">FAQ</div>
+          <div className="title"><strong>Preguntas</strong> <br /> <span className="libre_font" >frecuentes</span></div>
         </div>
         <div className="faq_content">
           <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
@@ -32,8 +30,6 @@ export const Faq = () => {
           </Accordion>
         </div>
       </section>
-
-      <HomeFooter />
     </>
   );
 };

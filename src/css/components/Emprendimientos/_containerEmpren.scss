@@ -13,7 +13,7 @@
     padding: 30px 25px;
 
     @media (max-width: $breakpoint-tablet) {
-      background: $aqua;
+      background: #E48D7A;
       padding: 0 25px;
       padding-top: 70px;
       height: auto;
@@ -21,7 +21,7 @@
     }
 
     h2 {
-      font-family: "Lato Regular";
+      font-family: "Helvetica";
       font-size: 50px;
       font-weight: 400;
       color: $black;

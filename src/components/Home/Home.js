@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { HomeManifesto } from "./HomeManifesto";
 import { HomeSlider } from "./HomeSlider";
 import { HomeEmpren } from "./HomeEmpren";
@@ -44,9 +44,9 @@ export const Home = ({ homePage, contacto }) => {
             video={homePage.Video}
             manifesto={homePage.manifesto}
           />
-          <HomeGaleria galeria={homePage.galeria} />
           <HomeEmpren emprendimientos={homePage.Emprendimientos} />
           <HomeExperience experiencia={homePage.experiencia} />
+          {/* <HomeGaleria galeria={homePage.galeria} /> */}
           <Newsletter />
           <HomeRedes />
           <HomeContacto />

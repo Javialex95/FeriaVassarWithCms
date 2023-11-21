@@ -1,9 +1,5 @@
 .posts {
-  height: 80vh;
-  padding-left: 16vh;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: scroll;
+  min-height: 80vh;
   justify-content: center;
   padding-top: 0;
 
@@ -12,8 +8,8 @@
   }
 
   &_post {
-    padding: 50px 20px;
-    width: 400px;
+    width: 100%;
+    display: flex;
 
     @media (max-width: $breakpoint-tablet) {
       padding: 50px 10px;
@@ -53,14 +49,13 @@
     }
 
     .post_info {
-      background: #ff9050;
+      background: #e66df2;
       padding: 30px;
-      font-weight: 800;
-      font-family: "Knockout 51";
+      font-weight: 600;
 
-      strong, p {
-        font-family: "Knockout 51";
-        color: #231F20;
+      strong,
+      p {
+        color: #241f20;
       }
 
       @media (max-width: $breakpoint-tablet) {
@@ -70,12 +65,12 @@
     }
 
     .post_button {
-      text-align: center;
       padding-top: 20px;
 
       a {
-        text-decoration: underline;
-        font-family: "Lato Bold";
+        border: 1px solid $black;
+        padding: 10px 100px 10px 20px;
+        font-weight: 300;
       }
     }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import mascara_blog from "../../assets/mascara_blog.png";
 import { getPosts } from "../lib/api";
 import { Posts } from "./Posts";
@@ -16,18 +16,14 @@ export const Blog = () => {
   return (
     <div className="blog">
       <div className="blog_title">
-        <h2>Blog</h2>
+        <h2>
+          Blo
+          <span className="libre_font">g</span>
+        </h2>
       </div>
 
       <div className="blog_container">
-        <div className="blog_leftImg">
-          <img src={mascara_blog} alt="mascara_blog" />
-        </div>
         <Posts posts={posts} />
-
-        <div className="blog_logoVassar">
-          <img className="logo" src={logo} alt="logo_feria_newsletter" />
-        </div>
       </div>
     </div>
   );

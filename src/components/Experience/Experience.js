@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { chevronUp } from "../Common/Icons";
 import { getExperiencia } from "../lib/api";
 
@@ -18,17 +18,22 @@ export const Experience = () => {
       <section id="top" className="experience">
         <div className="experience_title">
           <h1>
-            <span>experiencia</span>
+            <strong>Expe</strong>
+            <span className="libre_font">riencia</span>
           </h1>
 
-          <div className="desktop-hide hidden">
+          <div className="desktop-hide hidden libre_font">
             {experiencia.texto_IZQUIERDA}
           </div>
         </div>
         <div className="experience_content">
           <div className="experience_content_container">
             <div className="experience_content_left">
-              <div className="">{experiencia.texto_IZQUIERDA}</div>
+              <h1>
+                <strong>Expe</strong>
+                <span className="libre_font">riencia</span>
+              </h1>
+              <div className="libre_font">{experiencia.texto_IZQUIERDA}</div>
             </div>
             <div className="experience_content_right">
               {experiencias.length > 0 && (
@@ -43,7 +48,7 @@ export const Experience = () => {
                           />
                         </div>
                         <div className="experience_item_content">
-                          <div className="title">{item.titulo}</div>
+                          <div className="title libre_font">{item.titulo}</div>
                           <div className="description">{item.descripcion}</div>
                         </div>
                       </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams  } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getPost } from "../lib/api";
 import mascara_blog from "../../assets/mascara_blog.png";
 import logo from "../../assets/logovassarnegro.png";
@@ -12,14 +12,13 @@ export const Post = () => {
   const { id } = useParams();
   const [post, setPost] = useState({});
 
-
   useEffect(() => {
     getPost(id).then((data) => setPost(data.data));
     const body = document.querySelector("body");
 
     if (window.innerWidth > 700) {
       body.classList.add("noScroll");
-    }else{
+    } else {
       body.classList.remove("noScroll");
     }
   }, [id]);
@@ -33,10 +32,6 @@ export const Post = () => {
           </div>
 
           <div className="post_container">
-            <div className="post_leftImg">
-              <img src={mascara_blog} alt="mascara_blog" />
-            </div>
-
             <div className="post_info">
               <div className="imagen">
                 <img src={post.imagen.formats.small.url} alt="imagen" />
@@ -52,7 +47,13 @@ export const Post = () => {
               </div>
 
               {window.innerWidth < 700 && (
-                <Link className="boton" to="post" spy={true} smooth={true} duration={500}>
+                <Link
+                  className="boton"
+                  to="post"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
                   Volver arriba
                 </Link>
               )}
@@ -65,15 +66,9 @@ export const Post = () => {
         </>
       ) : (
         <>
-          <div className="post_title">
-        
-          </div>
+          <div className="post_title"></div>
 
           <div className="post_container">
-            <div className="post_leftImg">
-              <img src={mascara_blog} alt="mascara_blog" />
-            </div>
-
             <div className="post_info">
               <div className="imagen"></div>
               <p>CARGANDO INFORMACIÓN</p>

@@ -17,7 +17,8 @@ export const Galeria = () => {
     <div className="galeria">
       <div className="experience_title">
         <h1>
-          <span>Galería</span>
+          Gal<span className="libre_font">ería</span>
+
         </h1>
       </div>
 

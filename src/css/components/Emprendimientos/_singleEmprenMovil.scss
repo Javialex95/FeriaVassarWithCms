@@ -1,126 +1,115 @@
-.single-emprend-movil{
-    background: $white;
+.single-emprend-movil {
+  background: $white;
 
-    .max-width{
-        
-        padding-top: 2px;
+  .max-width {
+    padding-top: 2px;
+  }
 
+  .cargando_modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .single-emprend-desc-title {
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-bottom: 0;
+
+    h2 {
+      font-size: 35px;
+      line-height: 0.7;
+    }
+  }
+
+  .single-emprend-galeria {
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+
+    img {
+      width: 300px;
+      // max-width: fit-content;
+      border-radius: initial;
+    }
+  }
+
+  .single-emprend-desc {
+    width: 100%;
+    padding-top: 50px;
+
+    .single-emprend-desc-container {
+      width: 90%;
+      margin: 0px auto;
     }
 
-    .cargando_modal{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    hr {
+      margin: 30px 0;
+      background: $blackLight;
+      border: none;
+      height: 1px;
+    }
+  }
+
+  .botones {
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      width: fit-content;
+      padding-bottom: 20px;
     }
 
-    .single-emprend-desc-title{
-        justify-content: center;
-        text-align: center;
-        height: 200px;
-        display: flex;
-        -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-       
-        
-        border-radius: 200px 200px 0 0;
-        border-right: 1px solid$black;
-        border-left: 1px solid$black;
-        border-top: 1px solid$black;
-        padding-bottom: 0;
+    img {
+      max-width: 50px;
+    }
+  }
 
-        h2{
-         
-            font-size: 35px;
-            line-height: 0.7;
+  .go-back-perfil {
+    position: fixed;
+    top: 5%;
+    left: 5%;
 
+    .primary-button {
+      width: 220px;
+      min-width: auto;
+      .relative {
+        height: 40px;
+      }
+      &_text {
+        font-size: 15px;
+        .light {
+          font-size: 17px;
         }
+      }
     }
+  }
 
-    .single-emprend-galeria{
-        height: auto;
-        width: 100%;
-        margin-top: 50px;
+  .go-back-galeria {
+    background-color: $black;
+    color: $white;
+    margin-top: 50px;
 
+    .primary-button {
+      width: 250px;
+      min-width: auto;
 
-        img{
-            width: 300px;
-            // max-width: fit-content;
-            border-radius: initial;
+      .relative {
+        height: 40px;
+      }
+      &_text {
+        font-size: 15px;
+        .light {
+          font-size: 17px;
         }
+      }
     }
-
-    .single-emprend-desc{
-        width: 100%;
-        padding-top: 50px;
-       
-        .single-emprend-desc-container{
-            width: 90%;
-            margin: 0px auto;
-        }
-
-        hr{
-            margin: 30px 0;
-            background: $blackLight;
-            border: none;
-            height: 1px;
-        }
-    }
-
-    .botones{
-        flex-direction: column;
-        align-items: center;
-
-        a{
-            width: 75%;
-            padding-bottom: 20px;
-            max-width: 250px;
-        }
-
-        img{
-            max-width: 50px;
-        }
-    }
-
-    .go-back-perfil{
-        position: fixed;
-        top: 5%;
-        left: 5%;
-
-        .primary-button {
-            width: 220px;
-            min-width: auto;
-            .relative {
-              height: 40px;
-            }
-            &_text {
-              font-size: 15px;
-              .light {
-                font-size: 17px;
-              }
-            }
-          }
-    }
-
-    .go-back-galeria{
-        background-color: $orange;
-        margin-top: 50px;
-
-        .primary-button {
-            width: 250px;
-            min-width: auto;
-
-            .relative {
-              height: 40px;
-            }
-            &_text {
-              font-size: 15px;
-              .light {
-                font-size: 17px;
-              }
-            }
-          }
-    }
+  }
 }

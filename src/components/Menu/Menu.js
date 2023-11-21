@@ -1,9 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { SearchMenu } from "../Common/SearchMenu";
 import { ROUTES } from "../Router/routes";
-import imagen_menu_web from "../../assets/imagen_menu_web.png";
-import logo_feria_vassar_menu_desktop from "../../assets/logo_feria_vassar_menu_desktop.png";
+import imagen_menu_web from "../../assets/2023/menu_e_iconos/v.png";
 
 export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
   const closeMenu = () => {
@@ -27,7 +25,7 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               to="/"
             >
               Home
-            </Link>{" "}
+            </Link>
             <br />
             <Link
               onClick={() => {
@@ -36,9 +34,8 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               }}
               to={ROUTES.STARTUPS}
             >
-              {" "}
-              <b>Emprendimientos</b>{" "}
-            </Link>{" "}
+              <b>Emprendimientos</b>
+            </Link>
             <br />
             <Link
               onClick={() => {
@@ -47,8 +44,8 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               }}
               to={ROUTES.VASSAR}
             >
-              Es <b>Vassar</b>{" "}
-            </Link>{" "}
+              Es <b>Vassar</b>
+            </Link>
             <br />
             <Link
               onClick={() => {
@@ -57,8 +54,8 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               }}
               to={ROUTES.GALERIA}
             >
-              Galería{" "}
-            </Link>{" "}
+              Galería
+            </Link>
             <br />
             <Link
               onClick={() => {
@@ -67,9 +64,8 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               }}
               to={ROUTES.EXPERIENCE}
             >
-              {" "}
-              Experiencia{" "}
-            </Link>{" "}
+              Experiencia
+            </Link>
             <br />
             <Link
               onClick={() => {
@@ -78,8 +74,7 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               }}
               to={ROUTES.BLOG}
             >
-              {" "}
-              Blog{" "}
+              Blog
             </Link>
             <br />
             <Link
@@ -90,7 +85,7 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               to={ROUTES.FAQ}
             >
               FAQ
-            </Link>{" "}
+            </Link>
             <br />
             {/* <Link onClick={() => { closeMenu(); toggleMenu(); }} to={ROUTES.FUNDACIONES}>Fundaciones</Link> <br /> */}
             {/* <Link
@@ -101,7 +96,7 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
               to={ROUTES.PATROCINADORES}
             >
               Patrocinadores
-            </Link>{" "} */}
+            </Link> */}
             <br />
             <Link
               to="/contacto"
@@ -130,11 +125,6 @@ export const Menu = ({ redirect, setRedirect, toggleMenu }) => {
           />
         </div>
 
-        <img
-          className="logo_feria"
-          src={logo_feria_vassar_menu_desktop}
-          alt="logo_feria_vassar_menu_desktop"
-        />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Startup } from "./Startup";
 import { Header } from "./Header";
-import { Link } from "react-router-dom";
 import { Button } from "../Common/Button";
 import { rightArrowEmpre } from "../Common/Icons";
 import { Cargando } from "../Common/Cargando";
@@ -136,7 +136,6 @@ export const ContainerEmpren = ({
             <Link className="movil-boton" to="/emprendimientos-lista">
               <Button children="Ver lista" className="sidebarButton" />
             </Link>
-
             <Footer />
           </>
         )}

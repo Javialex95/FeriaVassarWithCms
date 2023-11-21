@@ -1,16 +1,11 @@
-import React from "react";
-import { Button } from "../Common/Button";
-import { Link } from "react-router-dom";
 
 export const HomeManifesto = ({ video, manifesto }) => {
   return (
     <section className="home-manifesto">
-      <div className="flex home-manifesto-contenedor flex">
+      <div className="flex home-manifesto-contenedor">
         <div className="home-manifesto-contenedor-title flex">
-          <div className="home-manifesto-contenedor-title-aros"></div>
-
           <div className="titulo">
-            <p>UN MOVIMIENTO CREATIVO</p>
+            <p className="libre_font">Un movimiento creativo</p>
             <h2>Manifiesto</h2>
           </div>
         </div>
@@ -49,15 +44,6 @@ export const HomeManifesto = ({ video, manifesto }) => {
           muted
           autoPlay
         ></iframe>
-        <div className="home-manifesto_button">
-          <Link to={`${video.url_BOTON}`}>
-            <Button>
-              <span>
-                Conoce qué es <strong>Vassar</strong>
-              </span>
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );
